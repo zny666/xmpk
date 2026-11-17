@@ -1,0 +1,17 @@
+rtl/include/cvxif_instr_pkg.sv
+rtl/gf2n_mul.sv
+rtl/gf256_inv_rom.sv
+rtl/gf256_inv8.sv
+rtl/gf_assist.sv
+rtl/xmpk_alu.sv
+rtl/xmpk_slow_mul.sv
+rtl/xmpk_ger_trf.sv
+rtl/xmpk_qgemm.sv
+rtl/xmpk_mqeval.sv
+rtl/xmpk_solveq.sv
+rtl/xmpk_linxfm.sv
+rtl/xmpk_extgemm.sv
+rtl/copro_alu.sv
+rtl/instr_decoder.sv
+rtl/compressed_instr_decoder.sv
+rtl/cvxif_example_coprocessor.sv

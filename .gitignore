@@ -1,0 +1,17 @@
+.DS_Store
+._*
+obj_dir/
+build/
+*.o
+*.a
+*.so
+*.vcd
+*.fst
+*.log
+*.jou
+*.dcp
+*.bit
+*.bin
+*.elf
+.Xil/
+*.zip

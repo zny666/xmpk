@@ -1,0 +1,180 @@
+{
+  "design": "Xmpk adopted RTL with QGEMM request overlap",
+  "upstream": {
+    "repository": "https://github.com/openhwgroup/cva6",
+    "commit": "742dc82a0c706e0a3bfb98b709fd3ee06d50d12a"
+  },
+  "scope": "RTL only; host CPU, firmware, tests, and implementation artifacts are external",
+  "rtl_files": [
+    {
+      "file": "rtl/include/cvxif_instr_pkg.sv",
+      "adopted_sha256": "ef4067a33129b969e6fadae8cdd633d44c9046da2196f19106b113cbfe2c46e0",
+      "release_sha256": "8863cfe499ddbb72ce4b696f4eb53723244ad54558435eb89530225968862a80",
+      "upstream_file": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "upstream_sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "upstream_modified": true,
+      "release_change": "added modification notice",
+      "license": "Apache-2.0 WITH SHL-2.0"
+    },
+    {
+      "file": "rtl/gf2n_mul.sv",
+      "adopted_sha256": "06d15592600330f1dd91be7257766fc86b1ba9f113da802a7de26cafff667ce0",
+      "release_sha256": "06d15592600330f1dd91be7257766fc86b1ba9f113da802a7de26cafff667ce0",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/gf256_inv_rom.sv",
+      "adopted_sha256": "036c869911116605818e397b9bdb54b7df6f2748329c70aeb67cd0ca4f2b07db",
+      "release_sha256": "036c869911116605818e397b9bdb54b7df6f2748329c70aeb67cd0ca4f2b07db",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/gf256_inv8.sv",
+      "adopted_sha256": "c7c51d737ac131b31c5d39390830e37767509f3682f8dcf6f039b55b8ba92da2",
+      "release_sha256": "c7c51d737ac131b31c5d39390830e37767509f3682f8dcf6f039b55b8ba92da2",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/gf_assist.sv",
+      "adopted_sha256": "541585ed56f42e1e709cc1612bca205106657971d1f29028bbf02c46ac089dd0",
+      "release_sha256": "541585ed56f42e1e709cc1612bca205106657971d1f29028bbf02c46ac089dd0",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_alu.sv",
+      "adopted_sha256": "efa2180eee35d803f0346f810db434f88cae7320fb712ea97e5084e1e4edd822",
+      "release_sha256": "efa2180eee35d803f0346f810db434f88cae7320fb712ea97e5084e1e4edd822",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_slow_mul.sv",
+      "adopted_sha256": "67a53f3f591934189a8628c9994279c5e917ebbe83988db6d016d99e531afa63",
+      "release_sha256": "67a53f3f591934189a8628c9994279c5e917ebbe83988db6d016d99e531afa63",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_ger_trf.sv",
+      "adopted_sha256": "2f84db9652fec2383b5d4afd9c693dce379a04ec15332826aa40fba7f83983e6",
+      "release_sha256": "2f84db9652fec2383b5d4afd9c693dce379a04ec15332826aa40fba7f83983e6",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_qgemm.sv",
+      "adopted_sha256": "b28853a7573ac03e6fba8fde22635dd6ed0eff8e16152bfe05a081fd6bf19642",
+      "release_sha256": "b28853a7573ac03e6fba8fde22635dd6ed0eff8e16152bfe05a081fd6bf19642",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_mqeval.sv",
+      "adopted_sha256": "a52b75af9dffdc0c2d3f416bebd004f6c93f5fe2e29e5a5c3fdfe48c63eb06c7",
+      "release_sha256": "a52b75af9dffdc0c2d3f416bebd004f6c93f5fe2e29e5a5c3fdfe48c63eb06c7",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_solveq.sv",
+      "adopted_sha256": "59f8865200b21292e97ee0c563dc461604681e8e25235cb0ae770a2820ccc839",
+      "release_sha256": "59f8865200b21292e97ee0c563dc461604681e8e25235cb0ae770a2820ccc839",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_linxfm.sv",
+      "adopted_sha256": "a36461cfd4b4092bda6cdf294f39965e83c6f68bb0b55d16a10cadcdd19b7a2c",
+      "release_sha256": "a36461cfd4b4092bda6cdf294f39965e83c6f68bb0b55d16a10cadcdd19b7a2c",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/xmpk_extgemm.sv",
+      "adopted_sha256": "f2f49873c01b45fd9aa8cce8c5ea3212b227e2155f0e719bbcbd2a8e80c58f61",
+      "release_sha256": "f2f49873c01b45fd9aa8cce8c5ea3212b227e2155f0e719bbcbd2a8e80c58f61",
+      "upstream_file": null,
+      "upstream_sha256": null,
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "pending owner selection"
+    },
+    {
+      "file": "rtl/copro_alu.sv",
+      "adopted_sha256": "21ddb18a78bab5f0bd3826f6b785bc5cf7519749a06d8fce619fead1c7c2fb81",
+      "release_sha256": "c08c67cec2210758230501e48cf07a1568fc18e43e3d84303542bd1b876f4e87",
+      "upstream_file": "core/cvxif_example/copro_alu.sv",
+      "upstream_sha256": "a6ffa7e2e0778bf1bc1b0609a1880ae9afcf8976d101c03ddb62a97ec00c1768",
+      "upstream_modified": true,
+      "release_change": "added modification notice",
+      "license": "Apache-2.0 WITH SHL-2.0"
+    },
+    {
+      "file": "rtl/instr_decoder.sv",
+      "adopted_sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "release_sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "upstream_file": "core/cvxif_example/instr_decoder.sv",
+      "upstream_sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "Apache-2.0 WITH SHL-2.0"
+    },
+    {
+      "file": "rtl/compressed_instr_decoder.sv",
+      "adopted_sha256": "b7a5bfdc09a732770691e350c4efc154a402b3823578134b23c1cd3ad5e14375",
+      "release_sha256": "b7a5bfdc09a732770691e350c4efc154a402b3823578134b23c1cd3ad5e14375",
+      "upstream_file": "core/cvxif_example/compressed_instr_decoder.sv",
+      "upstream_sha256": "b7a5bfdc09a732770691e350c4efc154a402b3823578134b23c1cd3ad5e14375",
+      "upstream_modified": false,
+      "release_change": "byte-identical",
+      "license": "Apache-2.0 WITH SHL-2.0"
+    },
+    {
+      "file": "rtl/cvxif_example_coprocessor.sv",
+      "adopted_sha256": "09f0f8f665b8f9ea59c409f18735eb0b25f5a705de6eeb6f79fb795ff04766ae",
+      "release_sha256": "3782a28e6c54059b36811bda171f07931040c97ba943a9df4faea4638418d197",
+      "upstream_file": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "upstream_sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7",
+      "upstream_modified": true,
+      "release_change": "added modification notice",
+      "license": "Apache-2.0 WITH SHL-2.0"
+    }
+  ]
+}

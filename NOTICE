@@ -1,0 +1,18 @@
+Xmpk RTL release candidate
+
+The CV-X-IF interface and instruction infrastructure originate from CVA6:
+https://github.com/openhwgroup/cva6
+
+The included upstream files retain the following attribution:
+Copyright 2021 Thales DIS design services SAS
+Copyright 2024 Thales DIS France SAS
+Original Author: Guillaume Chauvon
+
+Xmpk modifies the instruction package, coprocessor ALU, and coprocessor
+wrapper to integrate its custom instructions and accelerators.
+The added modification notices identify those changes.
+
+Other Xmpk arithmetic and accelerator RTL is included as the adopted
+design snapshot. Its release licensing decision is pending.
+
+This NOTICE supplies attribution; it does not modify licence terms.
