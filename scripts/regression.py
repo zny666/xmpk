@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 """Build and run instruction-level regressions from this repository."""
 import argparse
 import os

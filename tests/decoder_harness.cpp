@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 #include <cstdint>
 #include <cstdio>
 #include <random>

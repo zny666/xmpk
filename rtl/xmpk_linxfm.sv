@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Streamed small GF(16) linear transforms for extension-field basis changes.
 module xmpk_linxfm #(
     parameter int unsigned XLEN = 64

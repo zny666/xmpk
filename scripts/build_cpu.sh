@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 set -euo pipefail
 : "${CVA6_REPO_DIR:?Set CVA6_REPO_DIR to the integrated checkout}"
 : "${SPIKE_INSTALL_DIR:?Set SPIKE_INSTALL_DIR to the installed Spike prefix}"

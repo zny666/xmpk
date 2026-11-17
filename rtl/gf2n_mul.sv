@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Generic binary-field multiplier: carry-less product followed by modular
 // reduction modulo the degree-W polynomial whose low coefficients are `poly`.
 // One instance serves GF(16) (x^4+x+1) and GF(256) (AES x^8+x^4+x^3+x+1),

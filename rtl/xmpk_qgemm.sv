@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Autonomous rectangular packed finite-field matrix-multiply tile.
 //
 // Mode 0: GF16, 16 lanes, x^4+x+1.

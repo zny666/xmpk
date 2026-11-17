@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Combinational MPKC assist primitives used to build ger (rank-1 update /
 // dot-product) and solve (Gaussian pivot handling) out of the packed MACs.
 // No multipliers here: these are only broadcast / reduction / find-first.

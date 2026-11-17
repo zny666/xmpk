@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 module decoder_top
   import cvxif_instr_pkg::*;
 (

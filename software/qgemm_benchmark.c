@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 /* P6-1 autonomous rectangular GF(16) QGEMM regression. */
 #include <stdint.h>
 

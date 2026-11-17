@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 """Extract concise OOC results without copying host paths from Vivado reports."""
 import argparse
 import hashlib

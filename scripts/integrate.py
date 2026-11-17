@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 """Apply the Xmpk overlay to an otherwise clean, pinned CVA6 checkout."""
 import argparse
 from pathlib import Path

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // 8 parallel GF(2^8) inverses in one combinational cycle, AES poly 0x11b.
 // Each lane is an independent 256x8 constant ROM (inv(0)=0).  This preserves
 // the single-cycle CV-X-IF result contract; area is ~8 small LUT-ROMs.

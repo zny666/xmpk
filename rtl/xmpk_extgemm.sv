@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Autonomous GF(127^L) matrix multiply for QR-UOV L=3 and L=10.
 //
 // A, B and C are row-major matrices. Every extension-field element occupies

@@ -6,7 +6,7 @@ The release was prepared from the adopted Xmpk RTL snapshot with QGEMM request o
 
 All 17 adopted RTL files were compared across the frozen design, the local development tree, and the design used for the corresponding implementation evaluation. Their adopted hashes match.
 
-Fourteen released RTL files are byte-identical to the adopted source. Three upstream-derived files have an added two-line modification notice: the instruction package, `copro_alu`, and the CV-X-IF wrapper. Removing that notice restores the exact adopted source bytes. The release changes no RTL expressions, states, modules, ports, or instruction encodings.
+The initial RTL snapshot preserved fourteen adopted files byte for byte and added a two-line modification notice to three upstream-derived files. The licensing update additionally adds SPDX comments to the twelve new RTL files. Removing these release-only comments restores the adopted source bytes. RTL expressions, states, modules, ports and instruction encodings remain unchanged.
 
 `snapshot.json` records adopted, released, and available upstream hashes. `SHA256SUMS` verifies the prepared release files.
 

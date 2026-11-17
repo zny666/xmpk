@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Xmpk Stage-2 micro tensor register file and GF(16) GER engine.
 //
 // A GER command updates a contiguous tile entirely inside the TRF:

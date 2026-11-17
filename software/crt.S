@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Minimal M-mode RV64 startup for the public kernel examples.
 .section .text.init
 .globl _start

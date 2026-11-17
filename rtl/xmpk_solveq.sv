@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 module xmpk_solveq_ram (
     input  logic        clk_i,
     input  logic        a_we_i,

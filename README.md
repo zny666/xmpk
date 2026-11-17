@@ -67,4 +67,4 @@ This is the adopted solver implementation. Its pivot handling and singular-input
 
 ## Licensing
 
-Five upstream-derived files retain `Apache-2.0 WITH SHL-2.0`. The twelve added RTL files currently have no selected release license. This directory is a release candidate pending that selection; see [licensing status](LICENSE.md) and [attribution](NOTICE).
+Xmpk is licensed under `Apache-2.0 WITH SHL-2.0`, matching the included CVA6 CV-X-IF interface files. See [LICENSE](LICENSE), [licensing details](LICENSE.md) and [attribution](NOTICE). Existing upstream notices and dependency licences remain applicable.

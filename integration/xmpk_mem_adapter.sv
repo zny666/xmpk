@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Coherent 64-bit memory port for Xmpk autonomous engines.
 // Virtual addresses are translated and PMP-checked by the existing LSU.
 module xmpk_mem_adapter

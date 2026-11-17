@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 #include <stdint.h>
 
 typedef unsigned long long u64;

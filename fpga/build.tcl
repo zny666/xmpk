@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 # Run: vivado -mode batch -source fpga/build.tcl
 set root [file dirname [file dirname [file normalize [info script]]]]
 set out "$root/build/ppa"

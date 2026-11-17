@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Public instruction-level regression using the released decoder and ALU.
 module instruction_top
   import cvxif_instr_pkg::*;

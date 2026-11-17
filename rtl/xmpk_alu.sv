@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Xmpk multi-field arithmetic + MPKC kernel assist unit (minimal-area).
 //
 // Packed multipliers (one 64-bit word services all five MPKC schemes):

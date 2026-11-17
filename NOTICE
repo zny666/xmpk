@@ -1,4 +1,4 @@
-Xmpk RTL release candidate
+Xmpk hardware artifact
 
 The CV-X-IF interface and instruction infrastructure originate from CVA6:
 https://github.com/openhwgroup/cva6
@@ -13,11 +13,11 @@ wrapper to integrate its custom instructions and accelerators.
 The added modification notices identify those changes.
 
 Other Xmpk arithmetic and accelerator RTL is included as the adopted
-design snapshot. Its release licensing decision is pending.
+design snapshot, licensed under Apache-2.0 WITH SHL-2.0.
 
 Supporting tests, instruction interfaces, firmware, CPU integration
 patches and FPGA scripts accompany this snapshot. The CPU patch targets
 the pinned public CVA6 base and preserves the upstream file notices.
-Newly authored support code has no selected release license.
+Newly authored support code is licensed under Apache-2.0 WITH SHL-2.0.
 
 This NOTICE supplies attribution; it does not modify licence terms.

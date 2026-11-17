@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 """Measure public ELFs on CVA6; tohost in simulator output is already decoded."""
 import argparse
 import csv

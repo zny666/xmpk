@@ -1,6 +1,8 @@
 # Public artifact validation
 
-The release preserves all 17 RTL files from the first public snapshot. The checks below exercise the supporting materials added to that snapshot.
+The release preserves the logic of all 17 RTL files from the first public snapshot. The checks below exercise the supporting materials added to that snapshot.
+
+The subsequent licensing update adds SPDX comments and updates the generator's licence headers. Existing source hashes in validation/build records refer to the tested pre-licensing snapshot. `licensing-update.json` maps those files to their licensed bytes; removing the added SPDX comment recovers the tested source. Measurement values and binary/log hashes are preserved.
 
 | Check | Result | Evidence |
 |---|---|---|

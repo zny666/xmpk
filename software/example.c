@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 #include "xmpk_asm.h"
 extern void __attribute__((noreturn)) tohost_exit(unsigned long code);
 static uint64_t a[1] __attribute__((aligned(8))) = {1};

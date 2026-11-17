@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Multi-cycle packed GF256/GF127 engine.
 //
 // start_i op_i=0: 8 packed GF(2^8) multiplications

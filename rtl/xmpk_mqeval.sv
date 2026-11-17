@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Autonomous GF(16) multivariate-quadratic evaluator.
 //
 // Q stores one upper-triangular matrix per equation. Each equation starts on

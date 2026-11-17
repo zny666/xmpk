@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // GF(2^8) multiplicative inverse, AES polynomial x^8+x^4+x^3+x+1 (0x11b).
 //
 // One SHARED 256x8 constant LUT serves all 8 byte lanes: the byte address is

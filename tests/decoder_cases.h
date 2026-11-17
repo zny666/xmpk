@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 // Generated from the released instruction package.
 struct DecodeCase { unsigned base, mask, op, reads, wb; };
 static constexpr DecodeCase decode_cases[] = {

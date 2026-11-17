@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 #include "xmpk_asm.h"
 uint64_t header_probe(uint64_t a, uint64_t b, uint64_t c) {
   xmpk_nop(a, b, c);

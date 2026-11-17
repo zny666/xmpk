@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 """Refresh source manifests after adding supporting reproduction materials."""
 import hashlib
 import json
