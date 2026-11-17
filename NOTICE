@@ -15,4 +15,9 @@ The added modification notices identify those changes.
 Other Xmpk arithmetic and accelerator RTL is included as the adopted
 design snapshot. Its release licensing decision is pending.
 
+Supporting tests, instruction interfaces, firmware, CPU integration
+patches and FPGA scripts accompany this snapshot. The CPU patch targets
+the pinned public CVA6 base and preserves the upstream file notices.
+Newly authored support code has no selected release license.
+
 This NOTICE supplies attribution; it does not modify licence terms.

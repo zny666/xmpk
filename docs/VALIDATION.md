@@ -30,8 +30,12 @@ Existing warnings were retained with `-Wno-fatal`; they were not treated as a wa
 
 `SYMRSVDWORD` refers to the fixture's host member `register`, which matches a C++ keyword. `UNOPTFLAT` refers to the packed response structure where `register_ready` reads `issue_ready` from the same structure. The width diagnostics belong to the retained RTL. Integration lint policy and any subsequent changes should be checked in the concrete host configuration.
 
-## Scope
+## Extended reproduction materials
+
+The release now includes instruction-level tests, assembly interfaces, firmware sources, a pinned CPU integration patch, standalone build/measurement scripts and an OOC FPGA flow. Current checks and reference measurements are recorded in [release results](../results/VALIDATION.md).
+
+## Scope of the initial RTL checks
 
 This release check establishes source preservation and elaboration of the packaged dependencies. It adds no new synthesis, FPGA timing, physical side-channel, whole-signature, or arbitrary-parameter verification claims. The RTL supports the adopted RV64 configuration described in the integration notes.
 
-The prepared directory contains design RTL, source/attribution manifests, licence texts, and concise documentation. CPU sources, test programs, firmware, binaries, synthesis checkpoints, implementation logs, internal host paths, and remote machine identifiers are excluded.
+The initial check covered the RTL snapshot. The extended artifact adds source-level reproduction materials and concise results. Generated binaries/checkpoints, private environment paths and remote machine identifiers remain outside the release.

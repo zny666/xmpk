@@ -4,7 +4,7 @@
     "repository": "https://github.com/openhwgroup/cva6",
     "commit": "742dc82a0c706e0a3bfb98b709fd3ee06d50d12a"
   },
-  "scope": "RTL only; host CPU, firmware, tests, and implementation artifacts are external",
+  "scope": "Adopted RTL, instruction tests/ISA software, pinned CVA6 integration, kernel measurements and coprocessor OOC FPGA reproduction",
   "rtl_files": [
     {
       "file": "rtl/include/cvxif_instr_pkg.sv",
@@ -175,6 +175,200 @@
       "upstream_modified": true,
       "release_change": "added modification notice",
       "license": "Apache-2.0 WITH SHL-2.0"
+    }
+  ],
+  "support_files": [
+    {
+      "file": ".gitattributes",
+      "sha256": "b11161a857171c1c4206c89318e5903f0c2a250e612a5f1cf6c20e1bad3d2e7e"
+    },
+    {
+      "file": ".gitignore",
+      "sha256": "28f6bfaddf234cc07a470b8ab0760dea14a85709e2edeff8cdd179b528241308"
+    },
+    {
+      "file": "LICENSE.md",
+      "sha256": "77846169164850778ef1ad0087f0a507844a289b27fdff3bc9dc8f60fa6873c2"
+    },
+    {
+      "file": "LICENSES/Apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "LICENSES/SHL-2.0.txt",
+      "sha256": "32d570f3bed8c2e7c5a0488f8df1c74fff66bc11f2bc3c7d0c788233dd849a3c"
+    },
+    {
+      "file": "NOTICE",
+      "sha256": "1a428691480adb603b979684e882c468c7c8fbce58373cb9f9e27413ff8ac025"
+    },
+    {
+      "file": "README.md",
+      "sha256": "d8a7a7fa75b29f8d4bf7603f15e9fb1150a666b14852fbf0b8cf3e3389b6086a"
+    },
+    {
+      "file": "docs/ENCODINGS.md",
+      "sha256": "f70c0707f70bf452130d37b9dc8a33ff5ce671882195da9d9c89b72d320d5a3a"
+    },
+    {
+      "file": "docs/INTEGRATION.md",
+      "sha256": "e5863c2d6cda1aa1cd8e0e44479a47aed86c70b7baa3a023698d2ad5ad03c988"
+    },
+    {
+      "file": "docs/ISA.md",
+      "sha256": "919436fbf92f7d78b7131103e141254b96c61ca3a920b2077025f59e2040ec1d"
+    },
+    {
+      "file": "docs/REPRODUCE.md",
+      "sha256": "85fa48d7ea63e6fdb2766f9236709a1b83839c2d185f55e3233fe01439b67750"
+    },
+    {
+      "file": "docs/VALIDATION.md",
+      "sha256": "dc68463ae0147917d829c3a49166a43ea6ac1b126372e454c0b0350127e232f5"
+    },
+    {
+      "file": "fpga/build.tcl",
+      "sha256": "e2f3edd4a47e357b117ed558ce337c0ffae32620f7e2ac90f431fd58227aa728"
+    },
+    {
+      "file": "fpga/clock.xdc",
+      "sha256": "f7c836825a2596ffda46d644e8a780f0fb456221f4d6985975399ea9c593372d"
+    },
+    {
+      "file": "fpga/xmpk_copro_top.sv",
+      "sha256": "26d3ed4059c4e98a084d6496d754348449d10633386dc2811b6f3a056b7cc990"
+    },
+    {
+      "file": "integration/cva6.patch",
+      "sha256": "ab389998f592a9bfdce67a25cb2bced00567a92dd791940d3388c251094399d7"
+    },
+    {
+      "file": "integration/xmpk_mem_adapter.sv",
+      "sha256": "187c79be7f58db210187f9ed5159daddea2efb7322cee92b391f95a29b1475e8"
+    },
+    {
+      "file": "results/VALIDATION.md",
+      "sha256": "e2bbc96b17fc842c9316c61a4c69b4fd0651df6cba00280129c9e36ea1714854"
+    },
+    {
+      "file": "results/benchmark-public-rerun.csv",
+      "sha256": "a2e0e2299b2191f104927647fd331b84dee6b5fa9e24080c5860e3b585fab752"
+    },
+    {
+      "file": "results/benchmark-public-rerun.json",
+      "sha256": "86c5806082f415c3f33426790088c2c0dd4c19c8541f304722784552991dfd6c"
+    },
+    {
+      "file": "results/cpu-build.json",
+      "sha256": "37b4be8005f93a05e5fefa22e741371cb11c34bc88e64e12f34845fde66abfbb"
+    },
+    {
+      "file": "results/field-kernel-reference.json",
+      "sha256": "31b886feadbce31bbed2bb14cb8848ea093a37b762ee4e061d55d5fbf91d41d4"
+    },
+    {
+      "file": "results/firmware-build.json",
+      "sha256": "0dea94f599294cc2a9acde9552559f9d897ae7a5bc6e422348a4fb432112d7f3"
+    },
+    {
+      "file": "results/ppa-public-rerun.json",
+      "sha256": "fd94b803c8da762d5804ab28813dfb1d1ab18b74f68aa838d3b90bab6ec9f45f"
+    },
+    {
+      "file": "results/ppa-reference.json",
+      "sha256": "9a4bee96fda056eac7deeee93ce54418542355784f864f53070858e1f9fd0d6e"
+    },
+    {
+      "file": "results/qgemm-reference.json",
+      "sha256": "1bb3ea5768f788498eb23222b8e89a502b26d6becfbc2df5d55d13c39815f3fc"
+    },
+    {
+      "file": "results/regression.json",
+      "sha256": "152896f2dbb654209fed6f95fbc9b6012e26de46b96145d4d3b2a30c7ee23988"
+    },
+    {
+      "file": "scripts/build_cpu.sh",
+      "sha256": "6fa41fdf09c6a3632384382274d5b24318db76ea58c19c1c7392efb228ad8a1f"
+    },
+    {
+      "file": "scripts/compile_benchmarks.py",
+      "sha256": "c185f99d0d8e9c379398f2143195f87926672be7531cad0de5b56253bc4c9153"
+    },
+    {
+      "file": "scripts/generate_isa.py",
+      "sha256": "a8d3bb273e310812607d2e3eb120d074be68eb0c5be25d9df26c14750c4f6e27"
+    },
+    {
+      "file": "scripts/integrate.py",
+      "sha256": "08d7a21b6871ec4c862f466edc8a98c94b91422aaa95fdf164b657741b20200e"
+    },
+    {
+      "file": "scripts/regression.py",
+      "sha256": "91ee1ea29e5011698317434817a4103a59419b4fe52cced5ffd14f822ebfe28f"
+    },
+    {
+      "file": "scripts/run_benchmarks.py",
+      "sha256": "71ed4c41dde0e3ac92f6f0f7639b3bc73d3c6b8dea15973984ec1ba7f6a04cf6"
+    },
+    {
+      "file": "scripts/summarize_ppa.py",
+      "sha256": "6c1a446c2f46463292efbc443659b4adf8a8348951cab728d338d90a4c4969c0"
+    },
+    {
+      "file": "scripts/update_manifest.py",
+      "sha256": "555caa89c68d9c7656801ab34ce1fcefc48945894816d887ca2d777f1847a9ca"
+    },
+    {
+      "file": "software/crt.S",
+      "sha256": "36a0db02aa74ecc42b6ceb92b9286e793639654f16f74f8951a42f8a271f6bc3"
+    },
+    {
+      "file": "software/example.c",
+      "sha256": "e4e602f3f767ae3985867fc8c384bf18a7aaf01000ffcc7da76c04a673e59990"
+    },
+    {
+      "file": "software/field_benchmark.c",
+      "sha256": "450f6fa8a114b65ff92ec8ffc34adaf20099b299a6da0d90bd0dee7501839d8b"
+    },
+    {
+      "file": "software/instructions.json",
+      "sha256": "294abf72aec04ba802b3932c4ec4134e515de27f34cbc1eefbeaca881cec39f1"
+    },
+    {
+      "file": "software/link.ld",
+      "sha256": "a7d121c0cdde13a07fc9fd2a64ccd4468ae01d7bab8ca4979191b5f149b9ff8d"
+    },
+    {
+      "file": "software/qgemm_benchmark.c",
+      "sha256": "0d4f18c14c760568f11ab378dd92b1f9fc6e2f78ec8d945b2102e2db7649bc41"
+    },
+    {
+      "file": "software/xmpk_asm.h",
+      "sha256": "cd671ec14e6f3b3ff114c7444aa1c2d4d01462fce1a4a5aa1144f3ac8e5aca1d"
+    },
+    {
+      "file": "tests/decoder_cases.h",
+      "sha256": "0c66ba97218f6690b620692c60062506494681bd6ec1f4bae50d259a2f1ef392"
+    },
+    {
+      "file": "tests/decoder_harness.cpp",
+      "sha256": "88130b4d85184773c7db756822beb7a23e90dc69797025dab001fabb56ffffb9"
+    },
+    {
+      "file": "tests/decoder_top.sv",
+      "sha256": "76432b3b9dfd11bcc13bbd309511dadb7fe1c6d4f6637c2da80c5a5e62984665"
+    },
+    {
+      "file": "tests/engine_harness.cpp",
+      "sha256": "c375742ead4243fe8492e5729686ccfa6cd2a37021ca14fcc09088aeb7182749"
+    },
+    {
+      "file": "tests/header_probe.c",
+      "sha256": "ecbc6543e25fd5e01442c39852b008aadaffbf347edfb28ebb6a67b94a01178f"
+    },
+    {
+      "file": "tests/instruction_top.sv",
+      "sha256": "7f790cc791355034f203d9e43d6380233dc241c39d9d771b7ba46e5db624e75e"
     }
   ]
 }

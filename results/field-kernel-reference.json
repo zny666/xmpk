@@ -1,0 +1,117 @@
+{
+  "scope": "Archived SOLVE/EXT architectural cycles; SETUP included; same individual adopted engine sources",
+  "source_record_sha256": "fb2ae1317003dc33bf282f2c54ffdf6f7a73d0f85a0c6b0959b54d217144c152",
+  "model_sha256": "a5577176c677a1c4d189524c8dee57b8117db6f16d0b75ad2260341099b7f036",
+  "compiler_flags": "-O2 -fno-builtin -march=rv64gc -mabi=lp64d",
+  "measurement": "rdcycle delta; SOLVE validates its solution, hardware EXT validates against scalar, scalar EXT is the reference implementation",
+  "rows": [
+    {
+      "case": "ext-10-hardware",
+      "cycles": 198534,
+      "tohost": 198535,
+      "process_exit": 135,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "0035324dc9b04f288b3aa6b0dc79b825c99073a5011058c11afbb1e9b1b9edc0",
+      "log_sha256": "bd739682ae36b5d0baf509b2da1efc14b4b09dc4e120aae8410169a1b08bfe8f"
+    },
+    {
+      "case": "ext-10-layout",
+      "cycles": 510198,
+      "tohost": 510199,
+      "process_exit": 247,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "4a5f40ae9549973af84cf310ead9b905d66c8fcc5acf34e0576fb5918c9d2e49",
+      "log_sha256": "4ed6c50f2b6db24754dc42aa7d9291b974441e128f636543d751c355002f8f8d"
+    },
+    {
+      "case": "ext-10-scalar",
+      "cycles": 4578372,
+      "tohost": 4578373,
+      "process_exit": 69,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "30d2a70d4aa215bbe54584ec8bf7a86457a8703d7fb208e48a3e52e19ac57786",
+      "log_sha256": "ca292e61db4c26394f221bc8bb6ec2a39ad619de3724ffe5ef69f659aad102fa"
+    },
+    {
+      "case": "ext-3-hardware",
+      "cycles": 61176,
+      "tohost": 61177,
+      "process_exit": 249,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "807bd54067b420c2ad338cfa6942ed30e0f7579f2623d1fc06e076d4be1ce5b6",
+      "log_sha256": "422427aef7b20aa24a6f7e04a4c10638f68cdb8898a732de60401b899ea05a7d"
+    },
+    {
+      "case": "ext-3-layout",
+      "cycles": 92287,
+      "tohost": 92288,
+      "process_exit": 128,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "c33228ac6de5143a0464c973dc5dda415037c7b61ff5f85b3e1959241009ed7d",
+      "log_sha256": "6469180e42a4a023e9e8f39f80f4f3482ad17665650d9f70c4701d17efbc82e7"
+    },
+    {
+      "case": "ext-3-scalar",
+      "cycles": 527308,
+      "tohost": 527309,
+      "process_exit": 205,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "d67da02618d1021b214113f7ebb396dc1e51cf91079395e5d836fb95cf983984",
+      "log_sha256": "393cf8df58d090701b99d4b6650a035cc3367f46b74851edd9ef25f94b94dc92"
+    },
+    {
+      "case": "solve-45-hardware",
+      "cycles": 16370,
+      "tohost": 16371,
+      "process_exit": 243,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "776f12fc7efc5465fdcc5cddd8b35248672d4c5eed0d383a38392b1b54ed577d",
+      "log_sha256": "b2442390fbb4aec5769f7fb82bcdf22937d260b6c61fbba9a5db78ba9922825f"
+    },
+    {
+      "case": "solve-45-scalar",
+      "cycles": 824356,
+      "tohost": 824357,
+      "process_exit": 37,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "b9ba884cb61bd62e84162b7b7bf12c5cf0ed20a3db8a36bae753aaa1b970b512",
+      "log_sha256": "5561a0cc1b97f9f5708ea3a91d345d8099efd894ed4f1ce7c7017beed16eb0b4"
+    },
+    {
+      "case": "solve-72-hardware",
+      "cycles": 49298,
+      "tohost": 49299,
+      "process_exit": 147,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "70ed9dfd5890607b3a6b3724a61c0d3b2714cc7ef683a6f5cb895f7b5ca8b603",
+      "log_sha256": "b015514e48d084f911433a506a0d99542d9fbdd09231c1416c33b15d38b4678b"
+    },
+    {
+      "case": "solve-72-scalar",
+      "cycles": 3227451,
+      "tohost": 3227452,
+      "process_exit": 60,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "7190ce5627140302549dfbdecac70fb0e4b432411169752daaa7a138a861ee98",
+      "log_sha256": "ebc6c85a272ca4e4ffb7648af6044be7a287a7f8bb40295f3d355e1768f212bb"
+    },
+    {
+      "case": "solve-96-hardware",
+      "cycles": 96328,
+      "tohost": 96329,
+      "process_exit": 73,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "72b4d9b694ecac61d61b9cb814cb09ee93fb1f3cd56e65f119e2829a7bb04fbc",
+      "log_sha256": "b0d1ef13913e8b5aaa0fbde3f0462a4082d9288f417928a83033845bcf1f2290"
+    },
+    {
+      "case": "solve-96-scalar",
+      "cycles": 7504229,
+      "tohost": 7504230,
+      "process_exit": 102,
+      "exit_encoding": "decoded exit_code = rdcycle delta + 1",
+      "elf_sha256": "d2ffc4d80b19af54e6ffc8911a7368ff4f00b90c8693afc17745bf5ac6ddfd1e",
+      "log_sha256": "8a3a11413a0b7661718917cabfeef8c33f7cd5096ae62787fdb07946085f06c3"
+    }
+  ]
+}

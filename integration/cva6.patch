@@ -1,0 +1,406 @@
+diff --git a/core/Flist.cva6 b/core/Flist.cva6
+index 851153315..82ce0bd4e 100644
+--- a/core/Flist.cva6
++++ b/core/Flist.cva6
+@@ -109,6 +109,18 @@ ${CVA6_REPO_DIR}/core/cvxif_example/cvxif_example_coprocessor.sv
+ ${CVA6_REPO_DIR}/core/cvxif_example/instr_decoder.sv
+ ${CVA6_REPO_DIR}/core/cvxif_example/compressed_instr_decoder.sv
+ ${CVA6_REPO_DIR}/core/cvxif_example/copro_alu.sv
++${CVA6_REPO_DIR}/core/cvxif_example/gf2n_mul.sv
++${CVA6_REPO_DIR}/core/cvxif_example/gf256_inv8.sv
++${CVA6_REPO_DIR}/core/cvxif_example/gf256_inv_rom.sv
++${CVA6_REPO_DIR}/core/cvxif_example/gf_assist.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_alu.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_ger_trf.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_qgemm.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_mqeval.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_solveq.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_linxfm.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_extgemm.sv
++${CVA6_REPO_DIR}/core/cvxif_example/xmpk_slow_mul.sv
+ 
+ // Common Cells
+ ${CVA6_REPO_DIR}/vendor/pulp-platform/common_cells/src/cf_math_pkg.sv
+@@ -131,6 +143,7 @@ ${CVA6_REPO_DIR}/vendor/pulp-platform/common_cells/src/counter.sv
+ ${CVA6_REPO_DIR}/vendor/pulp-platform/common_cells/src/delta_counter.sv
+ 
+ // Top-level source files (not necessarily instantiated at the top of the cva6).
++${CVA6_REPO_DIR}/core/xmpk_mem_adapter.sv
+ ${CVA6_REPO_DIR}/core/cva6.sv
+ ${CVA6_REPO_DIR}/core/cva6_rvfi_probes.sv
+ ${CVA6_REPO_DIR}/core/alu.sv
+diff --git a/core/cache_subsystem/wt_dcache.sv b/core/cache_subsystem/wt_dcache.sv
+index 762488615..3e5e560d6 100644
+--- a/core/cache_subsystem/wt_dcache.sv
++++ b/core/cache_subsystem/wt_dcache.sv
+@@ -193,7 +193,9 @@ module wt_dcache
+   // 0 is used by MMU or implicit read by zcmt, 1 by READ access requests
+   for (genvar k = 0; k < NumPorts - 1; k++) begin : gen_rd_ports
+     // set these to high prio ports
+-    if ((k == 0 && (CVA6Cfg.MmuPresent || CVA6Cfg.RVZCMT )) || (k == 1) || (k == 2 && CVA6Cfg.EnableAccelerator)) begin
++    if ((k == 0 && (CVA6Cfg.MmuPresent || CVA6Cfg.RVZCMT )) ||
++        (k == 1) ||
++        (k == 2 && (CVA6Cfg.EnableAccelerator || CVA6Cfg.CvxifEn))) begin
+       assign rd_prio[k] = 1'b1;
+       wt_dcache_ctrl #(
+           .CVA6Cfg(CVA6Cfg),
+diff --git a/core/cva6.sv b/core/cva6.sv
+index 5b7c505e7..da2d49bf9 100644
+--- a/core/cva6.sv
++++ b/core/cva6.sv
+@@ -232,8 +232,19 @@ module cva6
+     parameter type accelerator_resp_t = logic,
+ 
+     // Accelerator - CVA6's MMU
+-    parameter type acc_mmu_req_t  = logic,
+-    parameter type acc_mmu_resp_t = logic,
++    parameter type acc_mmu_req_t = struct packed {
++      logic                    acc_mmu_req;
++      exception_t              acc_mmu_misaligned_ex;
++      logic                    acc_mmu_is_store;
++      logic [CVA6Cfg.VLEN-1:0] acc_mmu_vaddr;
++    },
++    parameter type acc_mmu_resp_t = struct packed {
++      logic                       acc_mmu_valid;
++      logic [CVA6Cfg.PLEN-1:0]    acc_mmu_paddr;
++      exception_t                 acc_mmu_exception;
++      logic                       acc_mmu_dtlb_hit;
++      logic [CVA6Cfg.PPNW-1:0]    acc_mmu_dtlb_ppn;
++    },
+ 
+     // AXI types
+     parameter type axi_ar_chan_t = struct packed {
+@@ -342,6 +353,16 @@ module cva6
+     output cvxif_req_t cvxif_req_o,
+     // CVXIF response - SUBSYSTEM
+     input cvxif_resp_t cvxif_resp_i,
++  // Xmpk coherent memory sideband - SUBSYSTEM
++    input logic xmpk_mem_req_valid_i,
++    output logic xmpk_mem_req_ready_o,
++    input logic [CVA6Cfg.XLEN-1:0] xmpk_mem_req_addr_i,
++  input logic xmpk_mem_req_write_i,
++  input logic [CVA6Cfg.XLEN-1:0] xmpk_mem_req_wdata_i,
++    input logic xmpk_mem_req_kill_i,
++    output logic xmpk_mem_rsp_valid_o,
++    output logic [CVA6Cfg.XLEN-1:0] xmpk_mem_rsp_data_o,
++    output logic xmpk_mem_rsp_error_o,
+     // noc request, can be AXI or OpenPiton - SUBSYSTEM
+     output noc_req_t noc_req_o,
+     // noc response, can be AXI or OpenPiton - SUBSYSTEM
+@@ -686,6 +707,11 @@ module cva6
+   dcache_req_o_t dcache_req_ports_cache_id;
+   dcache_req_i_t [1:0] dcache_req_ports_acc_cache;
+   dcache_req_o_t [1:0] dcache_req_ports_cache_acc;
++  dcache_req_i_t xmpk_dcache_req;
++  dcache_req_o_t xmpk_dcache_rsp;
++  logic xmpk_xlate_req;
++  logic xmpk_xlate_store;
++  logic [CVA6Cfg.VLEN-1:0] xmpk_xlate_vaddr;
+   logic dcache_commit_wbuffer_empty;
+   logic dcache_commit_wbuffer_not_ni;
+ 
+@@ -1659,6 +1685,11 @@ module cva6
+   // ----------------
+ 
+   if (CVA6Cfg.EnableAccelerator) begin : gen_accelerator
++    assign xmpk_mem_req_ready_o = 1'b0;
++    assign xmpk_mem_rsp_valid_o = 1'b0;
++    assign xmpk_mem_rsp_data_o  = '0;
++    assign xmpk_mem_rsp_error_o = 1'b1;
++
+     acc_dispatcher #(
+         .CVA6Cfg           (CVA6Cfg),
+         .fu_data_t         (fu_data_t),
+@@ -1734,11 +1765,55 @@ module cva6
+     assign flush_acc                  = '0;
+     assign single_step_acc_commit     = '0;
+ 
+-    // D$ connection is unused
+-    assign dcache_req_ports_acc_cache = '0;
+-
+-    // MMU access is unused
+-    assign acc_mmu_req                = '0;
++    if (CVA6Cfg.CvxifEn) begin : gen_xmpk_mem
++      xmpk_mem_adapter #(
++          .CVA6Cfg(CVA6Cfg),
++          .dcache_req_i_t(dcache_req_i_t),
++          .dcache_req_o_t(dcache_req_o_t)
++      ) i_xmpk_mem_adapter (
++          .clk_i(clk_i),
++          .rst_ni(rst_ni),
++          .req_valid_i(xmpk_mem_req_valid_i),
++          .req_ready_o(xmpk_mem_req_ready_o),
++          .req_addr_i(xmpk_mem_req_addr_i),
++          .req_write_i(xmpk_mem_req_write_i),
++          .req_wdata_i(xmpk_mem_req_wdata_i),
++          .req_kill_i(xmpk_mem_req_kill_i),
++          .rsp_valid_o(xmpk_mem_rsp_valid_o),
++          .rsp_data_o(xmpk_mem_rsp_data_o),
++          .rsp_error_o(xmpk_mem_rsp_error_o),
++          .xlate_req_o(xmpk_xlate_req),
++          .xlate_vaddr_o(xmpk_xlate_vaddr),
++          .xlate_store_o(xmpk_xlate_store),
++          .xlate_valid_i(acc_mmu_resp.acc_mmu_valid),
++          .xlate_paddr_i(acc_mmu_resp.acc_mmu_paddr),
++          .xlate_error_i(acc_mmu_resp.acc_mmu_exception.valid),
++          .dcache_req_o(xmpk_dcache_req),
++          .dcache_rsp_i(xmpk_dcache_rsp),
++          .dcache_wbuffer_empty_i(no_st_pending_commit)
++      );
++      always_comb begin
++        acc_mmu_req = '0;
++        acc_mmu_req.acc_mmu_req = xmpk_xlate_req;
++        acc_mmu_req.acc_mmu_vaddr = xmpk_xlate_vaddr;
++        acc_mmu_req.acc_mmu_is_store = xmpk_xlate_store;
++        acc_mmu_req.acc_mmu_misaligned_ex = '0;
++      end
++      assign dcache_req_ports_acc_cache[0] =
++          xmpk_xlate_store ? '0 : xmpk_dcache_req;
++      assign dcache_req_ports_acc_cache[1] =
++          xmpk_xlate_store ? xmpk_dcache_req : '0;
++      assign xmpk_dcache_rsp =
++          xmpk_xlate_store ? dcache_req_ports_cache_acc[1] :
++                             dcache_req_ports_cache_acc[0];
++    end else begin : gen_no_xmpk_mem
++      assign dcache_req_ports_acc_cache = '0;
++      assign acc_mmu_req = '0;
++      assign xmpk_mem_req_ready_o = 1'b0;
++      assign xmpk_mem_rsp_valid_o = 1'b0;
++      assign xmpk_mem_rsp_data_o  = '0;
++      assign xmpk_mem_rsp_error_o = 1'b1;
++    end
+ 
+     // No invalidation interface
+     assign inval_valid                = '0;
+diff --git a/core/include/build_config_pkg.sv b/core/include/build_config_pkg.sv
+index 429080949..b0abdc932 100644
+--- a/core/include/build_config_pkg.sv
++++ b/core/include/build_config_pkg.sv
+@@ -93,7 +93,7 @@ package build_config_pkg;
+     cfg.XF16ALTVec = bit'(XF16ALTVec);
+     cfg.XF8Vec = bit'(XF8Vec);
+     // Can take 2 or 3 in single issue. 4 or 6 in dual issue.
+-    cfg.NrRgprPorts = unsigned'(CVA6Cfg.SuperscalarEn ? 4 : 2);
++    cfg.NrRgprPorts = unsigned'(CVA6Cfg.SuperscalarEn ? 6 : 3);
+     // cfg.NrRgprPorts = unsigned'(CVA6Cfg.SuperscalarEn ? 6 : 3);
+     cfg.NrWbPorts = unsigned'(NrWbPorts);
+     cfg.EnableAccelerator = bit'(EnableAccelerator);
+diff --git a/core/include/cv64a6_imafdc_sv39_config_pkg.sv b/core/include/cv64a6_imafdc_sv39_config_pkg.sv
+index 707ecc1d9..e043d0882 100644
+--- a/core/include/cv64a6_imafdc_sv39_config_pkg.sv
++++ b/core/include/cv64a6_imafdc_sv39_config_pkg.sv
+@@ -106,7 +106,7 @@ package cva6_config_pkg;
+       RVZCMP: bit'(CVA6ConfigZcmpExtEn),
+       XFVec: bit'(CVA6ConfigFVecEn),
+       CvxifEn: bit'(CVA6ConfigCvxifEn),
+-      CoproType: config_pkg::COPRO_NONE,
++      CoproType: config_pkg::COPRO_EXAMPLE,
+       RVZiCond: bit'(CVA6ConfigRVZiCond),
+       RVZiCbom: bit'(0),
+       RVZicntr: bit'(1),
+diff --git a/core/load_store_unit.sv b/core/load_store_unit.sv
+index 12562063e..749f1b4ad 100644
+--- a/core/load_store_unit.sv
++++ b/core/load_store_unit.sv
+@@ -429,7 +429,7 @@ module load_store_unit
+   // External MMU port
+   // ------------------
+ 
+-  if (CVA6Cfg.EnableAccelerator) begin
++  if (CVA6Cfg.EnableAccelerator || CVA6Cfg.CvxifEn) begin
+     // The MMU can be connected to CVA6 or the ACCELERATOR
+     enum logic {
+       CVA6,
+diff --git a/corev_apu/src/ariane.sv b/corev_apu/src/ariane.sv
+index 272b7f351..64ae65c92 100644
+--- a/corev_apu/src/ariane.sv
++++ b/corev_apu/src/ariane.sv
+@@ -70,6 +70,11 @@ module ariane import ariane_pkg::*; #(
+ 
+   cvxif_req_t  cvxif_req;
+   cvxif_resp_t cvxif_resp;
++  logic xmpk_mem_req_valid, xmpk_mem_req_ready, xmpk_mem_req_kill;
++  logic xmpk_mem_req_write;
++  logic [CVA6Cfg.XLEN-1:0] xmpk_mem_req_addr, xmpk_mem_req_wdata;
++  logic xmpk_mem_rsp_valid, xmpk_mem_rsp_error;
++  logic [CVA6Cfg.XLEN-1:0] xmpk_mem_rsp_data;
+ 
+   cva6 #(
+     .CVA6Cfg ( CVA6Cfg ),
+@@ -106,6 +111,15 @@ module ariane import ariane_pkg::*; #(
+     .rvfi_probes_o        ( rvfi_probes_o             ),
+     .cvxif_req_o          ( cvxif_req                 ),
+     .cvxif_resp_i         ( cvxif_resp                ),
++    .xmpk_mem_req_valid_i ( xmpk_mem_req_valid        ),
++    .xmpk_mem_req_ready_o ( xmpk_mem_req_ready        ),
++    .xmpk_mem_req_addr_i  ( xmpk_mem_req_addr         ),
++    .xmpk_mem_req_write_i ( xmpk_mem_req_write        ),
++    .xmpk_mem_req_wdata_i ( xmpk_mem_req_wdata        ),
++    .xmpk_mem_req_kill_i  ( xmpk_mem_req_kill         ),
++    .xmpk_mem_rsp_valid_o ( xmpk_mem_rsp_valid        ),
++    .xmpk_mem_rsp_data_o  ( xmpk_mem_rsp_data         ),
++    .xmpk_mem_rsp_error_o ( xmpk_mem_rsp_error        ),
+     .noc_req_o            ( noc_req_o                 ),
+     .noc_resp_i           ( noc_resp_i                )
+   );
+@@ -132,13 +146,32 @@ module ariane import ariane_pkg::*; #(
+         .clk_i                ( clk_i                          ),
+         .rst_ni               ( rst_ni                         ),
+         .cvxif_req_i          ( cvxif_req                      ),
+-        .cvxif_resp_o         ( cvxif_resp                     )
++        .cvxif_resp_o         ( cvxif_resp                     ),
++        .mem_req_valid_o      ( xmpk_mem_req_valid             ),
++        .mem_req_ready_i      ( xmpk_mem_req_ready             ),
++        .mem_req_addr_o       ( xmpk_mem_req_addr              ),
++        .mem_req_write_o      ( xmpk_mem_req_write             ),
++        .mem_req_wdata_o      ( xmpk_mem_req_wdata             ),
++        .mem_req_kill_o       ( xmpk_mem_req_kill              ),
++        .mem_rsp_valid_i      ( xmpk_mem_rsp_valid             ),
++        .mem_rsp_data_i       ( xmpk_mem_rsp_data              ),
++        .mem_rsp_error_i      ( xmpk_mem_rsp_error             )
+       );
+     end else begin: gen_COPRO_NONE
+       assign cvxif_resp = '{compressed_ready: 1'b1, issue_ready: 1'b1, register_ready: 1'b1, default: '0};
++      assign xmpk_mem_req_valid = 1'b0;
++      assign xmpk_mem_req_addr  = '0;
++      assign xmpk_mem_req_write = 1'b0;
++      assign xmpk_mem_req_wdata = '0;
++      assign xmpk_mem_req_kill  = 1'b0;
+     end
+   end else begin: gen_no_cvxif
+     assign cvxif_resp = '0;
++    assign xmpk_mem_req_valid = 1'b0;
++    assign xmpk_mem_req_addr  = '0;
++    assign xmpk_mem_req_write = 1'b0;
++    assign xmpk_mem_req_wdata = '0;
++    assign xmpk_mem_req_kill  = 1'b0;
+   end
+ 
+ 
+diff --git a/corev_apu/tb/rvfi_tracer.sv b/corev_apu/tb/rvfi_tracer.sv
+index 1fdd099f2..cce1d1bbd 100644
+--- a/corev_apu/tb/rvfi_tracer.sv
++++ b/corev_apu/tb/rvfi_tracer.sv
+@@ -39,10 +39,15 @@ module rvfi_tracer #(
+   longint unsigned TOHOST_ADDR;
+   string binary;
+   int f;
++  bit trace_enabled;
+   int unsigned SIM_FINISH;
+   initial begin
+     TOHOST_ADDR = '0;
+-    f = $fopen($sformatf("trace_rvfi_hart_%h.dasm", HART_ID), "w");
++    trace_enabled = !$test$plusargs("rvfi_trace_disable");
++    if (trace_enabled)
++      f = $fopen($sformatf("trace_rvfi_hart_%h.dasm", HART_ID), "w");
++    else
++      f = 0;
+     if (!$value$plusargs("time_out=%d", SIM_FINISH)) SIM_FINISH = 2000000;
+     if (!$value$plusargs("tohost_addr=%h", TOHOST_ADDR)) TOHOST_ADDR = '0;
+     if (TOHOST_ADDR == '0) begin
+@@ -55,12 +60,13 @@ module rvfi_tracer #(
+         $display("*** [rvf_tracer] INFO: tohost_addr: %h", TOHOST_ADDR);
+         if (TOHOST_ADDR == '0) begin
+             $display("*** [rvf_tracer] WARNING: No valid address of 'tohost' (tohost == 0x%h), termination possible only by timeout or Ctrl-C!\n", TOHOST_ADDR);
+-            $fwrite(f, "*** [rvfi_tracer] WARNING No valid address of 'tohost' (tohost == 0x%h), termination possible only by timeout or Ctrl-C!\n", TOHOST_ADDR);
++            if (trace_enabled)
++              $fwrite(f, "*** [rvfi_tracer] WARNING No valid address of 'tohost' (tohost == 0x%h), termination possible only by timeout or Ctrl-C!\n", TOHOST_ADDR);
+         end
+     end
+   end
+ 
+-  final $fclose(f);
++  final if (trace_enabled) $fclose(f);
+ 
+   logic [31:0] cycles;
+   // Generate the trace based on RVFI
+@@ -113,20 +119,24 @@ module rvfi_tracer #(
+         logic dest_is_fp;
+         // Instruction information
+         if (rvfi_i[i].intr[2]) begin
+-           $fwrite(f, "core   INTERRUPT 0: 0x%h (0x%h) DASM(%h)\n",
+-             pc64, rvfi_i[i].insn, rvfi_i[i].insn);
++           if (trace_enabled)
++             $fwrite(f, "core   INTERRUPT 0: 0x%h (0x%h) DASM(%h)\n",
++               pc64, rvfi_i[i].insn, rvfi_i[i].insn);
+         end
+         else begin
+-           $fwrite(f, "core   0: 0x%h (0x%h) DASM(%h)\n",
+-             pc64, rvfi_i[i].insn, rvfi_i[i].insn);
++           if (trace_enabled)
++             $fwrite(f, "core   0: 0x%h (0x%h) DASM(%h)\n",
++               pc64, rvfi_i[i].insn, rvfi_i[i].insn);
+         end
+         // Destination register information
+         if (rvfi_i[i].insn[1:0] != 2'b11) begin
+-          $fwrite(f, "%h 0x%h (0x%h)",
+-            rvfi_i[i].mode, pc64, rvfi_i[i].insn[15:0]);
++          if (trace_enabled)
++            $fwrite(f, "%h 0x%h (0x%h)",
++              rvfi_i[i].mode, pc64, rvfi_i[i].insn[15:0]);
+         end else begin
+-          $fwrite(f, "%h 0x%h (0x%h)",
+-            rvfi_i[i].mode, pc64, rvfi_i[i].insn);
++          if (trace_enabled)
++            $fwrite(f, "%h 0x%h (0x%h)",
++              rvfi_i[i].mode, pc64, rvfi_i[i].insn);
+         end
+         // Decode instruction to know if destination register is FP register.
+         // Handle both uncompressed and compressed instructions.
+@@ -149,16 +159,20 @@ module rvfi_tracer #(
+         end
+ 
+         if (dest_is_fp) begin
+-          $fwrite(f, " f%d 0x%h", rvfi_i[i].rd_addr, rvfi_i[i].rd_wdata);
++          if (trace_enabled)
++            $fwrite(f, " f%d 0x%h", rvfi_i[i].rd_addr, rvfi_i[i].rd_wdata);
+         end else if (rvfi_i[i].rd_addr != 0) begin
+-          $fwrite(f, " x%d 0x%h", rvfi_i[i].rd_addr, rvfi_i[i].rd_wdata);
++          if (trace_enabled)
++            $fwrite(f, " x%d 0x%h", rvfi_i[i].rd_addr, rvfi_i[i].rd_wdata);
+           if (rvfi_i[i].mem_rmask != 0) begin
+-            $fwrite(f, " mem 0x%h", rvfi_i[i].mem_addr);
++            if (trace_enabled)
++              $fwrite(f, " mem 0x%h", rvfi_i[i].mem_addr);
+           end
+         end
+         // Handle memory writes (including for AMO instructions which have both rd and mem_wmask)
+         if (rvfi_i[i].mem_wmask != 0) begin
+-          $fwrite(f, " mem 0x%h 0x%h", rvfi_i[i].mem_addr, rvfi_i[i].mem_wdata);
++          if (trace_enabled)
++            $fwrite(f, " mem 0x%h 0x%h", rvfi_i[i].mem_addr, rvfi_i[i].mem_wdata);
+           if (TOHOST_ADDR != '0 &&
+               rvfi_i[i].mem_paddr == TOHOST_ADDR &&
+               rvfi_i[i].mem_wdata[0] == 1'b1) begin
+@@ -166,7 +180,7 @@ module rvfi_tracer #(
+             $display("*** [rvfi_tracer] INFO: Simulation terminated after %d cycles!\n", cycles);
+           end
+         end
+-        $fwrite(f, "\n");
++        if (trace_enabled) $fwrite(f, "\n");
+       end else begin
+         if (rvfi_i[i].trap) begin
+           case (rvfi_i[i].cause)
+@@ -186,9 +200,11 @@ module rvfi_tracer #(
+             32'hf: cause = "STORE_PAGE_FAULT";
+           endcase;
+           if (rvfi_i[i].insn[1:0] != 2'b11) begin
+-            $fwrite(f, "%s exception @ 0x%h (0x%h)\n", cause, pc64, rvfi_i[i].insn[15:0]);
++            if (trace_enabled)
++              $fwrite(f, "%s exception @ 0x%h (0x%h)\n", cause, pc64, rvfi_i[i].insn[15:0]);
+           end else begin
+-            $fwrite(f, "%s exception @ 0x%h (0x%h)\n", cause, pc64, rvfi_i[i].insn);
++            if (trace_enabled)
++              $fwrite(f, "%s exception @ 0x%h (0x%h)\n", cause, pc64, rvfi_i[i].insn);
+           end
+         end
+       end
+@@ -212,7 +228,7 @@ module rvfi_tracer #(
+   logic [63:0] debug [0:DEBUG_SIZE-1], debug_previous [0:DEBUG_SIZE-1];
+ 
+   always_ff @(posedge clk_i) begin
+-    if (cycles > DEBUG_START && cycles < DEBUG_STOP)
++    if (trace_enabled && cycles > DEBUG_START && cycles < DEBUG_STOP)
+       for (int index = 0; index < DEBUG_SIZE; index++)
+         if (debug_previous[index] != debug[index])
+           $fwrite(f, "%d %s %x\n", cycles, name[index], debug[index]);

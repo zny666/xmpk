@@ -1,0 +1,6 @@
+# Keep source text stable across checkouts.
+* text=auto eol=lf
+# Unified diffs represent an unchanged blank source line with one space.
+integration/cva6.patch whitespace=-blank-at-eol
+# CSV exports use RFC 4180 CRLF; preserve those bytes for release checksums.
+results/*.csv -text whitespace=cr-at-eol

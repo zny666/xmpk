@@ -1,0 +1,42 @@
+#include "xmpk_asm.h"
+uint64_t header_probe(uint64_t a, uint64_t b, uint64_t c) {
+  xmpk_nop(a, b, c);
+  c = xmpk_gf16_mul(a, b, c);
+  c = xmpk_gf16_macc(a, b, c);
+  c = xmpk_gf256_mul(a, b, c);
+  c = xmpk_gf127_mul(a, b, c);
+  c = xmpk_vbroad16(a, b, c);
+  c = xmpk_vbroad256(a, b, c);
+  c = xmpk_xorfold16(a, b, c);
+  c = xmpk_xorfold256(a, b, c);
+  c = xmpk_gf256_inv(a, b, c);
+  c = xmpk_fnz16(a, b, c);
+  c = xmpk_fnz256(a, b, c);
+  xmpk_trf_write(a, b, c);
+  c = xmpk_trf_read(a, b, c);
+  c = xmpk_ger16(a, b, c);
+  c = xmpk_ger16r(a, b, c);
+  c = xmpk_bger16r(a, b, c);
+  c = xmpk_atrf_load(a, b, c);
+  c = xmpk_ager16r(a, b, c);
+  c = xmpk_atrf_load16(a, b, c);
+  c = xmpk_ager16x16(a, b, c);
+  c = xmpk_ager16r2(a, b, c);
+  c = xmpk_gf16_dot(a, b, c);
+  c = xmpk_pivot16(a, b, c);
+  c = xmpk_rowelim16(a, b, c);
+  xmpk_ger_setup(a, b, c);
+  c = xmpk_ger_run(a, b, c);
+  c = xmpk_xmem_store(a, b, c);
+  xmpk_qgemm_setup(a, b, c);
+  c = xmpk_qgemm_run(a, b, c);
+  xmpk_mqeval_setup(a, b, c);
+  c = xmpk_mqeval_run(a, b, c);
+  xmpk_solveq_setup(a, b, c);
+  c = xmpk_solveq_run(a, b, c);
+  xmpk_linxfm_setup(a, b, c);
+  c = xmpk_linxfm_run(a, b, c);
+  xmpk_extgemm_setup(a, b, c);
+  c = xmpk_extgemm_run(a, b, c);
+  return c;
+}

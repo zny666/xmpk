@@ -2,6 +2,7 @@
 ._*
 obj_dir/
 build/
+/cva6/
 *.o
 *.a
 *.so
@@ -15,3 +16,5 @@ build/
 *.elf
 .Xil/
 *.zip
+__pycache__/
+*.pyc

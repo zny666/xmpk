@@ -1,0 +1,420 @@
+[
+  {
+    "opcode": "NOP",
+    "encoding": "0x0000007b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "opcode": "GF16_MUL",
+    "encoding": "0x0800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GF16_MACC",
+    "encoding": "0x0200107b",
+    "mask": "0x0600707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GF256_MUL",
+    "encoding": "0x1000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GF127_MUL",
+    "encoding": "0x1800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "VBROAD16",
+    "encoding": "0x2000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "VBROAD256",
+    "encoding": "0x2800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "XORFOLD16",
+    "encoding": "0x3000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "XORFOLD256",
+    "encoding": "0x3800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "GF256_INV",
+    "encoding": "0x4000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "FNZ16",
+    "encoding": "0x4800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "FNZ256",
+    "encoding": "0x5000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "TRF_WRITE",
+    "encoding": "0x5800107b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "TRF_READ",
+    "encoding": "0x6000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "opcode": "GER16",
+    "encoding": "0x6800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GER16R",
+    "encoding": "0x7000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "BGER16R",
+    "encoding": "0x7800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "ATRF_LOAD",
+    "encoding": "0x8000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "AGER16R",
+    "encoding": "0x8800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "ATRF_LOAD16",
+    "encoding": "0x9000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "AGER16X16",
+    "encoding": "0x9800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "AGER16R2",
+    "encoding": "0xa000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GF16_DOT",
+    "encoding": "0xa800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "PIVOT16",
+    "encoding": "0xb000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "ROWELIM16",
+    "encoding": "0xb800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GER_SETUP",
+    "encoding": "0xc000107b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "GER_RUN",
+    "encoding": "0xc800107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "XMEM_STORE",
+    "encoding": "0xd000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "QGEMM_SETUP",
+    "encoding": "0xd800107b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "QGEMM_RUN",
+    "encoding": "0xe000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "MQEVAL_SETUP",
+    "encoding": "0xe800107b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "MQEVAL_RUN",
+    "encoding": "0xf000107b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "SOLVEQ_SETUP",
+    "encoding": "0x0800207b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "SOLVEQ_RUN",
+    "encoding": "0x1000207b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "LINXFM_SETUP",
+    "encoding": "0x1800207b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "LINXFM_RUN",
+    "encoding": "0x2000207b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "opcode": "EXTGEMM_SETUP",
+    "encoding": "0x2800207b",
+    "mask": "0xfe00707f",
+    "writeback": false,
+    "read_old_rd_rs2_rs1": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "opcode": "EXTGEMM_RUN",
+    "encoding": "0x3000207b",
+    "mask": "0xfe00707f",
+    "writeback": true,
+    "read_old_rd_rs2_rs1": [
+      0,
+      0,
+      1
+    ]
+  }
+]

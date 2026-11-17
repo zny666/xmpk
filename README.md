@@ -1,4 +1,4 @@
-# Xmpk RTL
+# Xmpk hardware artifact
 
 SystemVerilog hardware for **Xmpk: A Cross-Scheme RISC-V Extension for Multivariate Post-Quantum Signatures**.
 
@@ -27,7 +27,7 @@ This source snapshot contains the adopted 64-bit accelerator design, including Q
 
 Use `cvxif_example_coprocessor` for the typed CV-X-IF interface, or `copro_alu` for a direct opcode/operand interface. The adopted configuration uses `XLEN=64` and three register-read ports. Several instructions consume the old destination register through operand 3.
 
-The integrating CPU supplies CV-X-IF packed structure types and connects the accelerator memory port to its memory system. The CPU RTL and its accelerator-to-memory adapter are external dependencies; this snapshot contains the coprocessor RTL.
+The integrating CPU supplies CV-X-IF packed structure types and connects the accelerator memory port to its memory system. `integration/` contains the pinned CVA6 patch and coherent memory adapter; the upstream CPU and its submodules are fetched separately.
 
 See [integration notes](docs/INTEGRATION.md) for operand mapping, handshakes, completion handling, and configuration requirements. A standalone engine can be elaborated with Verilator from the repository root:
 
@@ -37,6 +37,25 @@ verilator --lint-only --assert -Wno-fatal \
 ```
 
 Other engine entry points include `xmpk_mqeval`, `xmpk_solveq`, `xmpk_linxfm`, and `xmpk_extgemm`. Elaborating the typed wrapper requires the host's concrete type parameters; its default `logic` parameters are placeholders.
+
+## Reproduction materials
+
+| Directory | Material |
+|---|---|
+| `tests/` | Instruction-level C++ reference tests, random/boundary cases, backpressure, faults and reset recovery |
+| `software/` | All-instruction assembly header, a small example, standalone startup/linker and QGEMM/SOLVE/EXT benchmarks |
+| `integration/` | Patch against CVA6 commit `742dc82a0c706e0a3bfb98b709fd3ee06d50d12a` and coherent memory adapter |
+| `scripts/` | ISA generation, regression, CPU integration/build, firmware compilation and cycle collection |
+| `fpga/` | Vivado OOC implementation Tcl, Artix-7 part and 80 MHz clock constraint |
+| `results/` | Concise release validation and measured reference data with scope/provenance |
+
+Start with [reproduction instructions](docs/REPRODUCE.md). [ISA usage](docs/ISA.md) and the [37-instruction encoding table](docs/ENCODINGS.md) specify operands, layouts, SETUP/RUN and completion status.
+
+```sh
+python3 scripts/regression.py
+python3 scripts/compile_benchmarks.py --cc /path/to/riscv64-unknown-elf-gcc
+vivado -mode batch -source fpga/build.tcl
+```
 
 ## Snapshot and validation
 

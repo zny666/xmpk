@@ -1,0 +1,32 @@
+{
+  "tool": "Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025",
+  "part": "xc7a200tfbg676-2",
+  "scope": "Coprocessor OOC, 80 MHz core clock; external I/O unconstrained",
+  "timing": {
+    "WNS_ns": 0.144,
+    "WHS_ns": 0.098,
+    "WPWS_ns": 5.12
+  },
+  "internal_timing_nonnegative": true,
+  "post_route": {
+    "LUT": 13392.0,
+    "FF": 8021.0,
+    "BRAM_tiles": 4.0,
+    "DSP": 8.0
+  },
+  "power": {
+    "method": "post-route vectorless estimate",
+    "confidence": "Medium",
+    "ambient_C": 25.0,
+    "junction_C": 25.4,
+    "airflow_LFM": 250.0,
+    "total_W": 0.224,
+    "dynamic_W": 0.102,
+    "static_W": 0.122
+  },
+  "report_sha256": {
+    "route-util.rpt": "7d67f75be8548f843092a8023de9aa52a56d467ce048efbbae3bcc916747affc",
+    "timing.rpt": "3e92a23cd436720f49dda62a2e5d81b47c0cfbbf35b4e15199ba0a3c354e10a9",
+    "power.rpt": "cc4b72b11d03fc23f4baa8df90803314bb20f8284037fb3f88fe1c3e83f78506"
+  }
+}

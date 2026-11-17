@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "upstream_commit": "742dc82a0c706e0a3bfb98b709fd3ee06d50d12a",
+  "entry": "scripts/build_cpu.sh",
+  "entry_sha256": "6fa41fdf09c6a3632384382274d5b24318db76ea58c19c1c7392efb228ad8a1f",
+  "patch_sha256": "ab389998f592a9bfdce67a25cb2bced00567a92dd791940d3388c251094399d7",
+  "verilator": "Verilator 5.008 2023-03-04 rev v5.008",
+  "model_sha256": "a825800c629027a6882d7d1b09f1b23e2fc5415a183f122125779cd19a48f5b6",
+  "build_log_sha256": "070de98c2b9a19a2d4ff4836860165718e256ec744637d5b7741c9530f7625fd",
+  "hardware_submodules": "Hardware source files match the revisions pinned by the CVA6 base",
+  "simulation_mode": "RV64GC, single issue, three register-read ports, M-mode public firmware",
+  "smoke_test": "software/example.c, packed GF16 multiplication and coherent QGEMM"
+}

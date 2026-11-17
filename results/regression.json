@@ -1,0 +1,56 @@
+{
+  "tool": "Verilator 5.008",
+  "seed": "0x225613",
+  "source_sha256": {
+    "tests/engine_harness.cpp": "c375742ead4243fe8492e5729686ccfa6cd2a37021ca14fcc09088aeb7182749",
+    "tests/header_probe.c": "ecbc6543e25fd5e01442c39852b008aadaffbf347edfb28ebb6a67b94a01178f",
+    "tests/decoder_harness.cpp": "88130b4d85184773c7db756822beb7a23e90dc69797025dab001fabb56ffffb9",
+    "tests/decoder_top.sv": "76432b3b9dfd11bcc13bbd309511dadb7fe1c6d4f6637c2da80c5a5e62984665",
+    "tests/decoder_cases.h": "0c66ba97218f6690b620692c60062506494681bd6ec1f4bae50d259a2f1ef392",
+    "tests/instruction_top.sv": "7f790cc791355034f203d9e43d6380233dc241c39d9d771b7ba46e5db624e75e"
+  },
+  "suites": [
+    {
+      "suite": "DECODER",
+      "result": "PASS",
+      "metric_rows": 0,
+      "log_sha256": "d68ee08761415f0c8abaf8d966e690608ad2c2ab360cef38066492e0d31a278d"
+    },
+    {
+      "suite": "EXT",
+      "result": "PASS",
+      "metric_rows": 34,
+      "log_sha256": "5776d5e01c6690b943d26bd2a263a162db57daaefeff47c74431f7fd940aa6dc"
+    },
+    {
+      "suite": "Q",
+      "result": "PASS",
+      "metric_rows": 72,
+      "log_sha256": "d3b099a736f520baf8e6a232f8e7689e93d81076056bed090799b7cef3c2050d"
+    },
+    {
+      "suite": "SOLVE",
+      "result": "PASS",
+      "metric_rows": 86,
+      "log_sha256": "17d0c761d89579820a9d0069bec1f4235e35edc09a167bee0e250b0f11a56ae2"
+    },
+    {
+      "suite": "MQ",
+      "result": "PASS",
+      "metric_rows": 12,
+      "log_sha256": "d2d21f2fa509a9a75cc2089f4d6e9bf3377420d3c04427cb45bf9e5a7d1cfb29"
+    },
+    {
+      "suite": "LIN",
+      "result": "PASS",
+      "metric_rows": 38,
+      "log_sha256": "54c42672643da304fef890c620d6b9f6781149a67423e7bdb2c1d938e85e6fde"
+    },
+    {
+      "suite": "ARITH",
+      "result": "PASS",
+      "metric_rows": 0,
+      "log_sha256": "67ca3e60b2a5f960ca4a7231255b235ad180fb690579e04df122f31485bb27d7"
+    }
+  ]
+}

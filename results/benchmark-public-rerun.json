@@ -1,0 +1,179 @@
+{
+  "compiler": "riscv64-unknown-elf-gcc (12.2.0-14+deb12u1+11+b2) 12.2.0",
+  "model_sha256": "a825800c629027a6882d7d1b09f1b23e2fc5415a183f122125779cd19a48f5b6",
+  "exit_encoding": "decoded exit_code = rdcycle delta + 1 (example uses exit 0)",
+  "execution": "Independent simulations; original completed targets retained, remaining cases sharded across six workers",
+  "rows": [
+    {
+      "case": "example",
+      "cycles": 0,
+      "scope": "correctness",
+      "decoded_exit_code": 0,
+      "process_exit": 0,
+      "elf_sha256": "7f3071ae61423ef1a87e312a1a55c3978a8388994c8aa490cfc73a32e31a19c5",
+      "log_sha256": "b0c530501f2393829b44fcb0ed0be4739f812cb359edd9483be01c4bcab4a3f8"
+    },
+    {
+      "case": "solve-45-hardware",
+      "cycles": 16370,
+      "scope": "SETUP+RUN",
+      "decoded_exit_code": 16371,
+      "process_exit": 243,
+      "elf_sha256": "52d040829f859d490e92b7ede965054255253d280ed2bd9b07b5fa32e3cfb2d2",
+      "log_sha256": "2971ec3fc6185954425dd606038931848838583af0661860d6a34c85a312e1a2"
+    },
+    {
+      "case": "solve-45-scalar",
+      "cycles": 824356,
+      "scope": "scalar solve",
+      "decoded_exit_code": 824357,
+      "process_exit": 37,
+      "elf_sha256": "45654e758dfc2c81093a35337051289adcc044a4eb5cf8775babb22aa0ad4004",
+      "log_sha256": "a7b155ebff2e6ac1335003ea3c29070e91c65d774dd66512983bb8b2755b6f02"
+    },
+    {
+      "case": "solve-72-hardware",
+      "cycles": 49298,
+      "scope": "SETUP+RUN",
+      "decoded_exit_code": 49299,
+      "process_exit": 147,
+      "elf_sha256": "2816cd747ea41853f6a79992741d2c639819ae3066ac0d6f842267d13f407ebd",
+      "log_sha256": "dd7bd3a7c89a6c765d6166179f6a4b84871a2de5b6b6f36baf4e0b559c413773"
+    },
+    {
+      "case": "solve-72-scalar",
+      "cycles": 3227451,
+      "scope": "scalar solve",
+      "decoded_exit_code": 3227452,
+      "process_exit": 60,
+      "elf_sha256": "b14ca1da3eaa018d9fee67b96e20ce30b0948d52110d52d462226f34887c8613",
+      "log_sha256": "a91ade6a358920b6d571eca5011e8f7978af7e1c795e8ef411aee5ae50ce321f"
+    },
+    {
+      "case": "solve-96-hardware",
+      "cycles": 96328,
+      "scope": "SETUP+RUN",
+      "decoded_exit_code": 96329,
+      "process_exit": 73,
+      "elf_sha256": "84f837d78c2ca364784c8122bcb8fc60a79ce80fcd581b77598147ddb1070dda",
+      "log_sha256": "1ea49a53cb95eef9094c3b74aac30794479b97eb3f7af2749ebb35838792f557"
+    },
+    {
+      "case": "solve-96-scalar",
+      "cycles": 7504229,
+      "scope": "scalar solve",
+      "decoded_exit_code": 7504230,
+      "process_exit": 102,
+      "elf_sha256": "dce2465cf4ce973d48d9494c6f66e3ada7240176c290006104c3cc51b7982580",
+      "log_sha256": "2f545c0dd2ef6db2f292f9b632934f056a54d1df695188f190f557d6ead68eba"
+    },
+    {
+      "case": "ext-3-hardware",
+      "cycles": 61178,
+      "scope": "SETUP+RUN",
+      "decoded_exit_code": 61179,
+      "process_exit": 251,
+      "elf_sha256": "3bf1156fd24e0e09743235bc2322d24a15e53c6d1e8653be3e6054d0d8875e6a",
+      "log_sha256": "c6b855c138fdf1c64fc1a646b2dac681d7e87c4115fb095e91fd359b27b23d26"
+    },
+    {
+      "case": "ext-3-scalar",
+      "cycles": 527665,
+      "scope": "scalar EXT",
+      "decoded_exit_code": 527666,
+      "process_exit": 50,
+      "elf_sha256": "2820ae9f4e37c623382529484e4007c6eee35a6c4669b8934d4484ebd344daeb",
+      "log_sha256": "add3eb826d3e0696202b71bec3f439372d8fdfcfdafe4d6ba82795cc92f7e082"
+    },
+    {
+      "case": "ext-3-layout",
+      "cycles": 92287,
+      "scope": "layout+SETUP+RUN+layout",
+      "decoded_exit_code": 92288,
+      "process_exit": 128,
+      "elf_sha256": "612d335b221078584ed4a661c659914075de8a268c24d8396977c6bb154b0a6a",
+      "log_sha256": "56e95a5c00841f4e11d6b0ef16c3a3e9dd7ddb81b183f69fc3206546cee299c5"
+    },
+    {
+      "case": "ext-10-hardware",
+      "cycles": 198534,
+      "scope": "SETUP+RUN",
+      "decoded_exit_code": 198535,
+      "process_exit": 135,
+      "elf_sha256": "cd8bdc47009f750a9ee425fef50ddcfd63cfa4cba4a476562e48e9175644a4c0",
+      "log_sha256": "6ee3ffe5609cd76b72d4916688ef0e487409b37df15e58aa7233b51da8a76781"
+    },
+    {
+      "case": "ext-10-scalar",
+      "cycles": 4577945,
+      "scope": "scalar EXT",
+      "decoded_exit_code": 4577946,
+      "process_exit": 154,
+      "elf_sha256": "93bd9cfa17cfaf0418de1bb2a713e01b695da0895a149baf03b96052627a6a67",
+      "log_sha256": "987e579b62075dbcb9f4663e926178b69f9f2e8988828ab3317187c963e503e0"
+    },
+    {
+      "case": "ext-10-layout",
+      "cycles": 510185,
+      "scope": "layout+SETUP+RUN+layout",
+      "decoded_exit_code": 510186,
+      "process_exit": 234,
+      "elf_sha256": "b064c3e7bac68a560c82484cacfca2709c57631fd074ec6518e0718242b13d07",
+      "log_sha256": "3c5a6945cd18cd7787783da80f4ad544f840be60925b6a4d9c3cd536a81eeb27"
+    },
+    {
+      "case": "qgemm-3-5-16-hardware",
+      "cycles": 220,
+      "scope": "RUN; SETUP excluded",
+      "decoded_exit_code": 221,
+      "process_exit": 221,
+      "elf_sha256": "f3e46d240c67e139a639a7a25f41232004908497fc13d1cd940e2ff7e7c642d6",
+      "log_sha256": "fd78580df368848329969231b51a45310a2e7b889975b805b5a1fbd03ddc3617"
+    },
+    {
+      "case": "qgemm-3-5-16-scalar",
+      "cycles": 19771,
+      "scope": "scalar QGEMM",
+      "decoded_exit_code": 19772,
+      "process_exit": 60,
+      "elf_sha256": "0f5c959547096f66c964c9ed5303874497e0df73e6491439cdc6961ebcdedfc5",
+      "log_sha256": "0b30e5647ea411dea83b014bdb968e70883c63036824a8eb6a5aa51a97df13a3"
+    },
+    {
+      "case": "qgemm-7-19-32-hardware",
+      "cycles": 2318,
+      "scope": "RUN; SETUP excluded",
+      "decoded_exit_code": 2319,
+      "process_exit": 15,
+      "elf_sha256": "a3b2d1a998a6bb88318dfd037c9c0c33919b35e77a350bf74f21d182446a4340",
+      "log_sha256": "d336adc82a282fbe34a343d1b6c9eb690a66ec5d4e6eef81b777ab894647fc3b"
+    },
+    {
+      "case": "qgemm-7-19-32-scalar",
+      "cycles": 407291,
+      "scope": "scalar QGEMM",
+      "decoded_exit_code": 407292,
+      "process_exit": 252,
+      "elf_sha256": "0d62b821a36fc3eaad9ddcdbbe7699f73148ee0e936e99bfc2d55690d9f15d18",
+      "log_sha256": "eee41348c69a68eaa7e483c35092c728c627ebcee37ab81ceffaed1dc43dd2d7"
+    },
+    {
+      "case": "qgemm-16-64-32-hardware",
+      "cycles": 15762,
+      "scope": "RUN; SETUP excluded",
+      "decoded_exit_code": 15763,
+      "process_exit": 147,
+      "elf_sha256": "ba057f9adf1f32d7f94f01d845df3cb1034e0df0fa8f4223c696e9a6835489c3",
+      "log_sha256": "0e605d94d889c1ebb3d1cfb9fbb378b49398566d23b1fbba863ea6638647f5e1"
+    },
+    {
+      "case": "qgemm-16-64-32-scalar",
+      "cycles": 3134332,
+      "scope": "scalar QGEMM",
+      "decoded_exit_code": 3134333,
+      "process_exit": 125,
+      "elf_sha256": "97e7fcfdada1304e2fe514a701bd338f6cd95b8170bd03bbbe66a98364b74793",
+      "log_sha256": "5003cbeae75d3c966a5affdf0c18036e5b853cedbf1495a160fef799c2a7963f"
+    }
+  ]
+}
