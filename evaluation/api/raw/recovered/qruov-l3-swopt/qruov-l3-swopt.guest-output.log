@@ -1,0 +1,5 @@
+E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-xmpk-gf127
+E2E_METRIC keygen cycles=0x000000000a380953 instret=0x0000000003e641df
+E2E_METRIC sign cycles=0x0000000006fe32fe instret=0x000000000568a973
+E2E_METRIC verify cycles=0x0000000005f3d344 instret=0x0000000004acb0b9
+E2E_SUCCESS

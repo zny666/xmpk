@@ -1,0 +1,4 @@
+aes_key_bits,rounds,assumed_round_latency_cycles,xor_overhead_cycles,single_block_latency_cycles,one_port_steady_state_cycles_per_block,two_port_independent_cycles_per_block
+128,10,2,1,21,21,10.5
+192,12,2,1,25,25,12.5
+256,14,2,1,29,29,14.5

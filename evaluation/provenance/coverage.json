@@ -1,0 +1,12 @@
+{
+  "kernel_logs_recomputed": 18,
+  "api_observations": 176,
+  "submitted_display_entries": 40,
+  "api_variant_entries": 60,
+  "api_entries_with_numeric_matches": 20,
+  "api_entries_without_matching_final_counter": 40,
+  "complete_final_api_command_source_log_chains": 0,
+  "limitation": "All displayed API values are author-confirmed measurements. This export does not establish the exact final source/ELF/log linkage for all 60 API variants. Numeric matches alone do not establish that linkage.",
+  "energy_arithmetic": "PASS; energy estimates use recorded unclamped cycles and archived vectorless power.",
+  "publication_validation": "Offline only; no fresh full API, RTL or Vivado execution."
+}

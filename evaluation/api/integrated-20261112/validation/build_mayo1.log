@@ -1,0 +1,4 @@
+/usr/lib/gcc/riscv64-unknown-elf/12.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mayo1-xmpk/mayo1-xmpk.elf has a LOAD segment with RWX permissions
+   text	   data	    bss	    dec	    hex	filename
+  37416	    232	33809705	33847353	2047839	/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mayo1-xmpk/mayo1-xmpk.elf
+MAYO1_BUILD_PASS variant=mayo1-xmpk

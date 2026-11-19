@@ -1,0 +1,42 @@
+[
+  {
+    "path": "baseline/build/snova1-baseline/snova1-baseline.elf",
+    "sha256": "0e4d04231aacb7c74dffa221dc3c3c3db25995c8673303087629ed8a524522d9"
+  },
+  {
+    "path": "baseline/results/baseline/snova1-baseline.guest-output.log",
+    "sha256": "6d43c2cb7172b5c9df9b705aba927287864d780eb280c9c2eef420cfb0aa3bb0"
+  },
+  {
+    "path": "baseline/results/baseline/snova1-baseline.htif-service.log",
+    "sha256": "210243fbe15977a09ee7fb7e07c46f8eb12e620bb688671af1974a504fba75ce"
+  },
+  {
+    "path": "baseline/results/baseline/snova1-baseline.log",
+    "sha256": "65cb5858a2a001941f4f4b12fd60521d6e42cf491f08c20c04de5df923931707"
+  },
+  {
+    "path": "optimized/BATCH2_SOURCE_SHA256SUMS",
+    "sha256": "a1d85e4ce5d3e9612ab357643db3b20926914925b992d7b466e2411d89ba01ef"
+  },
+  {
+    "path": "optimized/build/snova1-batch/snova1-batch.elf",
+    "sha256": "98c012aca5bc5e177f0fcf85d81c22b90b26b367cad852c06b6030e9f055e0b9"
+  },
+  {
+    "path": "optimized/results/optimized/snova1-batch2.guest-output.log",
+    "sha256": "7b88f2785916682a157205cde5081c1e276472c0878019ab92fffa0a2759b745"
+  },
+  {
+    "path": "optimized/results/optimized/snova1-batch2.htif-service.log",
+    "sha256": "e384ee3d7db061f00b4718c0c04878a41d903dc9595594301ba91cb4ff255eef"
+  },
+  {
+    "path": "optimized/results/optimized/snova1-batch2.log",
+    "sha256": "f2be12f936af0065be9a0185942959518f9ed07f193a936f8c625b73fa150b05"
+  },
+  {
+    "path": "optimized/snova-batch2-wrapper.log",
+    "sha256": "c4835351ee9e5e9f0ea3a036b12577f908a23d1ac3034a657bcc0189354a9dbe"
+  }
+]

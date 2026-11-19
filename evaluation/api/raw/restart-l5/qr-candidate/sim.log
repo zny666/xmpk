@@ -1,0 +1,15 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 39515
+/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/qr-candidate.elf *** SUCCESS *** (tohost = 0) after 3222645008 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after 3222644996 cycles!
+
+CPU time used: 142927586.29 ms
+Wall clock time passed: 91164382.80 ms
+E2E_STAGE keygen cycles=0x000000007fa56946 instret=0x000000001c7f446d hash=0xe50fae89cab38093
+E2E_STAGE sign cycles=0x000000001f2030f4 instret=0x000000001b41ac5a hash=0xd3486493d76eb71b
+E2E_STAGE verify cycles=0x00000000213c5f71 instret=0x000000001cb6eab7 hash=0xe6cb594c1a148ac5
+E2E_BEGIN algorithm=QRUOV parameter=5q127L3
+E2E_METRIC keygen cycles=0x000000007fa56946 instret=0x000000001c7f446d hash=0xe50fae89cab38093
+E2E_METRIC sign cycles=0x000000001f2030f4 instret=0x000000001b41ac5a hash=0xd3486493d76eb71b
+E2E_METRIC verify cycles=0x00000000213c5f71 instret=0x000000001cb6eab7 hash=0xe6cb594c1a148ac5
+E2E_SUCCESS

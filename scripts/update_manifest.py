@@ -14,7 +14,7 @@ for entry in snapshot["rtl_files"]:
 names=sorted(set(subprocess.check_output(
     ["git","ls-files","--cached","--others","--exclude-standard"],cwd=ROOT,text=True).splitlines()))
 names=[name for name in names if (ROOT/name).is_file() and name!="SHA256SUMS"]
-snapshot["scope"]="Adopted RTL, instruction tests/ISA software, pinned CVA6 integration, kernel measurements and coprocessor OOC FPGA reproduction"
+snapshot["scope"]="Adopted RTL, instruction tests/ISA software, pinned CVA6 integration, API source snapshots and historical logs, complete profiling text, kernel measurements, FPGA input closure and manuscript table traceability"
 snapshot["support_files"]=[{"file":name,"sha256":digest(ROOT/name)}
                            for name in names if not name.startswith("rtl/") and name!="snapshot.json"]
 (ROOT/"snapshot.json").write_text(json.dumps(snapshot,indent=2)+"\n")

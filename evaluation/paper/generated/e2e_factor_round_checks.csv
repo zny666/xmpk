@@ -1,0 +1,10 @@
+round_id,scheme,reported_whole_speedup,stage_sum_before,stage_sum_after,derived_whole_speedup,status
+arithmetic-followup-confirmed-20261112,MAYO-1,1.004,55798165,55582322,1.003883303040128478259688395,matches-rounded-user-ratio
+arithmetic-followup-confirmed-20261112,MAYO-5,1.003,314651885,313706425,1.003013836901810347046605756,matches-rounded-user-ratio
+arithmetic-followup-confirmed-20261112,QR-UOV-1q127L3,1.001,299352454,298991409,1.001207543056864219132128977,matches-rounded-user-ratio
+arithmetic-followup-confirmed-20261112,SNOVA-V,1.081,323900645,299533480,1.081350388610982652089509326,matches-rounded-user-ratio
+arithmetic-followup-confirmed-20261112,UOV-Is,1.068,95199682,89133802,1.068053643667079297256948604,matches-rounded-user-ratio
+snova-l1-shape-followup-confirmed-20261113,SNOVA-I,1.52,104727096,68910795,1.519748770856583500451562052,matches-rounded-user-ratio
+q-request-overlap-confirmed-20261116,MAYO-1,1.004016064257028112449799197,55582322,55360659,1.004003980516200141331410090,matches-rounded-user-ratio
+q-request-overlap-confirmed-20261116,MAYO-5,1.005227181342983514274225975,313706425,312078383,1.005216772736226334523144463,matches-rounded-user-ratio
+q-request-overlap-confirmed-20261116,UOV-Is,1.046025104602510460251046025,89123795,85208673,1.045947458893063620413382098,matches-rounded-user-ratio

@@ -1,0 +1,19 @@
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mayo1-xmpk/mayo1-xmpk.elf
+00000000800099f0 T xmpk_gf16_packed_gemm_add
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mayo5-xmpk/mayo5-xmpk.elf
+00000000800099f4 T xmpk_gf16_packed_gemm_add
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mqom1-xmpk/mqom1-xmpk.elf
+00000000800194f0 T xmpk_gf256_matvec_batch
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mqom5-xmpk/mqom5-xmpk.elf
+0000000080019430 T xmpk_gf256_matvec_batch
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/qruov-l3-xmpk/qruov-l3-xmpk.elf
+0000000080009d18 T qruov_keygen_refined
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/qruov-l5-xmpk/qruov-l5-xmpk.elf
+0000000080009da4 T qruov_keygen_refined
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/snova1-xmpk/snova1-xmpk.elf
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/snova5-xmpk/snova5-xmpk.elf
+000000008000e334 T xmpk_gf16_linxfm_apply_prepared
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/uov-is-xmpk/uov-is-xmpk.elf
+0000000080007dc0 T xmpk_gf16_batch_matvec_add
+/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/uov-v-xmpk/uov-v-xmpk.elf
+ALL_TEN_LINKED_NO_UNRESOLVED_QR_REFINED_PRESENT

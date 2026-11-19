@@ -1,0 +1,15 @@
+{
+  "format": "concatenated-gzip-tar",
+  "sha256": "8a8842abf96d6de08264ef4d52da9797909def88590029740d7c2e280c377495",
+  "bytes": 23016613,
+  "parts": [
+    {
+      "file": "profiling/bundle/profile-text.tar.gz.part000",
+      "sha256": "8a8842abf96d6de08264ef4d52da9797909def88590029740d7c2e280c377495",
+      "bytes": 23016613
+    }
+  ],
+  "members": 5875,
+  "excluded": "Binary perf.data, ELF/DSO files, instruction traces and memory/register dumps. Full text perf reports and samples remain.",
+  "original_private_archive_sha256": "f1f6e36fc62e15b7093e6d618b731a63e4b1c230770a0e007ec99102f6af260c"
+}

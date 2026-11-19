@@ -1,0 +1,11 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 32807
+/reviewer/xmpk-arm64/formal/elf/snova5-xmpk.elf *** SUCCESS *** (tohost = 0) after 635393835 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after  635393823 cycles!
+
+CPU time used: 25964669.15 ms
+Wall clock time passed: 25970372.41 ms
+ret=0x000000000262c83a
+E2E_METRIC sign cycles=0x000000000cf02c8a instret=0x000000000a4c3830
+E2E_METRIC verify cycles=0x00000000073d7f42 instret=0x0000000006fd038b
+E2E_SUCCESS

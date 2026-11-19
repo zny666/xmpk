@@ -1,0 +1,20 @@
+[
+  {
+    "operation": "keygen",
+    "cycles": 2452505880,
+    "instret": 2073324157,
+    "hash": "0xe50fae89cab38093"
+  },
+  {
+    "operation": "sign",
+    "cycles": 544451111,
+    "instret": 493653920,
+    "hash": "0xd3486493d76eb71b"
+  },
+  {
+    "operation": "verify",
+    "cycles": 520880656,
+    "instret": 476421012,
+    "hash": "0xe6cb594c1a148ac5"
+  }
+]

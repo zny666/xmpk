@@ -1,0 +1,5 @@
+E2E_BEGIN algorithm=QRUOV parameter=5q127L3
+E2E_METRIC keygen cycles=0x000000007fae547c instret=0x000000001c7f446c hash=0xe50fae89cab38093
+E2E_METRIC sign cycles=0x000000001ee9bd9c instret=0x000000001b3b8e8c hash=0xd3486493d76eb71b
+E2E_METRIC verify cycles=0x00000000212a3f3c instret=0x000000001cb6eab6 hash=0xe6cb594c1a148ac5
+E2E_SUCCESS

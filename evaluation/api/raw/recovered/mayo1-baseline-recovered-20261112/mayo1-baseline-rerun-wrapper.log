@@ -1,0 +1,2 @@
+[2026-11-09T10:54:42+08:00] E2E_SIM tag=mayo1-baseline START elf=/data00/reviewer/riscv/xmpk-final-runs/sim-final-20261108T201758/e2e/build/mayo1-baseline/mayo1-baseline.elf max_cycles=1000000000 harness=/reviewer/riscv/xmpk-final-runs/sim-final-20261108T201758/cva6/work-ver/Variane_testharness
+[2026-11-09T15:01:43+08:00] E2E_SIM tag=mayo1-baseline PASS log=/data00/reviewer/riscv/xmpk-final-runs/sim-final-20261108T201758/e2e/results/baseline/mayo1-baseline.log

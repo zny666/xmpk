@@ -1,0 +1,3 @@
+{"operation": "keygen", "cycles": 34940, "instret": 23608, "hash": "0x4242dc5249c33625"}
+{"operation": "sign", "cycles": 21664, "instret": 14911, "hash": "0xe6cb594c1a148ac5"}
+{"operation": "verify", "cycles": 8631, "instret": 4062, "hash": "0xe6cb594c1a148ac5"}

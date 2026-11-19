@@ -1,0 +1,5 @@
+/usr/lib/gcc/riscv64-unknown-elf/12.2.0/../../../riscv64-unknown-elf/bin/ld: /reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/snova5-xmpk/snova5-xmpk.elf: section .tbss.buf.1 lma 0x8201a100 adjusted to 0x8201a104
+/usr/lib/gcc/riscv64-unknown-elf/12.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/snova5-xmpk/snova5-xmpk.elf has a LOAD segment with RWX permissions
+   text	   data	    bss	    dec	    hex	filename
+  65078	    376	33575413	33640867	20151a3	/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/snova5-xmpk/snova5-xmpk.elf
+SNOVA5_BUILD_PASS variant=snova5-xmpk

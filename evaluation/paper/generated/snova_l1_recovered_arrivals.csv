@@ -1,0 +1,4 @@
+scheme,level,operation,baseline_cycles,xmpk_cycles,speedup,status
+SNOVA-I,L1,keygen,16065800,13118431,1.224674,measured-recovered-baseline-and-linxfm-batch2
+SNOVA-I,L1,sign,76923470,64346195,1.195463,measured-recovered-baseline-and-linxfm-batch2
+SNOVA-I,L1,verify,27403339,27262470,1.005167,measured-recovered-baseline-and-linxfm-batch2

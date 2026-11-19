@@ -1,0 +1,41 @@
+{
+  "method": "Amdahl replacement of eligible sampled AES self time",
+  "aes_speedup_scenarios": {
+    "conservative": 8.0,
+    "central": 32.0,
+    "marian_aes128_ratio": 54.79300291545189,
+    "ideal": "infinity"
+  },
+  "signing_max_by_algorithm": {
+    "mayo": {
+      "max_aes_parameter": "MAYO-2",
+      "max_aes_self_pct": 50.46082565431964,
+      "central_32x_overall_speedup": 1.9563317354018288,
+      "central_32x_estimated_ms": 1.576627296496859
+    },
+    "mqom": {
+      "max_aes_parameter": "mqom3_cat1_gf16_fast_ct",
+      "max_aes_self_pct": 46.02090987183014,
+      "central_32x_overall_speedup": 1.8044924931844866,
+      "central_32x_estimated_ms": 6.931749257613113
+    },
+    "qruov": {
+      "max_aes_parameter": "1q127L3",
+      "max_aes_self_pct": 0.052984952131515384,
+      "central_32x_overall_speedup": 1.0005135553274733,
+      "central_32x_estimated_ms": 3.2540971013714475
+    },
+    "snova": {
+      "max_aes_parameter": "SNOVA_III_B_AES",
+      "max_aes_self_pct": 2.8487858068282566,
+      "central_32x_overall_speedup": 1.0283808563805612,
+      "central_32x_estimated_ms": 46.182201278185644
+    },
+    "uov": {
+      "max_aes_parameter": "UOV-III",
+      "max_aes_self_pct": 0.0,
+      "central_32x_overall_speedup": 1.0,
+      "central_32x_estimated_ms": 6.796199698113208
+    }
+  }
+}

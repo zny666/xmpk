@@ -1,0 +1,5 @@
+E2E_BEGIN algorithm=MAYO parameter=MAYO-1 implementation=cva6-ref-portable
+E2E_METRIC keygen cycles=0x0000000001437eae instret=0x0000000001303de4
+E2E_METRIC sign cycles=0x0000000002239a13 instret=0x0000000001f66fa8
+E2E_METRIC verify cycles=0x0000000001282952 instret=0x0000000001147302
+E2E_SUCCESS

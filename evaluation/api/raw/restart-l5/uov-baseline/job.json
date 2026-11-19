@@ -1,0 +1,78 @@
+{
+  "tag": "uov-baseline",
+  "pid": 41824,
+  "worker_pid": 41820,
+  "started": 1794536178.990975,
+  "elf": "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/uov-baseline.elf",
+  "elf_sha256": "bd390b1667edc878a4e2233ce91ef1db4f407a247fe867a28edd31508557b1db",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+  "simulator_sha256": "356d5ee74e6dd1199c7464fb4d95dbe3cdac8570ef591e346f7e01a80ed2da99",
+  "offsets": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480
+  },
+  "stage_table_va": "0x8200d000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+    "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/uov-baseline.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=4294967295",
+    "++/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/uov-baseline.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/uov-baseline.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/uov-baseline/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/uov-baseline/report.yaml"
+  ],
+  "state": "passed",
+  "model_threads": 2,
+  "host_cycle_limit": 20000000000,
+  "cache_layout": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480,
+    "bank0": 268481840,
+    "bank1": 268483888,
+    "bank2": 1128,
+    "bank3": 268449872,
+    "bank4": 268457416,
+    "bank5": 268553520,
+    "bank6": 268555568,
+    "bank7": 268459464
+  },
+  "runner_sha256": "ffe1b5d5377ef7e6c63843b73142c8ccbce30623bab6d64199c448c634c7bf56",
+  "htif_sha256": "49d2336b353d04fc3e51edb9a74ee7eb5cb6f6757151708ebd442f9f8e28d150",
+  "root": "0xf768eba06100",
+  "sram": "0xf768eba095a8",
+  "returncode": 0,
+  "ended": 1794761402.034183,
+  "metrics": [
+    {
+      "operation": "keygen",
+      "cycles": 9656875166,
+      "instret": 8784186327,
+      "hash": "0x441acf671c0338d5"
+    },
+    {
+      "operation": "sign",
+      "cycles": 76404978,
+      "instret": 68696352,
+      "hash": "0xa5e05097f07f43c9"
+    },
+    {
+      "operation": "verify",
+      "cycles": 17248892,
+      "instret": 12854740,
+      "hash": "0xe6cb594c1a148ac5"
+    }
+  ],
+  "observed_sequences": 3,
+  "completed_stages_observed": 3
+}

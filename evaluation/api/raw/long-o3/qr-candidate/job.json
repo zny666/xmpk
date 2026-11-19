@@ -1,0 +1,59 @@
+{
+  "tag": "qr-candidate",
+  "pid": 15184,
+  "worker_pid": 15183,
+  "started": 1794508101.7753992,
+  "elf": "/artifact/xmpk-arm64-native/long-o3-20261113/elf/qr-candidate.elf",
+  "elf_sha256": "b272d8c71890a03e5188a1f2d474bca3693319f2327f22ee590d71756fdd1173",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t1/Variane_testharness",
+  "simulator_sha256": "c5daca3087796a5a7b2f4d28cb43538e74d4e25feb0295986169502d07bdb815",
+  "offsets": {
+    "cycle": 34032,
+    "instret": 34048,
+    "pc": 22416,
+    "sram": 43368,
+    "sram_plain": 268478824
+  },
+  "stage_table_va": "0x8200e000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t1/Variane_testharness",
+    "/artifact/xmpk-arm64-native/long-o3-20261113/elf/qr-candidate.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=10000000000",
+    "++/artifact/xmpk-arm64-native/long-o3-20261113/elf/qr-candidate.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/long-o3-20261113/elf/qr-candidate.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/long-o3-20261113/results/qr-candidate/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/long-o3-20261113/results/qr-candidate/report.yaml"
+  ],
+  "state": "passed",
+  "root": "0xe0a2570e7100",
+  "sram": "0xe0a2670f1a68",
+  "returncode": 0,
+  "ended": 1794605577.9857793,
+  "metrics": [
+    {
+      "operation": "keygen",
+      "cycles": 2142131324,
+      "instret": 478102636,
+      "hash": "0xe50fae89cab38093"
+    },
+    {
+      "operation": "sign",
+      "cycles": 518634908,
+      "instret": 456887948,
+      "hash": "0xd3486493d76eb71b"
+    },
+    {
+      "operation": "verify",
+      "cycles": 556416828,
+      "instret": 481749686,
+      "hash": "0xe6cb594c1a148ac5"
+    }
+  ],
+  "observed_sequences": 3,
+  "completed_stages_observed": 2
+}

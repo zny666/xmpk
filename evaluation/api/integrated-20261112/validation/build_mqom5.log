@@ -1,0 +1,4 @@
+/usr/lib/gcc/riscv64-unknown-elf/12.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mqom5-xmpk/mqom5-xmpk.elf has a LOAD segment with RWX permissions
+   text	   data	    bss	    dec	    hex	filename
+ 105380	    360	33607760	33713500	2026d5c	/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/mqom5-xmpk/mqom5-xmpk.elf
+MQOM5_BUILD_PASS variant=mqom5-xmpk

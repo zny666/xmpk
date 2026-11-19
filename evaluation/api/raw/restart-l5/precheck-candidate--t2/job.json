@@ -1,0 +1,64 @@
+{
+  "tag": "precheck-candidate--t2",
+  "pid": 41652,
+  "worker_pid": 41647,
+  "started": 1794535685.3727655,
+  "elf": "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+  "elf_sha256": "0a9ca671ce34fc1bfb18216d8d5de6f0caf95d337691426cdaba1aec98a1d2a3",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+  "simulator_sha256": "356d5ee74e6dd1199c7464fb4d95dbe3cdac8570ef591e346f7e01a80ed2da99",
+  "offsets": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480
+  },
+  "stage_table_va": "0x82007000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+    "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=4294967295",
+    "++/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/precheck-candidate--t2/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/precheck-candidate--t2/report.yaml"
+  ],
+  "state": "failed",
+  "model_threads": 2,
+  "host_cycle_limit": 20000000000,
+  "cache_layout": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480,
+    "bank0": 268481840,
+    "bank1": 268483888,
+    "bank2": 1128,
+    "bank3": 268449872,
+    "bank4": 268457416,
+    "bank5": 268553520,
+    "bank6": 268555568,
+    "bank7": 268459464
+  },
+  "runner_sha256": "a0fb8fcaf0779b00c60c5f6d009f9012ebf5a8130a532045695ed4319b34f3b7",
+  "htif_sha256": "25fe7ea6063cb911c2921c0713604d82ba2d5775b2a0cdfb80c4bf12ba62bae3",
+  "root": "0xf8c9dfda6100",
+  "sram": "0xf8c9dfda95a8",
+  "error": "HTIF service exited early",
+  "ended": 1794535712.1647067,
+  "saved_api_stages": [
+    {
+      "operation": "keygen",
+      "cycles": 35101,
+      "instret": 23608,
+      "hash": "0x4242dc5249c33625"
+    }
+  ]
+}

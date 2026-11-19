@@ -1,0 +1,68 @@
+{
+  "tag": "precheck-candidate--t2-r3",
+  "pid": 41728,
+  "worker_pid": 41720,
+  "started": 1794535899.3212163,
+  "elf": "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+  "elf_sha256": "bc7646df2ce66ef70ff19a169c06255c0b94df9561097c976e3b052e9f1a99a3",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+  "simulator_sha256": "356d5ee74e6dd1199c7464fb4d95dbe3cdac8570ef591e346f7e01a80ed2da99",
+  "offsets": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480
+  },
+  "stage_table_va": "0x82007000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+    "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=4294967295",
+    "++/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/precheck-candidate--t2-r3/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/precheck-candidate--t2-r3/report.yaml"
+  ],
+  "state": "failed",
+  "model_threads": 2,
+  "host_cycle_limit": 20000000000,
+  "cache_layout": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480,
+    "bank0": 268481840,
+    "bank1": 268483888,
+    "bank2": 1128,
+    "bank3": 268449872,
+    "bank4": 268457416,
+    "bank5": 268553520,
+    "bank6": 268555568,
+    "bank7": 268459464
+  },
+  "runner_sha256": "e9725ae381052a114eb0a7369f9c5f3a9892edfe1a69c4d082899c91f43d98c9",
+  "htif_sha256": "49d2336b353d04fc3e51edb9a74ee7eb5cb6f6757151708ebd442f9f8e28d150",
+  "root": "0xfd582f5a6100",
+  "sram": "0xfd582f5a95a8",
+  "returncode": 0,
+  "ended": 1794536090.2190185,
+  "metrics": [],
+  "observed_sequences": 2,
+  "completed_stages_observed": 1,
+  "error": "final output/oracle/counters failed",
+  "saved_api_stages": [
+    {
+      "operation": "keygen",
+      "cycles": 34937,
+      "instret": 23608,
+      "hash": "0x4242dc5249c33625"
+    }
+  ]
+}

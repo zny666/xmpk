@@ -1,0 +1,51 @@
+{
+  "accessed": "2026-11-16",
+  "latency_unit": "ms",
+  "comparison_policy": "Report each design at its own stated parameters and frequency. Do not compute cross-design speedups. Xmpk API times are recorded/factor-derived RTL cycles divided by 40 MHz, not FPGA stopwatch measurements.",
+  "papers": [
+    {
+      "id": "whipping",
+      "title": "Whipping the Multivariate-Based MAYO Signature Scheme Using Hardware Platforms",
+      "url": "https://doi.org/10.1145/3658644.3690258",
+      "local_pdf": "sources/whipping-mayo.pdf",
+      "locator": "Table 5, printed page 3433 (PDF page 13); Section 7 specifies xc7a200t.",
+      "parameter_note": "MAYO1 uses n=66, m=64, o=8; this differs from Xmpk's MAYO-1 n=88, m=80, o=8, k=10.",
+      "latency_note": "Use reported cycles divided by the stated 75 MHz. Table 5's printed ms values are R: 0.40/1.28/0.40, P: 0.08/0.43/0.05; these are not fully consistent with its cycles/frequency. The generated comparison uses cycle-derived values and preserves this discrepancy.",
+      "rows": [
+        {"work": "Whipping R", "parameter": "MAYO1 (66,64)", "fpga": "A200T", "frequency_mhz": 75, "lut": 92000, "ff": 33000, "resource_precision": "Rounded k counts from the same Table 5 Artix-7 row; do not replace with Table 3 totals from a different implementation.", "bram36": 45.5, "dsp": 2, "schemes": 1, "keygen_cycles": 29330, "sign_cycles": 95191, "verify_cycles": 30150, "variant": "Two AES128-R units"},
+        {"work": "Whipping P", "parameter": "MAYO1 (66,64)", "fpga": "A200T", "frequency_mhz": 75, "lut": 106000, "ff": 38000, "resource_precision": "Rounded k counts from Table 5.", "bram36": 45.5, "dsp": 2, "schemes": 1, "keygen_cycles": 5799, "sign_cycles": 31128, "verify_cycles": 4587, "variant": "Two AES128-P units"}
+      ]
+    },
+    {
+      "id": "uovhw",
+      "title": "Lightweight Hardware Accelerator for the UOV Signature Scheme with Oil Space Blinding",
+      "url": "https://flokrieger.github.io/papers/ches27_uov.pdf",
+      "record_url": "https://eprint.iacr.org/2026/1451",
+      "local_pdf": "sources/uov-hardware-author.pdf",
+      "locator": "Table 1 (PDF page 5), Table 4 (page 19), Table 5 (page 20), Table 6 (page 21).",
+      "parameter_note": "UOV-V uses q=256,n=244,m=96; Xmpk's UOV-V uses q=256,n=259,m=96. Ordinary and blinded timings share the 34,438-LUT design. Blinded signing loads a persistent randomized oil-space basis; Table 4 uses a 16-byte message and first-attempt nonsingular A.",
+      "keygen_note": "No KeyGen latency reported in the implementation tables; keep null.",
+      "rows": [
+        {"work": "Krieger plain", "parameter": "UOV-V (244,96)", "fpga": "A100T", "frequency_mhz": 100, "lut": 34438, "ff": 26243, "bram36": 22, "dsp": 14, "schemes": 1, "keygen_cycles": null, "sign_cycles": 515468, "verify_cycles": 179000, "verify_precision": "Rounded 179 kcycles from Table 6; not an exact-cycle measurement.", "variant": "16 lanes, unblinded"},
+        {"work": "Krieger blinded", "parameter": "UOV-V (244,96)", "fpga": "A100T", "frequency_mhz": 100, "lut": 34438, "ff": 26243, "bram36": 22, "dsp": 14, "schemes": 1, "keygen_cycles": null, "sign_cycles": 664460, "verify_cycles": 179000, "verify_precision": "Rounded 179 kcycles from Table 6.", "variant": "16 lanes, LU-based oil-space blinding"}
+      ]
+    },
+    {
+      "id": "qruovhw",
+      "title": "A High-Speed Hardware Accelerator for QR-UOV Signature Scheme",
+      "url": "https://eprint.iacr.org/2026/1458",
+      "locator": "Official ePrint abstract, accessed 2026-11-16.",
+      "availability": "PDF access returned a security-verification page. Frequency, FPGA model, resources and exact L1 parameter tuple are not verified; null is a retrieval gap, not a claim that the paper omits them.",
+      "abstract_excerpt": "FPGA evaluation shows that the proposed hardware executes key generation, signature generation, and signature verification in 0.74 ms, 0.28 ms, and 0.19 ms, respectively, at security level I.",
+      "rows": [
+        {"work": "Sugai", "parameter": "QR-UOV L1", "fpga": null, "frequency_mhz": null, "lut": null, "ff": null, "bram36": null, "dsp": null, "schemes": 1, "keygen_ms": 0.74, "sign_ms": 0.28, "verify_ms": 0.19, "variant": "Official-abstract results; full-paper metadata pending"}
+      ]
+    }
+  ],
+  "xmpk": [
+    {"work": "Xmpk system", "scheme": "MAYO-1", "parameter": "MAYO1 (88,80)", "fpga": "A200T", "frequency_mhz": 40, "resource_prefix": "System", "schemes": 5},
+    {"work": "Xmpk system", "scheme": "UOV-V", "parameter": "UOV-V (259,96)", "fpga": "A200T", "frequency_mhz": 40, "resource_prefix": "System", "schemes": 5},
+    {"work": "Xmpk system", "scheme": "QR-UOV-1q127L3", "parameter": "QR-UOV (127,3)", "fpga": "A200T", "frequency_mhz": 40, "resource_prefix": "System", "schemes": 5},
+    {"work": "Xmpk copro.", "scheme": null, "parameter": "Shared engines", "fpga": "A200T", "frequency_mhz": 80, "resource_prefix": "Xmpk", "schemes": 5}
+  ]
+}

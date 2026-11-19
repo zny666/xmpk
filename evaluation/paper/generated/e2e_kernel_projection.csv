@@ -1,0 +1,35 @@
+scheme,operation,component,fraction,kernel_speedup,baseline_component_cycles,projected_component_cycles,projected_saved_cycles,basis
+MAYO-1,keygen,QGEMM-3x5x16,0.297460,81.368000,16094799,197803,15896996,80% of non-AES keypair parent
+MAYO-1,keygen,unaccelerated-residual,0.702540,1.000000,38012639,38012639,0,outside mapped Xmpk kernels
+MAYO-1,sign,QGEMM-3x5x16,0.120000,81.368000,12230590,150312,12080278,mapped GF16 products
+MAYO-1,sign,SOLVEQ-GF16-proxy,0.063860,33.610000,6508712,193654,6315058,mapped linear solve
+MAYO-1,sign,unaccelerated-residual,0.816140,1.000000,83182281,83182281,0,outside mapped Xmpk kernels
+MAYO-1,verify,QGEMM-3x5x16,0.161690,81.368000,7608238,93504,7514734,80% of non-AES verify parent
+MAYO-1,verify,unaccelerated-residual,0.838310,1.000000,39446239,39446239,0,outside mapped Xmpk kernels
+MQOM-L1-GF16-fast,keygen,unaccelerated-residual,1.000000,1.000000,21037821,21037821,0,outside mapped Xmpk kernels
+MQOM-L1-GF16-fast,sign,QGEMM-16x64x32,0.265430,159.579000,58579408,367087,58212321,gf256_mat_mult_ref samples
+MQOM-L1-GF16-fast,sign,unaccelerated-residual,0.734570,1.000000,162116852,162116852,0,outside mapped Xmpk kernels
+MQOM-L1-GF16-fast,verify,QGEMM-16x64x32,0.345380,159.579000,61093728,382843,60710885,Algebra samples
+MQOM-L1-GF16-fast,verify,unaccelerated-residual,0.654620,1.000000,115794709,115794709,0,outside mapped Xmpk kernels
+QR-UOV-1q127L3,keygen,EXTGEMM-L3-layout,0.650000,4.740000,469727180,99098561,370628619,structural matrix share
+QR-UOV-1q127L3,keygen,unaccelerated-residual,0.350000,1.000000,252930020,252930020,0,outside mapped Xmpk kernels
+QR-UOV-1q127L3,sign,EXTGEMM-L3-layout,0.667000,4.740000,35174449,7420770,27753679,two-thirds non-PRG path
+QR-UOV-1q127L3,sign,unaccelerated-residual,0.333000,1.000000,17560857,17560857,0,outside mapped Xmpk kernels
+QR-UOV-1q127L3,verify,EXTGEMM-L3-layout,0.600000,4.740000,23865716,5034961,18830755,structural matrix share
+QR-UOV-1q127L3,verify,unaccelerated-residual,0.400000,1.000000,15910477,15910477,0,outside mapped Xmpk kernels
+SNOVA-I-AES,keygen,QGEMM-3x5x16,0.300000,81.368000,15463710,190047,15273664,small GF16 products
+SNOVA-I-AES,keygen,LINXFM-16x32,0.200000,16.000000,10309140,644321,9664819,transform proxy
+SNOVA-I-AES,keygen,unaccelerated-residual,0.500000,1.000000,25772850,25772850,0,outside mapped Xmpk kernels
+SNOVA-I-AES,sign,QGEMM-3x5x16,0.300000,81.368000,110078300,1352845,108725455,small GF16 products
+SNOVA-I-AES,sign,LINXFM-16x32,0.250000,16.000000,91731917,5733245,85998672,transform proxy
+SNOVA-I-AES,sign,unaccelerated-residual,0.450000,1.000000,165117450,165117450,0,outside mapped Xmpk kernels
+SNOVA-I-AES,verify,QGEMM-3x5x16,0.280000,81.368000,29610293,363906,29246388,small GF16 products
+SNOVA-I-AES,verify,LINXFM-16x32,0.220000,16.000000,23265231,1454077,21811154,transform proxy
+SNOVA-I-AES,verify,unaccelerated-residual,0.500000,1.000000,52875524,52875524,0,outside mapped Xmpk kernels
+UOV-Is,keygen,QGEMM-7x19x32,0.870730,143.416000,517076642,3605432,513471210,Algebra samples
+UOV-Is,keygen,unaccelerated-residual,0.129270,1.000000,76766044,76766044,0,outside mapped Xmpk kernels
+UOV-Is,sign,QGEMM-16x64x32,0.789400,159.579000,6034129,37813,5996317,gf16mat_prod_ref samples
+UOV-Is,sign,SOLVEQ-GF16-proxy,0.173390,33.610000,1325383,39434,1285949,elim/back-sub samples
+UOV-Is,sign,unaccelerated-residual,0.037210,1.000000,284431,284431,0,outside mapped Xmpk kernels
+UOV-Is,verify,QGEMM-16x64x32,0.974920,159.579000,1249384,7829,1241555,Algebra samples
+UOV-Is,verify,unaccelerated-residual,0.025080,1.000000,32141,32141,0,outside mapped Xmpk kernels

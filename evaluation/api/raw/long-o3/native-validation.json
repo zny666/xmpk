@@ -1,0 +1,83 @@
+[
+  {
+    "tag": "snova-oracle",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.5980739593505859,
+    "golden_bytes": 1172,
+    "sha256": "5093f230aef6f4d851963f6a4a5a65bc352e12ef1f9c7b85244ec2c5b24952ee"
+  },
+  {
+    "tag": "snova-baseline",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.4483041763305664,
+    "golden_bytes": 1172,
+    "sha256": "5093f230aef6f4d851963f6a4a5a65bc352e12ef1f9c7b85244ec2c5b24952ee"
+  },
+  {
+    "tag": "snova-candidate",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.4631617069244385,
+    "golden_bytes": 1172,
+    "sha256": "5093f230aef6f4d851963f6a4a5a65bc352e12ef1f9c7b85244ec2c5b24952ee"
+  },
+  {
+    "tag": "uov-oracle",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.5169429779052734,
+    "golden_bytes": 760992,
+    "sha256": "0a471b466c46e6fdea263e5e4a97fdcf03149cd99769d5fa39a000f0f961bf6a"
+  },
+  {
+    "tag": "uov-baseline",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.6327097415924072,
+    "golden_bytes": 760992,
+    "sha256": "0a471b466c46e6fdea263e5e4a97fdcf03149cd99769d5fa39a000f0f961bf6a"
+  },
+  {
+    "tag": "uov-candidate",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.6385231018066406,
+    "golden_bytes": 760992,
+    "sha256": "0a471b466c46e6fdea263e5e4a97fdcf03149cd99769d5fa39a000f0f961bf6a"
+  },
+  {
+    "tag": "qr-oracle",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.7937169075012207,
+    "golden_bytes": 174116,
+    "sha256": "21ec9f5102d6a82173a94f2b4f112a6c82ccbf9054c08eeb1cd9a0fe18df5199"
+  },
+  {
+    "tag": "qr-baseline",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.8263578414916992,
+    "golden_bytes": 174116,
+    "sha256": "21ec9f5102d6a82173a94f2b4f112a6c82ccbf9054c08eeb1cd9a0fe18df5199"
+  },
+  {
+    "tag": "qr-candidate",
+    "bytewise_oracle_match": true,
+    "negative_checks": 2,
+    "asan_ubsan": "pass",
+    "seconds": 0.7527170181274414,
+    "golden_bytes": 174116,
+    "sha256": "21ec9f5102d6a82173a94f2b4f112a6c82ccbf9054c08eeb1cd9a0fe18df5199"
+  }
+]

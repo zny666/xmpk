@@ -1,0 +1,15 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 33719
+/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/uov-baseline.elf *** SUCCESS *** (tohost = 0) after 9774184697 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after 1184250093 cycles!
+
+CPU time used: 410958441.27 ms
+Wall clock time passed: 225222803.94 ms
+E2E_STAGE keygen cycles=0x000000023f98389e instret=0x000000020b940bd7 hash=0x441acf671c0338d5
+E2E_STAGE sign cycles=0x00000000048dd8f2 instret=0x0000000004183920 hash=0xa5e05097f07f43c9
+E2E_STAGE verify cycles=0x000000000107327c instret=0x0000000000c425d4 hash=0xe6cb594c1a148ac5
+E2E_BEGIN algorithm=UOV parameter=UOV-V
+E2E_METRIC keygen cycles=0x000000023f98389e instret=0x000000020b940bd7 hash=0x441acf671c0338d5
+E2E_METRIC sign cycles=0x00000000048dd8f2 instret=0x0000000004183920 hash=0xa5e05097f07f43c9
+E2E_METRIC verify cycles=0x000000000107327c instret=0x0000000000c425d4 hash=0xe6cb594c1a148ac5
+E2E_SUCCESS

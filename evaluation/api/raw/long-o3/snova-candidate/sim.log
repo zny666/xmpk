@@ -1,0 +1,12 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 37355
+/artifact/xmpk-arm64-native/long-o3-20261113/elf/snova-candidate.elf *** SUCCESS *** (tohost = 0) after 97187429 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after   97187417 cycles!
+
+CPU time used: 2655456.13 ms
+Wall clock time passed: 2833259.34 ms
+E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES
+E2E_METRIC keygen cycles=0x0000000000a87686 instret=0x00000000008f6fb6 hash=0x77503626036f47ee
+E2E_METRIC sign cycles=0x00000000039e2c2d instret=0x0000000003120fd0 hash=0xe07def2895f5c33c
+E2E_METRIC verify cycles=0x0000000001840f06 instret=0x000000000139a6a5 hash=0xe6cb594c1a148ac5
+E2E_SUCCESS

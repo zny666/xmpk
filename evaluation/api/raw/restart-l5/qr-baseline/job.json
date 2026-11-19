@@ -1,0 +1,78 @@
+{
+  "tag": "qr-baseline",
+  "pid": 41835,
+  "worker_pid": 41822,
+  "started": 1794536179.0153291,
+  "elf": "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/qr-baseline.elf",
+  "elf_sha256": "07f3f83a838b2b7f65c8aaef398ceda4a8020f328e4eb582b78b07534380b00f",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+  "simulator_sha256": "356d5ee74e6dd1199c7464fb4d95dbe3cdac8570ef591e346f7e01a80ed2da99",
+  "offsets": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480
+  },
+  "stage_table_va": "0x8200b000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t2/Variane_testharness",
+    "/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/qr-baseline.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=4294967295",
+    "++/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/qr-baseline.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/qr-baseline.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/qr-baseline/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/restart-l5-o3-20261113/results/qr-baseline/report.yaml"
+  ],
+  "state": "passed",
+  "model_threads": 2,
+  "host_cycle_limit": 20000000000,
+  "cache_layout": {
+    "cycle": 268540016,
+    "instret": 268539968,
+    "pc": 268566400,
+    "sram": 268576256,
+    "sram_plain": 13480,
+    "bank0": 268481840,
+    "bank1": 268483888,
+    "bank2": 1128,
+    "bank3": 268449872,
+    "bank4": 268457416,
+    "bank5": 268553520,
+    "bank6": 268555568,
+    "bank7": 268459464
+  },
+  "runner_sha256": "ffe1b5d5377ef7e6c63843b73142c8ccbce30623bab6d64199c448c634c7bf56",
+  "htif_sha256": "49d2336b353d04fc3e51edb9a74ee7eb5cb6f6757151708ebd442f9f8e28d150",
+  "root": "0xea0b97cf6100",
+  "sram": "0xea0b97cf95a8",
+  "returncode": 0,
+  "ended": 1794642095.7436316,
+  "metrics": [
+    {
+      "operation": "keygen",
+      "cycles": 2452505880,
+      "instret": 2073324157,
+      "hash": "0xe50fae89cab38093"
+    },
+    {
+      "operation": "sign",
+      "cycles": 544451111,
+      "instret": 493653920,
+      "hash": "0xd3486493d76eb71b"
+    },
+    {
+      "operation": "verify",
+      "cycles": 520880656,
+      "instret": 476421012,
+      "hash": "0xe6cb594c1a148ac5"
+    }
+  ],
+  "observed_sequences": 3,
+  "completed_stages_observed": 3
+}

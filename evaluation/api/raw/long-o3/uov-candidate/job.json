@@ -1,0 +1,59 @@
+{
+  "tag": "uov-candidate",
+  "pid": 15178,
+  "worker_pid": 15177,
+  "started": 1794508101.711451,
+  "elf": "/artifact/xmpk-arm64-native/long-o3-20261113/elf/uov-candidate.elf",
+  "elf_sha256": "4713d064786c11af348dc9c1b8bf19ad1420d4da4a310c24e9a55cc26f7cadfb",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t1/Variane_testharness",
+  "simulator_sha256": "c5daca3087796a5a7b2f4d28cb43538e74d4e25feb0295986169502d07bdb815",
+  "offsets": {
+    "cycle": 34032,
+    "instret": 34048,
+    "pc": 22416,
+    "sram": 43368,
+    "sram_plain": 268478824
+  },
+  "stage_table_va": "0x8200c000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t1/Variane_testharness",
+    "/artifact/xmpk-arm64-native/long-o3-20261113/elf/uov-candidate.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=10000000000",
+    "++/artifact/xmpk-arm64-native/long-o3-20261113/elf/uov-candidate.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/long-o3-20261113/elf/uov-candidate.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/long-o3-20261113/results/uov-candidate/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/long-o3-20261113/results/uov-candidate/report.yaml"
+  ],
+  "state": "passed",
+  "root": "0xf417ca157100",
+  "sram": "0xf417da161a68",
+  "returncode": 0,
+  "ended": 1794510498.1321154,
+  "metrics": [
+    {
+      "operation": "keygen",
+      "cycles": 90238225,
+      "instret": 47783039,
+      "hash": "0x14bc936b3dee8701"
+    },
+    {
+      "operation": "sign",
+      "cycles": 693893,
+      "instret": 105111,
+      "hash": "0xa944aea304fd9930"
+    },
+    {
+      "operation": "verify",
+      "cycles": 904775,
+      "instret": 675860,
+      "hash": "0xe6cb594c1a148ac5"
+    }
+  ],
+  "observed_sequences": 3,
+  "completed_stages_observed": 2
+}

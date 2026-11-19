@@ -1,0 +1,4 @@
+operation,cycles,instret,hash
+keygen,35084,23607,0x4242dc5249c33625
+sign,21560,14910,0xe6cb594c1a148ac5
+verify,8499,4061,0xe6cb594c1a148ac5

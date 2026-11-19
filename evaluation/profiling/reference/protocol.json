@@ -1,0 +1,35 @@
+{
+  "study": "official-C-reference-profiling",
+  "host_alias": "REDACTED",
+  "worker_cpu": 3,
+  "observer_cpu": 7,
+  "message_bytes": 32,
+  "key_scope": "One fresh fixture per parameter shared across sign/verify passes; keygen produces fresh keys per operation.",
+  "operations": [
+    "keygen",
+    "sign",
+    "verify"
+  ],
+  "parameter_count": 20,
+  "timing_trials": 7,
+  "core_stat_trials": 3,
+  "aux_stat_passes_max": 2,
+  "sample_passes": 2,
+  "timing_target_seconds": 0.5,
+  "sample_target_seconds": 10,
+  "sample_frequency_hz": 199,
+  "max_iterations": 100000,
+  "output_retention_max_bytes": 134217728,
+  "max_measured_seconds": 30,
+  "cold_definition": "Fresh process per batch, fixture loading and verification-input generation outside measured region; repeated operations within a batch amortize process-local first use. No CPU cache flush.",
+  "baseline_definition": "Official C reference paths with -O3 and no project ISA/vector optimization. Preserve upstream portable/SWAR algorithms. MQOM C reference equals optimized sources by upstream design; portable C selection explicitly recorded.",
+  "PMU_scope": "User-mode, process-specific, start-disabled perf events controlled by child FD enable/disable and ACK. Original API loop/clock/syscall boundary overhead disclosed, no manual correction.",
+  "profile_privacy": "Frame-pointer address callchains only, no DWARF user-stack bytes, no user registers, raw sample payloads, physical addresses or kernel profiling. No secret fixtures or entropy in archive.",
+  "ratios": "Hotspot self=sample period weight at IP / all sample period weight including unknown; children inclusive overlaps and not additive; not precise wall-time percentages.",
+  "quality": "Correctness and identity failures stop that case. Sampling limitations/lost/unknown/multiplexing are explicit; no selective retry for faster results.",
+  "constraints": [
+    "Do not modify earlier experiments or manuscript.",
+    "Do not change governor, IRQ, system permissions or other users processes.",
+    "No automatic commit or upload; local full archive and Chinese reports required."
+  ]
+}

@@ -1,0 +1,6 @@
+design,scope,lut,ff,lutram,ramb36,dsp,clock_ns,wns_ns,fmax_mhz
+vanilla_synth,full_core,53772,23828,0,36,27,5.0,-17.761,43.935
+vanilla_route,full_core,52360,23828,0,36,27,24.0,-0.808,40.310
+vanilla_route_verified,full_core,52360,23828,0,36,27,25.0,0.192,40.000
+p3b,datapath_plus_lsu,2702,1514,128,0,8,5.0,0.019,200.763
+p4,datapath_plus_lsu,4278,1951,704,0,8,5.0,-0.289,189.071

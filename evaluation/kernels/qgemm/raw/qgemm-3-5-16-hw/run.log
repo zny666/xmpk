@@ -1,0 +1,7 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 42487
+/tmp/xmpk-q-overlap-closure-20261116/elf/xmpk_qgemm_perf_3_5_1_hw.elf *** FAILED *** (tohost = 219) after 1491 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after       1479 cycles!
+
+CPU time used: 22168.14 ms
+Wall clock time passed: 22209.49 ms

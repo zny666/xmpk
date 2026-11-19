@@ -1,0 +1,4 @@
+/usr/lib/gcc/riscv64-unknown-elf/12.2.0/../../../riscv64-unknown-elf/bin/ld: warning: /reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/uov-is-xmpk/uov-is-xmpk.elf has a LOAD segment with RWX permissions
+   text	   data	    bss	    dec	    hex	filename
+  29984	     72	34054768	34084824	20817d8	/reviewer/riscv/xmpk-refined-algorithms-20261112/e2e/build/uov-is-xmpk/uov-is-xmpk.elf
+UOV_IS_BUILD_PASS variant=uov-is-xmpk

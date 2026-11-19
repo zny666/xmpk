@@ -1,0 +1,25 @@
+{
+  "state": "passed",
+  "command": [
+    "/tmp/xmpk-q-overlap-closure-20261116/model/Variane_testharness",
+    "/tmp/xmpk-q-overlap-closure-20261116/elf/qgemm-payload-regression.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=120000000",
+    "++/tmp/xmpk-q-overlap-closure-20261116/elf/qgemm-payload-regression.elf",
+    "+elf_file=/tmp/xmpk-q-overlap-closure-20261116/elf/qgemm-payload-regression.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/tmp/xmpk-q-overlap-closure-20261116/results/integrated-payload-local-input/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/tmp/xmpk-q-overlap-closure-20261116/results/integrated-payload-local-input/report.yaml"
+  ],
+  "started": 1794806942.2590332,
+  "ended": 1794807077.3268144,
+  "process_exit": 0,
+  "decoded_exit_code": 0,
+  "model_sha256": "5582f48c00ad74f0ba03b1bb03f4f369eecc80af6178719b48a5a1ace37f77d8",
+  "elf_sha256": "1b0f734812308c7601ea633406bcd16744b2ed9f25c4d35b10245f4f5ded964e",
+  "log_sha256": "89a7aeaeb9d4cb025c1f979d6a59c146694c68510f3119e888e763645eebb99a",
+  "coverage": "GF16 three exact shapes plus nword256; GF256; Fp7/31/127; invalid/unaligned descriptors"
+}

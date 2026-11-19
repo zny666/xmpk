@@ -1,0 +1,18 @@
+{
+  "state": "running",
+  "command": [
+    "/tmp/xmpk-q-overlap-closure-20261116/model/Variane_testharness",
+    "/artifact/xmpk-q-overlap-closure-20261116/regression/qgemm-payload-regression.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=120000000",
+    "++/artifact/xmpk-q-overlap-closure-20261116/regression/qgemm-payload-regression.elf",
+    "+elf_file=/artifact/xmpk-q-overlap-closure-20261116/regression/qgemm-payload-regression.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/tmp/xmpk-q-overlap-closure-20261116/results/integrated-payload/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/tmp/xmpk-q-overlap-closure-20261116/results/integrated-payload/report.yaml"
+  ],
+  "started": 1794806877.5373445
+}

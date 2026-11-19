@@ -1,0 +1,112 @@
+{
+  "shell_scripts_syntax_checked": 41,
+  "python_entries_compiled": 25,
+  "privacy_scan_loose_and_5875_archive_members": "PASS",
+  "api_build_argument_closure": [
+    {
+      "variant": "mayo1",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mayo1",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mayo5",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mayo5",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mqom1",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mqom1",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mqom5",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "mqom5",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "snova1",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "snova1",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "snova5",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "snova5",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "uov_is",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "uov_is",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "uov_v",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "uov_v",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "qruov_l3",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "qruov_l3",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "qruov_l5",
+      "accel": 0,
+      "source_include_linker_paths_exist": true
+    },
+    {
+      "variant": "qruov_l5",
+      "accel": 1,
+      "source_include_linker_paths_exist": true
+    }
+  ],
+  "before_source_reconstruction": "PASS",
+  "actual_compiler_execution": false,
+  "fresh_algorithm_or_RTL_execution": false,
+  "argv_capture_note": "Unmodified build scripts run under Bash 5 with a compiler-argument recorder that exits 90 before compilation.",
+  "scope": "Offline export validation, not compilation/performance measurement."
+}

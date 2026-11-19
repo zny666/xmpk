@@ -1,0 +1,7 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 33217
+/artifact/xmpk-arm64-native/hardware-final-20261113/kernel-elf/ext-10-layout.elf *** FAILED *** (tohost = 510199) after 6199768 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after    6199756 cycles!
+
+CPU time used: 206609.93 ms
+Wall clock time passed: 221187.39 ms

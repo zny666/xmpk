@@ -1,0 +1,40 @@
+round_id,scheme,level,operation,scope,additional_speedup,validation_status,validation_source,optimization
+prior-confirmed,MAYO-1,L1,sign,api,1.0488019194598701,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,zero-copy packed GEMM
+prior-confirmed,MAYO-5,L5,sign,api,1.037647938677375,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,zero-copy packed GEMM
+prior-confirmed,MQOM-L1,L1,sign,api,1.3356498456425776,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,triangular GF256 MUL8
+prior-confirmed,MQOM-L1,L1,verify,api,1.32373843693937,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,triangular GF256 MUL8
+prior-confirmed,MQOM-L5,L5,sign,api,1.7272863484703531,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,triangular GF256 MUL8
+prior-confirmed,MQOM-L5,L5,verify,api,1.5837785689769024,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,triangular GF256 MUL8
+prior-confirmed,SNOVA-V,L5,keygen,api,1.3623281838114139,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,prepared LINXFM packing
+prior-confirmed,SNOVA-V,L5,sign,api,1.3184811966737937,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,prepared LINXFM packing
+prior-confirmed,UOV-Is,L1,keygen,api,1.150609625031263,user-confirmed-external-simulation,user confirmed the earlier external simulation ratios,packed-window batch matvec
+arithmetic-followup-confirmed-20261112,MAYO-1,L1,keygen,api,1.014,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,transposed register tile and word XOR
+arithmetic-followup-confirmed-20261112,MAYO-5,L5,keygen,api,1.010,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,transposed register tile and word XOR
+arithmetic-followup-confirmed-20261112,QR-UOV-1q127L3,L1,sign,api,1.005,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,GF127 MUL8 LU row updates
+arithmetic-followup-confirmed-20261112,SNOVA-V,L5,keygen,api,1.064,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,prepared RHS-row GF16 MACC
+arithmetic-followup-confirmed-20261112,SNOVA-V,L5,sign,api,1.155,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,prepared RHS-row GF16 MACC across Sign shapes
+arithmetic-followup-confirmed-20261112,UOV-Is,L1,keygen,api,1.055,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,aligned dual-word windows and word XOR
+arithmetic-followup-confirmed-20261112,UOV-Is,L1,sign,api,2.51,user-confirmed-test-ratios,user reports actual tests match these rounded API ratios,GF16 Sign tails MACC and packed QGEMM
+arithmetic-followup-confirmed-20261112,MAYO-1,L1,whole-run,whole-report,1.004,user-confirmed-test-ratios,user reports actual tests match these rounded whole-run ratios,whole-run cross-check only
+arithmetic-followup-confirmed-20261112,MAYO-5,L5,whole-run,whole-report,1.003,user-confirmed-test-ratios,user reports actual tests match these rounded whole-run ratios,whole-run cross-check only
+arithmetic-followup-confirmed-20261112,QR-UOV-1q127L3,L1,whole-run,whole-report,1.001,user-confirmed-test-ratios,user reports actual tests match these rounded whole-run ratios,whole-run cross-check only
+arithmetic-followup-confirmed-20261112,SNOVA-V,L5,whole-run,whole-report,1.081,user-confirmed-test-ratios,user reports actual tests match these rounded whole-run ratios,whole-run cross-check only
+arithmetic-followup-confirmed-20261112,UOV-Is,L1,whole-run,whole-report,1.068,user-confirmed-test-ratios,user reports actual tests match these rounded whole-run ratios,whole-run cross-check only
+snova-l1-shape-followup-confirmed-20261113,SNOVA-I,L1,keygen,api,1.49,user-confirmed-test-ratios,user confirms actual tests match preceding rounded API ratio; raw counters not supplied,shape-specific GF16 MACC and fused four-RHS rows
+snova-l1-shape-followup-confirmed-20261113,SNOVA-I,L1,sign,api,1.32,user-confirmed-test-ratios,user confirms actual tests match preceding rounded API ratio; raw counters not supplied,ordinary MACC for F21 and six-column Sign paths; fused four-column F12
+snova-l1-shape-followup-confirmed-20261113,SNOVA-I,L1,verify,api,2.40,user-confirmed-test-ratios,user confirms actual tests match preceding rounded API ratio; raw counters not supplied,GF16 MACC replaces scalar loops; prepack all31 RHS; shape-specific fusion
+snova-l1-shape-followup-confirmed-20261113,SNOVA-I,L1,whole-run,whole-report,1.52,user-confirmed-test-ratios,user confirms actual tests match preceding rounded whole-run ratio,whole-run cross-check only
+hardware-final-confirmed-20261113,QR-UOV-1q127L3,L1,keygen,api,1.086956521739130434782608696,user-confirmed-test-ratios,user reports measured KeyGen cycle reduction of 8%; raw counters not supplied,degree-specific EXTGEMM arithmetic and registered accumulation
+hardware-final-confirmed-20261113,UOV-Is,L1,sign,api,1.012145748987854251012145749,user-confirmed-test-ratios,user reports approximate measured Sign cycle reduction of 1.2%; raw counters not supplied,SOLVEQ phase-specific row-word updates
+qr-l5-kernel-adjustment-confirmed-20261114,QR-UOV-5q127L3,L5,keygen,api,1.088892769973580602556204913,user-confirmed-kernel-adjustment,user confirms L5 kernel-replay adjustment applied to measured LU API counts,174874875-cycle EXTGEMM savings from actual-input replay
+qr-l5-kernel-adjustment-confirmed-20261114,QR-UOV-5q127L3,L5,sign,api,1.000020847469455025090079887,user-confirmed-kernel-adjustment,user confirms L5 kernel-replay adjustment applied to measured LU API counts,10812-cycle EXTGEMM savings; LU software already included in raw measurement
+qr-l5-kernel-adjustment-confirmed-20261114,QR-UOV-5q127L3,L5,verify,api,1,user-confirmed-kernel-adjustment,user confirms neutral Verify factor for completed LU API measurement,no additional kernel savings
+q-request-overlap-confirmed-20261116,MAYO-1,L1,keygen,api,1.009896990506968289234498081,user-confirmed-test-ratios,user reports measured time decrease .98 percent; raw counters not supplied,QGEMM GF16/GF256 request overlap
+q-request-overlap-confirmed-20261116,MAYO-1,L1,sign,api,1.003411599438089504314669878,user-confirmed-test-ratios,user reports measured time decrease .34 percent; raw counters not supplied,QGEMM GF16/GF256 request overlap
+q-request-overlap-confirmed-20261116,MAYO-5,L5,keygen,api,1.013581998783701601459558078,user-confirmed-test-ratios,user reports measured time decrease 1.34 percent; raw counters not supplied,QGEMM GF16/GF256 request overlap
+q-request-overlap-confirmed-20261116,MAYO-5,L5,sign,api,1.003109639883639281773497843,user-confirmed-test-ratios,user reports measured time decrease .31 percent; raw counters not supplied,QGEMM GF16/GF256 request overlap
+q-request-overlap-confirmed-20261116,UOV-Is,L1,keygen,api,1.046572475143903715332286761,user-confirmed-test-ratios,user reports measured time decrease 4.45 percent; raw counters not supplied,QGEMM GF16/GF256 request overlap
+q-request-overlap-confirmed-20261116,UOV-Is,L1,sign,api,1.032631144155307724080958282,user-confirmed-test-ratios,user reports measured time decrease 3.16 percent; raw counters not supplied,QGEMM GF16/GF256 request overlap
+q-request-overlap-confirmed-20261116,MAYO-1,L1,whole-run,whole-report,1.004016064257028112449799197,user-confirmed-test-ratios,user reports measured time decrease .40 percent; raw counters not supplied,whole-run cross-check only
+q-request-overlap-confirmed-20261116,MAYO-5,L5,whole-run,whole-report,1.005227181342983514274225975,user-confirmed-test-ratios,user reports measured time decrease .52 percent; raw counters not supplied,whole-run cross-check only
+q-request-overlap-confirmed-20261116,UOV-Is,L1,whole-run,whole-report,1.046025104602510460251046025,user-confirmed-test-ratios,user reports measured time decrease 4.40 percent; raw counters not supplied,whole-run cross-check only

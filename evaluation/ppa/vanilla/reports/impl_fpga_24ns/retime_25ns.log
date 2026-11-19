@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 01:00:44 2026
+# Process ID         : 3779939
+# Current directory  : /artifact
+# Command line       : vivado -mode batch -source /reviewer/riscv/xmpk-cva6-vanilla-baseline/retime_routed.tcl -log /reviewer/riscv/xmpk-cva6-vanilla-baseline/reports/impl_fpga_24ns/retime_25ns.log -journal /reviewer/riscv/xmpk-cva6-vanilla-baseline/reports/impl_fpga_24ns/retime_25ns.jou
+# Log file           : /reviewer/riscv/xmpk-cva6-vanilla-baseline/reports/impl_fpga_24ns/retime_25ns.log
+# Journal file       : /reviewer/riscv/xmpk-cva6-vanilla-baseline/reports/impl_fpga_24ns/retime_25ns.jou
+# Running On         : REDACTED_HOST
+# Platform           : Velinux
+# Operating System   : veLinux GNU/Linux 2 (lyra)
+# Processor Detail   : Intel(R) Xeon(R) Platinum 8260 CPU @ 2.40GHz
+# CPU Frequency      : 2399.998 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16534 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33714 MB
+# Available Virtual  : 31734 MB
+#-----------------------------------------------------------
+source /reviewer/riscv/xmpk-cva6-vanilla-baseline/retime_routed.tcl
+# set DCP $::env(ROUTED_DCP)
+# set OUT $::env(OUT_DIR)
+# set CLKNS $::env(CLK_NS)
+# file mkdir $OUT
+# open_checkpoint $DCP
+Command: open_checkpoint /reviewer/riscv/xmpk-cva6-vanilla-baseline/reports/impl_fpga_24ns/cva6_vanilla_route.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1481.328 ; gain = 0.000 ; free physical = 8733 ; free virtual = 29904
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+Netlist sorting complete. Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.92 . Memory (MB): peak = 1855.258 ; gain = 0.000 ; free physical = 8384 ; free virtual = 29569
+INFO: [Netlist 29-17] Analyzing 4664 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1992.180 ; gain = 14.547 ; free physical = 8243 ; free virtual = 29429
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
+  general.maxThreads
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2671.898 ; gain = 3.008 ; free physical = 7618 ; free virtual = 28804
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2674.898 ; gain = 3.000 ; free physical = 7615 ; free virtual = 28802
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2674.898 ; gain = 0.000 ; free physical = 7615 ; free virtual = 28802
+Read placeStorage: Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2719.898 ; gain = 45.000 ; free physical = 7567 ; free virtual = 28753
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2719.898 ; gain = 0.000 ; free physical = 7567 ; free virtual = 28753
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2768.047 ; gain = 48.148 ; free physical = 7520 ; free virtual = 28707
+Read Physdb Files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2768.047 ; gain = 99.156 ; free physical = 7520 ; free virtual = 28707
+Restored from archive | CPU: 7.640000 secs | Memory: 75.892609 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2768.047 ; gain = 99.156 ; free physical = 7520 ; free virtual = 28707
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2786.320 ; gain = 0.000 ; free physical = 7503 ; free virtual = 28689
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:51 ; elapsed = 00:00:37 . Memory (MB): peak = 2794.355 ; gain = 1313.027 ; free physical = 7502 ; free virtual = 28689
+# create_clock -name core_clk -period $CLKNS [get_ports clk_i]
+WARNING: [Constraints 18-619] A clock with name 'core_clk' already exists, overwriting the previous clock with the same name.
+# report_timing_summary -file $OUT/timing_route_${CLKNS}ns.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk_i" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:01:50 ; elapsed = 00:00:40 . Memory (MB): peak = 2988.375 ; gain = 194.020 ; free physical = 7286 ; free virtual = 28472
+# report_timing -delay_type max -max_paths 20 -file $OUT/timing_paths_${CLKNS}ns.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 20 -nworst 1 -delay_type max -sort_by slack.
+# puts "CVA6_VANILLA_RETIMED"
+CVA6_VANILLA_RETIMED
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 01:02:07 2026...

@@ -18,3 +18,10 @@ build/
 *.zip
 __pycache__/
 *.pyc
+!/evaluation/**/*.log
+!/evaluation/api/integrated-20261112/e2e/source/r20/results/received/build/
+!/evaluation/api/integrated-20261112/e2e/source/r20/results/received/build/**
+/evaluation/api/integrated-20261112/e2e/build/
+/evaluation/api/integrated-20261112/e2e/work/native-check/
+/evaluation/profiling/reference/build/
+/evaluation/profiling/reference/raw/

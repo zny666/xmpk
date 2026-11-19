@@ -21,3 +21,10 @@ the pinned public CVA6 base and preserves the upstream file notices.
 Newly authored support code is licensed under Apache-2.0 WITH SHL-2.0.
 
 This NOTICE supplies attribution; it does not modify licence terms.
+
+Evaluation sources include upstream MAYO, UOV, MQOM, SNOVA and QR-UOV reference
+implementations, their project adaptations, and CVA6/Spike-derived support.
+Original copyright and license notices are retained alongside the source.
+See evaluation/licenses/README.md for per-project terms and the official
+QR-UOV IP statement. The integrated source snapshot and prior versions identify
+changes independently of the historical measured experiment records.

@@ -1,0 +1,5 @@
+E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-xmpk-gf16-linxfm-batch
+E2E_METRIC keygen cycles=0x0000000000c82bdf instret=0x00000000009adce2
+E2E_METRIC sign cycles=0x0000000003d5d853 instret=0x0000000003126186
+E2E_METRIC verify cycles=0x00000000019ffe06 instret=0x000000000194d13d
+E2E_SUCCESS

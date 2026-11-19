@@ -1,0 +1,177 @@
+operation,cycles,instret,evidence,identity,completed,kind
+keygen,114926282,89793960,evaluation/api/raw/formal/snova5-qgemm/snova5-qgemm.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_V_B_AES implementation=cva6-xmpk-gf16-qgemm,True,guest-counter
+sign,357185270,280832595,evaluation/api/raw/formal/snova5-qgemm/snova5-qgemm.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_V_B_AES implementation=cva6-xmpk-gf16-qgemm,True,guest-counter
+verify,121606374,117244386,evaluation/api/raw/formal/snova5-qgemm/snova5-qgemm.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_V_B_AES implementation=cva6-xmpk-gf16-qgemm,True,guest-counter
+sign,357185270,280832595,evaluation/api/raw/formal/snova5-qgemm/snova5-qgemm.log,,True,guest-counter
+verify,121606374,117244386,evaluation/api/raw/formal/snova5-qgemm/snova5-qgemm.log,,True,guest-counter
+keygen,51490569,40028218,evaluation/api/raw/formal/snova5-xmpk/snova5-xmpk.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_V_B_AES implementation=cva6-xmpk-gf16-linxfm-batch,True,guest-counter
+sign,217066634,172767280,evaluation/api/raw/formal/snova5-xmpk/snova5-xmpk.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_V_B_AES implementation=cva6-xmpk-gf16-linxfm-batch,True,guest-counter
+verify,121470786,117244811,evaluation/api/raw/formal/snova5-xmpk/snova5-xmpk.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_V_B_AES implementation=cva6-xmpk-gf16-linxfm-batch,True,guest-counter
+sign,217066634,172767280,evaluation/api/raw/formal/snova5-xmpk/snova5-xmpk.log,,True,guest-counter
+verify,121470786,117244811,evaluation/api/raw/formal/snova5-xmpk/snova5-xmpk.log,,True,guest-counter
+keygen,884704805,381383126,evaluation/api/raw/formal/uov-v-xmpk/uov-v-xmpk.guest-output.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+sign,1,6113138,evaluation/api/raw/formal/uov-v-xmpk/uov-v-xmpk.guest-output.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+verify,1,12397055,evaluation/api/raw/formal/uov-v-xmpk/uov-v-xmpk.guest-output.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+sign,1,6113138,evaluation/api/raw/formal/uov-v-xmpk/uov-v-xmpk.log,,True,guest-counter
+verify,1,12397055,evaluation/api/raw/formal/uov-v-xmpk/uov-v-xmpk.log,,True,guest-counter
+keygen,883899625,381383127,evaluation/api/raw/formal/uov-v-xmpk-counter-clean/uov-v-xmpk-counter-clean.guest-output.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+sign,11389188,6113144,evaluation/api/raw/formal/uov-v-xmpk-counter-clean/uov-v-xmpk-counter-clean.guest-output.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+verify,16741971,12397061,evaluation/api/raw/formal/uov-v-xmpk-counter-clean/uov-v-xmpk-counter-clean.guest-output.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+keygen,883899625,381383127,evaluation/api/raw/formal/uov-v-xmpk-counter-clean/uov-v-xmpk-counter-clean.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+sign,11389188,6113144,evaluation/api/raw/formal/uov-v-xmpk-counter-clean/uov-v-xmpk-counter-clean.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+verify,16741971,12397061,evaluation/api/raw/formal/uov-v-xmpk-counter-clean/uov-v-xmpk-counter-clean.log,E2E_BEGIN algorithm=UOV parameter=UOV-V implementation=cva6-xmpk-gf256-qgemm,True,guest-counter
+keygen,35084,23607,evaluation/api/raw/long-o3/precheck-candidate/guest.log,,True,guest-counter
+sign,21560,14910,evaluation/api/raw/long-o3/precheck-candidate/guest.log,,True,guest-counter
+verify,8499,4061,evaluation/api/raw/long-o3/precheck-candidate/guest.log,,True,guest-counter
+keygen,35084,23607,evaluation/api/raw/long-o3/precheck-candidate/sim.log,,True,guest-counter
+sign,21560,14910,evaluation/api/raw/long-o3/precheck-candidate/sim.log,,True,guest-counter
+verify,8499,4061,evaluation/api/raw/long-o3/precheck-candidate/sim.log,,True,guest-counter
+keygen,35084,23607,evaluation/api/raw/long-o3/precheck-candidate--debug/guest.log,,True,guest-counter
+sign,21560,14910,evaluation/api/raw/long-o3/precheck-candidate--debug/guest.log,,True,guest-counter
+verify,8499,4061,evaluation/api/raw/long-o3/precheck-candidate--debug/guest.log,,True,guest-counter
+keygen,35084,23607,evaluation/api/raw/long-o3/precheck-candidate--debug/sim.log,,True,guest-counter
+sign,21560,14910,evaluation/api/raw/long-o3/precheck-candidate--debug/sim.log,,True,guest-counter
+verify,8499,4061,evaluation/api/raw/long-o3/precheck-candidate--debug/sim.log,,True,guest-counter
+keygen,2142131324,478102636,evaluation/api/raw/long-o3/qr-candidate/guest.log,,True,guest-counter
+sign,518634908,456887948,evaluation/api/raw/long-o3/qr-candidate/guest.log,,True,guest-counter
+verify,556416828,481749686,evaluation/api/raw/long-o3/qr-candidate/guest.log,,True,guest-counter
+verify,556416828,481749686,evaluation/api/raw/long-o3/qr-candidate/sim.log,,True,guest-counter
+keygen,13099260,10149090,evaluation/api/raw/long-o3/snova-baseline/guest.log,,True,guest-counter
+sign,64250584,51536283,evaluation/api/raw/long-o3/snova-baseline/guest.log,,True,guest-counter
+verify,27257149,26530137,evaluation/api/raw/long-o3/snova-baseline/guest.log,,True,guest-counter
+keygen,13099260,10149090,evaluation/api/raw/long-o3/snova-baseline/sim.log,,True,guest-counter
+sign,64250584,51536283,evaluation/api/raw/long-o3/snova-baseline/sim.log,,True,guest-counter
+verify,27257149,26530137,evaluation/api/raw/long-o3/snova-baseline/sim.log,,True,guest-counter
+keygen,11040390,9400246,evaluation/api/raw/long-o3/snova-candidate/guest.log,,True,guest-counter
+sign,60697645,51515344,evaluation/api/raw/long-o3/snova-candidate/guest.log,,True,guest-counter
+verify,25431814,20555429,evaluation/api/raw/long-o3/snova-candidate/guest.log,,True,guest-counter
+keygen,11040390,9400246,evaluation/api/raw/long-o3/snova-candidate/sim.log,,True,guest-counter
+sign,60697645,51515344,evaluation/api/raw/long-o3/snova-candidate/sim.log,,True,guest-counter
+verify,25431814,20555429,evaluation/api/raw/long-o3/snova-candidate/sim.log,,True,guest-counter
+keygen,90238225,47783039,evaluation/api/raw/long-o3/uov-candidate/guest.log,,True,guest-counter
+sign,693893,105111,evaluation/api/raw/long-o3/uov-candidate/guest.log,,True,guest-counter
+verify,904775,675860,evaluation/api/raw/long-o3/uov-candidate/guest.log,,True,guest-counter
+keygen,90238225,47783039,evaluation/api/raw/long-o3/uov-candidate/sim.log,,True,guest-counter
+sign,693893,105111,evaluation/api/raw/long-o3/uov-candidate/sim.log,,True,guest-counter
+verify,904775,675860,evaluation/api/raw/long-o3/uov-candidate/sim.log,,True,guest-counter
+keygen,21200558,19938788,evaluation/api/raw/recovered/mayo1-baseline-recovered-20261112/mayo1-baseline.guest-output.log,E2E_BEGIN algorithm=MAYO parameter=MAYO-1 implementation=cva6-ref-portable,True,guest-counter
+sign,35887635,32927656,evaluation/api/raw/recovered/mayo1-baseline-recovered-20261112/mayo1-baseline.guest-output.log,E2E_BEGIN algorithm=MAYO parameter=MAYO-1 implementation=cva6-ref-portable,True,guest-counter
+verify,19409234,18117378,evaluation/api/raw/recovered/mayo1-baseline-recovered-20261112/mayo1-baseline.guest-output.log,E2E_BEGIN algorithm=MAYO parameter=MAYO-1 implementation=cva6-ref-portable,True,guest-counter
+sign,35887635,32927656,evaluation/api/raw/recovered/mayo1-baseline-recovered-20261112/mayo1-baseline.log,,True,guest-counter
+verify,19409234,18117378,evaluation/api/raw/recovered/mayo1-baseline-recovered-20261112/mayo1-baseline.log,,True,guest-counter
+keygen,10989214,10069550,evaluation/api/raw/recovered/mqom1-baseline-clean/mqom1-baseline-clean.guest-output.log,E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable,True,guest-counter
+sign,1,98113392,evaluation/api/raw/recovered/mqom1-baseline-clean/mqom1-baseline-clean.guest-output.log,E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable,True,guest-counter
+verify,1,93276409,evaluation/api/raw/recovered/mqom1-baseline-clean/mqom1-baseline-clean.guest-output.log,E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable,True,guest-counter
+sign,1,98113392,evaluation/api/raw/recovered/mqom1-baseline-clean/mqom1-baseline-clean.log,,True,guest-counter
+verify,1,93276409,evaluation/api/raw/recovered/mqom1-baseline-clean/mqom1-baseline-clean.log,,True,guest-counter
+keygen,10950253,10069551,evaluation/api/raw/recovered/mqom1-baseline-counter-clean-recovered-20261112/mqom1-baseline-counter-clean/mqom1-baseline-counter-clean.guest-output.log,E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable,True,guest-counter
+sign,105733402,98113398,evaluation/api/raw/recovered/mqom1-baseline-counter-clean-recovered-20261112/mqom1-baseline-counter-clean/mqom1-baseline-counter-clean.guest-output.log,E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable,True,guest-counter
+verify,102629625,93276415,evaluation/api/raw/recovered/mqom1-baseline-counter-clean-recovered-20261112/mqom1-baseline-counter-clean/mqom1-baseline-counter-clean.guest-output.log,E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable,True,guest-counter
+sign,105733402,98113398,evaluation/api/raw/recovered/mqom1-baseline-counter-clean-recovered-20261112/mqom1-baseline-counter-clean/mqom1-baseline-counter-clean.log,,True,guest-counter
+verify,102629625,93276415,evaluation/api/raw/recovered/mqom1-baseline-counter-clean-recovered-20261112/mqom1-baseline-counter-clean/mqom1-baseline-counter-clean.log,,True,guest-counter
+keygen,208695359,176617068,evaluation/api/raw/recovered/qruov-l3-baseline-matched-recovered-20261112/qruov-l3-baseline-matched.guest-output.log,E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-ref-portable-aes,True,guest-counter
+sign,74390612,67804278,evaluation/api/raw/recovered/qruov-l3-baseline-matched-recovered-20261112/qruov-l3-baseline-matched.guest-output.log,E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-ref-portable-aes,True,guest-counter
+verify,71292714,65372497,evaluation/api/raw/recovered/qruov-l3-baseline-matched-recovered-20261112/qruov-l3-baseline-matched.guest-output.log,E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-ref-portable-aes,True,guest-counter
+sign,74390612,67804278,evaluation/api/raw/recovered/qruov-l3-baseline-matched-recovered-20261112/qruov-l3-baseline-matched.log,,True,guest-counter
+verify,71292714,65372497,evaluation/api/raw/recovered/qruov-l3-baseline-matched-recovered-20261112/qruov-l3-baseline-matched.log,,True,guest-counter
+keygen,171444563,65421791,evaluation/api/raw/recovered/qruov-l3-swopt/qruov-l3-swopt.guest-output.log,E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-xmpk-gf127,True,guest-counter
+sign,117322494,90745203,evaluation/api/raw/recovered/qruov-l3-swopt/qruov-l3-swopt.guest-output.log,E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-xmpk-gf127,True,guest-counter
+verify,99865412,78426297,evaluation/api/raw/recovered/qruov-l3-swopt/qruov-l3-swopt.guest-output.log,E2E_BEGIN algorithm=QRUOV parameter=1q127L3 implementation=cva6-xmpk-gf127,True,guest-counter
+sign,117322494,90745203,evaluation/api/raw/recovered/qruov-l3-swopt/qruov-l3-swopt.log,,True,guest-counter
+verify,99865412,78426297,evaluation/api/raw/recovered/qruov-l3-swopt/qruov-l3-swopt.log,,True,guest-counter
+keygen,16065800,15733290,evaluation/api/raw/recovered/snova1-recovered-20261113/baseline/results/baseline/snova1-baseline.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-ref-portable,True,guest-counter
+sign,76923470,69353748,evaluation/api/raw/recovered/snova1-recovered-20261113/baseline/results/baseline/snova1-baseline.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-ref-portable,True,guest-counter
+verify,27403339,26686075,evaluation/api/raw/recovered/snova1-recovered-20261113/baseline/results/baseline/snova1-baseline.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-ref-portable,True,guest-counter
+sign,76923470,69353748,evaluation/api/raw/recovered/snova1-recovered-20261113/baseline/results/baseline/snova1-baseline.log,,True,guest-counter
+verify,27403339,26686075,evaluation/api/raw/recovered/snova1-recovered-20261113/baseline/results/baseline/snova1-baseline.log,,True,guest-counter
+keygen,13118431,10149090,evaluation/api/raw/recovered/snova1-recovered-20261113/optimized/results/optimized/snova1-batch2.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-xmpk-gf16-linxfm-batch,True,guest-counter
+sign,64346195,51536262,evaluation/api/raw/recovered/snova1-recovered-20261113/optimized/results/optimized/snova1-batch2.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-xmpk-gf16-linxfm-batch,True,guest-counter
+verify,27262470,26530109,evaluation/api/raw/recovered/snova1-recovered-20261113/optimized/results/optimized/snova1-batch2.guest-output.log,E2E_BEGIN algorithm=SNOVA parameter=SNOVA_I_B_AES implementation=cva6-xmpk-gf16-linxfm-batch,True,guest-counter
+sign,64346195,51536262,evaluation/api/raw/recovered/snova1-recovered-20261113/optimized/results/optimized/snova1-batch2.log,,True,guest-counter
+verify,27262470,26530109,evaluation/api/raw/recovered/snova1-recovered-20261113/optimized/results/optimized/snova1-batch2.log,,True,guest-counter
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/guest.log,,True,guest-counter
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/guest.log,,True,guest-counter
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/guest.log,,True,guest-counter
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/sim.log,,True,guest-counter
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/sim.log,,True,guest-counter
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/sim.log,,True,guest-counter
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/guest.log,,True,guest-counter
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/guest.log,,True,guest-counter
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/guest.log,,True,guest-counter
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/sim.log,,True,guest-counter
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/sim.log,,True,guest-counter
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/sim.log,,True,guest-counter
+keygen,2452505880,2073324157,evaluation/api/raw/restart-l5/qr-baseline/guest.log,,True,guest-counter
+sign,544451111,493653920,evaluation/api/raw/restart-l5/qr-baseline/guest.log,,True,guest-counter
+verify,520880656,476421012,evaluation/api/raw/restart-l5/qr-baseline/guest.log,,True,guest-counter
+keygen,2452505880,2073324157,evaluation/api/raw/restart-l5/qr-baseline/sim.log,,True,guest-counter
+sign,544451111,493653920,evaluation/api/raw/restart-l5/qr-baseline/sim.log,,True,guest-counter
+verify,520880656,476421012,evaluation/api/raw/restart-l5/qr-baseline/sim.log,,True,guest-counter
+keygen,2141546822,478102637,evaluation/api/raw/restart-l5/qr-candidate/guest.log,,True,guest-counter
+sign,522203380,457288794,evaluation/api/raw/restart-l5/qr-candidate/guest.log,,True,guest-counter
+verify,557604721,481749687,evaluation/api/raw/restart-l5/qr-candidate/guest.log,,True,guest-counter
+keygen,2141546822,478102637,evaluation/api/raw/restart-l5/qr-candidate/sim.log,,True,guest-counter
+sign,522203380,457288794,evaluation/api/raw/restart-l5/qr-candidate/sim.log,,True,guest-counter
+verify,557604721,481749687,evaluation/api/raw/restart-l5/qr-candidate/sim.log,,True,guest-counter
+keygen,9656875166,8784186327,evaluation/api/raw/restart-l5/uov-baseline/guest.log,,True,guest-counter
+sign,76404978,68696352,evaluation/api/raw/restart-l5/uov-baseline/guest.log,,True,guest-counter
+verify,17248892,12854740,evaluation/api/raw/restart-l5/uov-baseline/guest.log,,True,guest-counter
+keygen,9656875166,8784186327,evaluation/api/raw/restart-l5/uov-baseline/sim.log,,True,guest-counter
+sign,76404978,68696352,evaluation/api/raw/restart-l5/uov-baseline/sim.log,,True,guest-counter
+verify,17248892,12854740,evaluation/api/raw/restart-l5/uov-baseline/sim.log,,True,guest-counter
+keygen,35084,23607,evaluation/api/raw/long-o3/precheck-candidate/job.json,,True,stage-record
+sign,21560,14910,evaluation/api/raw/long-o3/precheck-candidate/job.json,,True,stage-record
+verify,8499,4061,evaluation/api/raw/long-o3/precheck-candidate/job.json,,True,stage-record
+keygen,35084,23607,evaluation/api/raw/long-o3/precheck-candidate--debug/job.json,,True,stage-record
+sign,21560,14910,evaluation/api/raw/long-o3/precheck-candidate--debug/job.json,,True,stage-record
+verify,8499,4061,evaluation/api/raw/long-o3/precheck-candidate--debug/job.json,,True,stage-record
+keygen,2142131324,478102636,evaluation/api/raw/long-o3/qr-candidate/job.json,,True,stage-record
+sign,518634908,456887948,evaluation/api/raw/long-o3/qr-candidate/job.json,,True,stage-record
+verify,556416828,481749686,evaluation/api/raw/long-o3/qr-candidate/job.json,,True,stage-record
+keygen,13099260,10149090,evaluation/api/raw/long-o3/snova-baseline/job.json,,True,stage-record
+sign,64250584,51536283,evaluation/api/raw/long-o3/snova-baseline/job.json,,True,stage-record
+verify,27257149,26530137,evaluation/api/raw/long-o3/snova-baseline/job.json,,True,stage-record
+keygen,11040390,9400246,evaluation/api/raw/long-o3/snova-candidate/job.json,,True,stage-record
+sign,60697645,51515344,evaluation/api/raw/long-o3/snova-candidate/job.json,,True,stage-record
+verify,25431814,20555429,evaluation/api/raw/long-o3/snova-candidate/job.json,,True,stage-record
+keygen,90238225,47783039,evaluation/api/raw/long-o3/uov-candidate/job.json,,True,stage-record
+sign,693893,105111,evaluation/api/raw/long-o3/uov-candidate/job.json,,True,stage-record
+verify,904775,675860,evaluation/api/raw/long-o3/uov-candidate/job.json,,True,stage-record
+keygen,35101,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1/api-stages.json,,,stage-record
+keygen,35101,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1/job.json,,False,stage-record
+keygen,35101,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1-r2/api-stages.json,,,stage-record
+keygen,34937,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1-r3/api-stages.json,,,stage-record
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/api-stages.json,,,stage-record
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/api-stages.json,,,stage-record
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/api-stages.json,,,stage-record
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/job.json,,True,stage-record
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/job.json,,True,stage-record
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t1-r4/job.json,,True,stage-record
+keygen,35101,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2/api-stages.json,,,stage-record
+keygen,35101,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2/job.json,,False,stage-record
+keygen,35101,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2-r2/api-stages.json,,,stage-record
+keygen,34937,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2-r3/api-stages.json,,,stage-record
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/api-stages.json,,,stage-record
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/api-stages.json,,,stage-record
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/api-stages.json,,,stage-record
+keygen,34940,23608,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/job.json,,True,stage-record
+sign,21664,14911,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/job.json,,True,stage-record
+verify,8631,4062,evaluation/api/raw/restart-l5/precheck-candidate--t2-r4/job.json,,True,stage-record
+keygen,2452505880,2073324157,evaluation/api/raw/restart-l5/qr-baseline/api-stages.json,,,stage-record
+sign,544451111,493653920,evaluation/api/raw/restart-l5/qr-baseline/api-stages.json,,,stage-record
+verify,520880656,476421012,evaluation/api/raw/restart-l5/qr-baseline/api-stages.json,,,stage-record
+keygen,2452505880,2073324157,evaluation/api/raw/restart-l5/qr-baseline/job.json,,True,stage-record
+sign,544451111,493653920,evaluation/api/raw/restart-l5/qr-baseline/job.json,,True,stage-record
+verify,520880656,476421012,evaluation/api/raw/restart-l5/qr-baseline/job.json,,True,stage-record
+keygen,2141546822,478102637,evaluation/api/raw/restart-l5/qr-candidate/api-stages.json,,,stage-record
+sign,522203380,457288794,evaluation/api/raw/restart-l5/qr-candidate/api-stages.json,,,stage-record
+verify,557604721,481749687,evaluation/api/raw/restart-l5/qr-candidate/api-stages.json,,,stage-record
+keygen,2141546822,478102637,evaluation/api/raw/restart-l5/qr-candidate/job.json,,True,stage-record
+sign,522203380,457288794,evaluation/api/raw/restart-l5/qr-candidate/job.json,,True,stage-record
+verify,557604721,481749687,evaluation/api/raw/restart-l5/qr-candidate/job.json,,True,stage-record
+keygen,9656875166,8784186327,evaluation/api/raw/restart-l5/uov-baseline/api-stages.json,,,stage-record
+sign,76404978,68696352,evaluation/api/raw/restart-l5/uov-baseline/api-stages.json,,,stage-record
+verify,17248892,12854740,evaluation/api/raw/restart-l5/uov-baseline/api-stages.json,,,stage-record
+keygen,9656875166,8784186327,evaluation/api/raw/restart-l5/uov-baseline/job.json,,True,stage-record
+sign,76404978,68696352,evaluation/api/raw/restart-l5/uov-baseline/job.json,,True,stage-record
+verify,17248892,12854740,evaluation/api/raw/restart-l5/uov-baseline/job.json,,True,stage-record

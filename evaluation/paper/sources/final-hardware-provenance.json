@@ -1,0 +1,100 @@
+{
+  "revision": "q-request-overlap-confirmed-20261116",
+  "source_manifest": "q-overlap-source-hashes.json",
+  "selection": {
+    "Q": "GF16/GF256 next B request overlaps current MAC; one outstanding request",
+    "EXT": "unchanged six-product degree3 / fixed reduction / 28-bit accumulator",
+    "SOLVE": "unchanged forward elimination / RHS-word backward elimination"
+  },
+  "resources": [
+    {
+      "revision": "q-request-overlap-confirmed-20261116",
+      "source_manifest": "q-overlap-source-hashes.json",
+      "kind": "coprocessor OOC post-route; internal register paths",
+      "LUT": 13392,
+      "FF": 8021,
+      "LUTRAM": 804,
+      "BRAM36": 4,
+      "DSP": 8,
+      "target_MHz": 80,
+      "WNS_ns": 0.144,
+      "critical_path_ns": 12.356,
+      "effective_Fmax_MHz": 80.93234056328909,
+      "STA_max_integer_MHz": 80,
+      "next_MHz": 81,
+      "next_WNS_ns": -0.01,
+      "power_total_W": 0.224,
+      "power_dynamic_W": 0.102,
+      "power_static_W": 0.122,
+      "power_method": "Vivado 2025.2 vectorless; medium confidence",
+      "io_scope": "267 inputs and 196 outputs without IO delay; CPU/LSU interface timing not validated",
+      "unit_synthesis": {
+        "LUT": 1514,
+        "FF": 913,
+        "delta_LUT": 62,
+        "delta_FF": 5
+      },
+      "report_sha256": {
+        "q-overlap-copro-clocks-target.rpt": "ddb2de1e91c644e0c122b329dc4f2c6e6b98f06e75d93adae644f6f06d30d31f",
+        "q-overlap-copro-power-target.rpt": "59c6784ba0684523d46aec2805883c75c9d2d2cbe331f64140750824a5ed3ecf",
+        "q-overlap-copro-route-hierarchy.rpt": "61a04db795ace33d8631fea46f16673bd71b42a9f766ed47ed4ff1a5fbe89608",
+        "q-overlap-copro-route-util.rpt": "eb38b56d19f1b5561d48b25ad23a7d1ca2522dc08ee1e0f3767891f5da251ce0",
+        "q-overlap-copro-timing-next-mhz.rpt": "3efabb8d135e4d2a1e3e70b6850c5eb13eba4c1360a4e9d887509d6d9bd18230",
+        "q-overlap-copro-timing-target.rpt": "5b1bc61492f9969e8aee4c4dc632ccba9b19076c0613afea392494b9ebf2e14e"
+      }
+    },
+    {
+      "kind": "system",
+      "LUT": 66255,
+      "FF": 31866,
+      "BRAM36": 40,
+      "DSP": 35,
+      "target_MHz": 40,
+      "critical_path_ns": 24.789,
+      "effective_Fmax_MHz": 40.34047359716003,
+      "power_total_W": 0.269,
+      "power_dynamic_W": 0.145,
+      "power_static_W": 0.124,
+      "timing": {
+        "target_MHz": 40.0,
+        "target_WNS_ns": 0.211,
+        "target_WHS_ns": 0.078,
+        "target_WPWS_ns": 11.37,
+        "STA_max_integer_MHz": 40,
+        "max_WNS_ns": 0.211,
+        "max_WHS_ns": 0.078,
+        "max_WPWS_ns": 11.37,
+        "next_MHz": 41,
+        "next_WNS_ns": -0.399,
+        "next_WHS_ns": 0.078,
+        "next_WPWS_ns": 11.065
+      },
+      "report_sha256": {
+        "clocks-max-supported.rpt": "bc8af4b27a1c13c3c0be47e9774bd403206faa194e78099341a1a687d47968cb",
+        "clocks-target.rpt": "369b465c5b7e14f1f4a659a57d3d3074bbf4d35ddaa74b12fb2302ce96d1f2f6",
+        "critical-paths.rpt": "b7e992ee79e4a2b79e94d0d4dbead8865c41a86a07be4999a93a041df251765f",
+        "drc.rpt": "53b912406049bb332670bea1e3120cebff1c368646e0a1503b14c216172f6f2a",
+        "power-target.rpt": "d338e8100a7b1ad552f5eb46b999d141b2e870d8f96b6ff4a3a7feb91c7189b8",
+        "route-hierarchy.rpt": "7c24f1973029259c3adec3acb5ae5cad569b5cf3818ff30785ca84d6ea764ba7",
+        "route-util.rpt": "dc023ec20473a0e9e6e19e88ed8d062e82caf7696801edd9519705ec5b4797a3",
+        "synth-hierarchy.rpt": "1de15ef8b6f6b94db5a8958119a2c1aa43b377153ad1283b8b2ac90f289c5eb0",
+        "synth-util.rpt": "6420a41a311805b9a852b2aa3bdd7a5063b99daee2024113312d84134a50c2dc",
+        "timing-coverage.rpt": "9e94244409d42db6c21b57fe230164f508adc210f4f1cf457c7a4d6d5ed5c853",
+        "timing-max-supported.rpt": "f5c41166f907ef550b904ab8195b0f094c265044aacfa3a4f89c14b50329c5bb",
+        "timing-next-mhz.rpt": "d20597dc2c6f938780bfc574d4414805cfa80618e4792ab67ea2b37943764608",
+        "timing-probe.rpt": "0e08fdca2cc5c3d9c76867f36adce589384fd29ffce8016072d630caad4c7898",
+        "timing-target.rpt": "f07ce3af7225bf2fb31e27bea2019f00c49a2f03910b7f036080da0077c917cc"
+      },
+      "power_method": "Vivado 2025.2 vectorless post-route estimate; external memory excluded",
+      "io_scope": "Integrated CPU/LSU internal timing; no external I/O delay",
+      "timing_coverage": {
+        "no_clock": 0,
+        "unconstrained_internal_endpoints": 0,
+        "no_input_delay": 211,
+        "no_output_delay": 271,
+        "loops": 0
+      }
+    }
+  ],
+  "measurement": "Vivado 2025.2 OOC post-route; no external I/O delay"
+}

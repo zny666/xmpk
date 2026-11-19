@@ -1,0 +1,5 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 38735
+/reviewer/xmpk-arm64/formal/elf/qruov-l3-mul8-matvec.elf *** SUCCESS *** (tohost = 0) after 27608378 cycles
+CPU time used: 916527.24 ms
+Wall clock time passed: 916646.67 ms

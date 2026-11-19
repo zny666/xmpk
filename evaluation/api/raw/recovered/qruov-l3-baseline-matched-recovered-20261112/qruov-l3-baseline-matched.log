@@ -1,0 +1,13 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 44441
+/reviewer/xmpk-worker/elf/qruov-l3-baseline-matched.elf *** SUCCESS *** (tohost = 0) after 425682497 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after  425682485 cycles!
+
+CPU time used: 19405793.85 ms
+Wall clock time passed: 20283865.85 ms
+000a86f66c
+E2E_METRIC sign cycles=0x00000000046f1c54 instret=0x00000000040a9c76
+E2E_METRIC verify cycles=0x00000000043fd72a instret=0x0000000003e58151
+DEBUG_COUNTER sign_start=0x000000000c7073d0 sign_end=0x0000000010df9032 sign_delta=0x00000000046f1c54
+DEBUG_COUNTER verify_start=0x0000000010df904a verify_end=0x00000000151f677f verify_delta=0x00000000043fd72a
+E2E_SUCCESS

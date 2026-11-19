@@ -1,0 +1,7 @@
+1q127L3 accel=0 SYNTAX_PASS
+1q127L3 accel=1 SYNTAX_PASS
+5q127L3 accel=0 SYNTAX_PASS
+5q127L3 accel=1 SYNTAX_PASS
+1q127L10 accel=0 SYNTAX_PASS
+1q127L10 accel=1 SYNTAX_PASS
+STATIC_ONLY_COMPLETE: runtime + QR L1/L5 + degree-10 fallback; no execution

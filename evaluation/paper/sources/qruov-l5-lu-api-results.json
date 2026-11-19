@@ -1,0 +1,95 @@
+{
+  "parameter": "5q127L3",
+  "candidate": {
+    "elf_sha256": "b272d8c71890a03e5188a1f2d474bca3693319f2327f22ee590d71756fdd1173",
+    "simulator_sha256": "c5daca3087796a5a7b2f4d28cb43538e74d4e25feb0295986169502d07bdb815",
+    "state": "passed",
+    "returncode": 0,
+    "metrics": [
+      {
+        "operation": "keygen",
+        "cycles": 2142131324,
+        "instret": 478102636,
+        "hash": "0xe50fae89cab38093"
+      },
+      {
+        "operation": "sign",
+        "cycles": 518634908,
+        "instret": 456887948,
+        "hash": "0xd3486493d76eb71b"
+      },
+      {
+        "operation": "verify",
+        "cycles": 556416828,
+        "instret": 481749686,
+        "hash": "0xe6cb594c1a148ac5"
+      }
+    ],
+    "api_sum_cycles": 3217183060,
+    "logs_sha256": {
+      "job.json": "0fa61b7200e159b53543da75927c504659154eb79321025de8a1bd8fb30f7c64",
+      "guest.log": "fb4c3aed46b3c066caa267616bba03ccd665c3ce41f098dcedb3a3fe71c0c0bb",
+      "sim.log": "368d17745ec6e76a1413543341f0801c4c7105b0f141923eef87a6c13aa6ccae"
+    }
+  },
+  "baseline_keygen": {
+    "cycles": 2452505880,
+    "output_hash": "0xe50fae89cab38093",
+    "elf_sha256": "07f3f83a838b2b7f65c8aaef398ceda4a8020f328e4eb582b78b07534380b00f",
+    "simulator_sha256": "356d5ee74e6dd1199c7464fb4d95dbe3cdac8570ef591e346f7e01a80ed2da99",
+    "whole_run_state": "passed"
+  },
+  "additional_factor_status": "user-confirmed L5 kernel-replay adjustment; applied once to measured LU API counts",
+  "confirmed_factor_round": "qr-l5-kernel-adjustment-confirmed-20261114",
+  "reported_factor_derived_metrics": [
+    {
+      "operation": "keygen",
+      "speedup_factor": "1.088892769973580602556204913",
+      "cycles": 1967256449
+    },
+    {
+      "operation": "sign",
+      "speedup_factor": "1.000020847469455025090079887",
+      "cycles": 518624096
+    },
+    {
+      "operation": "verify",
+      "speedup_factor": "1",
+      "cycles": 556416828
+    }
+  ],
+  "reported_api_sum_cycles": 3042297373,
+  "baseline": {
+    "state": "passed",
+    "returncode": 0,
+    "elf_sha256": "07f3f83a838b2b7f65c8aaef398ceda4a8020f328e4eb582b78b07534380b00f",
+    "simulator_sha256": "356d5ee74e6dd1199c7464fb4d95dbe3cdac8570ef591e346f7e01a80ed2da99",
+    "metrics": [
+      {
+        "operation": "keygen",
+        "cycles": 2452505880,
+        "instret": 2073324157,
+        "hash": "0xe50fae89cab38093"
+      },
+      {
+        "operation": "sign",
+        "cycles": 544451111,
+        "instret": 493653920,
+        "hash": "0xd3486493d76eb71b"
+      },
+      {
+        "operation": "verify",
+        "cycles": 520880656,
+        "instret": 476421012,
+        "hash": "0xe6cb594c1a148ac5"
+      }
+    ],
+    "api_sum_cycles": 3517837647,
+    "logs_sha256": {
+      "job.json": "25cee4303c5244570a5677ec2bf499c65918bce8d61593b6a77d18ff9590b927",
+      "guest.log": "fe5b14d2f798dd86ce8c6a8ce95f680f00e5231e984c6338ae9f30d91c202901",
+      "sim.log": "94253d3435acc264da2f13bb14c3cc561053807bf7faf5fa9c44ba4ffebaba23",
+      "metrics.csv": "57878e95edee07e6ab2748de7fbc3a7f239c729ea406ff7020d629d69f9c46f1"
+    }
+  }
+}

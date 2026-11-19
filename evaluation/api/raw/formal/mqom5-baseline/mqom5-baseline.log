@@ -1,0 +1,5 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 36389
+/reviewer/xmpk-arm64/formal/elf/mqom5-baseline.elf *** SUCCESS *** (tohost = 0) after 2466012115 cycles
+CPU time used: 107779808.65 ms
+Wall clock time passed: 109301520.43 ms

@@ -1,0 +1,2 @@
+{"timestamp": 1794535921.5819304, "pid": 41728, "seq": 2, "phase": 1, "completed": 0, "status": 0, "cycles": [], "instret": [], "hashes": [], "live_cycle": 1555, "live_instret": 494, "tohost": 0, "observer": "O_RDONLY", "elf_load_verified": true}
+{"timestamp": 1794535922.606404, "pid": 41728, "seq": 6, "phase": 1, "completed": 1, "status": 1, "cycles": [34937], "instret": [23608], "hashes": ["0x4242dc5249c33625"], "live_cycle": 39010, "live_instret": 25555, "tohost": 0, "observer": "O_RDONLY", "elf_load_verified": true}

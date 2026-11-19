@@ -1,0 +1,59 @@
+{
+  "tag": "precheck-candidate--debug",
+  "pid": 15133,
+  "worker_pid": 15132,
+  "started": 1794508025.1199102,
+  "elf": "/artifact/xmpk-arm64-native/long-o3-20261113/elf/precheck-candidate.elf",
+  "elf_sha256": "833d1f877821d6ce6dec12c4ee6438d28d6fbdc772bb7caa70c9aee580b3c347",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/o3-debug-t1/Variane_testharness",
+  "simulator_sha256": "4d048b2251d2e1a096545456c7d6990cee8c5beb2674d86169bf84067f42a355",
+  "offsets": {
+    "cycle": 34032,
+    "instret": 34048,
+    "pc": 22416,
+    "sram": 43368,
+    "sram_plain": 268478824
+  },
+  "stage_table_va": "0x82007000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/o3-debug-t1/Variane_testharness",
+    "/artifact/xmpk-arm64-native/long-o3-20261113/elf/precheck-candidate.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=10000000000",
+    "++/artifact/xmpk-arm64-native/long-o3-20261113/elf/precheck-candidate.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/long-o3-20261113/elf/precheck-candidate.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/long-o3-20261113/results/precheck-candidate--debug/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/long-o3-20261113/results/precheck-candidate--debug/report.yaml"
+  ],
+  "state": "passed",
+  "root": "0xffaba21a7100",
+  "sram": "0xffabb21b1a68",
+  "returncode": 0,
+  "ended": 1794508051.0727127,
+  "metrics": [
+    {
+      "operation": "keygen",
+      "cycles": 35084,
+      "instret": 23607,
+      "hash": "0x4242dc5249c33625"
+    },
+    {
+      "operation": "sign",
+      "cycles": 21560,
+      "instret": 14910,
+      "hash": "0xe6cb594c1a148ac5"
+    },
+    {
+      "operation": "verify",
+      "cycles": 8499,
+      "instret": 4061,
+      "hash": "0xe6cb594c1a148ac5"
+    }
+  ],
+  "observed_sequences": 5,
+  "completed_stages_observed": 3
+}

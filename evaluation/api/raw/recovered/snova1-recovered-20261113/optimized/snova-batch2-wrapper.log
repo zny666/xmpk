@@ -1,0 +1,2 @@
+[2026-11-09T14:39:31+08:00] E2E_SIM tag=snova1-batch2 START elf=/data00/reviewer/riscv/xmpk-snova-batch-20261109/e2e/build/snova1-batch/snova1-batch.elf max_cycles=2000000000 harness=/reviewer/riscv/xmpk-final-runs/sim-final-20261108T201758/cva6/work-ver/Variane_testharness
+[2026-11-09T20:09:32+08:00] E2E_SIM tag=snova1-batch2 PASS log=/data00/reviewer/riscv/xmpk-snova-batch-20261109/e2e/results/optimized/snova1-batch2.log

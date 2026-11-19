@@ -1,0 +1,48 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Fri Nov 13 15:01:24 2026
+| Host         : REDACTED_HOST running 64-bit veLinux GNU/Linux 2 (lyra)
+| Command      : report_utilization -hierarchical -file /data00/reviewer/xmpk-hardware-final-20261113/results/final-copro/route-hierarchy.rpt
+| Design       : xmpk_copro_top
+| Device       : xc7a200tfbg676-2
+| Speed File   : -2
+| Design State : Routed
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|        Instance        |             Module            | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| xmpk_copro_top         |                         (top) |      13391 |      12587 |     804 |    0 | 8024 |      4 |      0 |          8 |
+|   (xmpk_copro_top)     |                         (top) |          0 |          0 |       0 |    0 |  201 |      0 |      0 |          0 |
+|   dut                  |                     copro_alu |      13391 |      12587 |     804 |    0 | 7823 |      4 |      0 |          8 |
+|     (dut)              |                     copro_alu |        376 |        376 |       0 |    0 |  269 |      0 |      0 |          0 |
+|     i_extgemm          |                  xmpk_extgemm |       3559 |       3559 |       0 |    0 | 1746 |      0 |      0 |          0 |
+|     i_ger_trf          |                  xmpk_ger_trf |       3397 |       2789 |     608 |    0 | 2073 |      0 |      0 |          0 |
+|       i_aggressive     |          xmpk_auto_aggressive |       3397 |       2789 |     608 |    0 | 2073 |      0 |      0 |          0 |
+|         (i_aggressive) |          xmpk_auto_aggressive |        979 |        979 |       0 |    0 | 2073 |      0 |      0 |          0 |
+|         i_atrf         |                 xmpk_atrf4_32 |       1240 |        728 |     512 |    0 |    0 |      0 |      0 |          0 |
+|         i_c_even       |                 xmpk_trf_bank |        154 |        122 |      32 |    0 |    0 |      0 |      0 |          0 |
+|         i_c_odd        |               xmpk_trf_bank_0 |        518 |        486 |      32 |    0 |    0 |      0 |      0 |          0 |
+|         i_legacy_b     | xmpk_trf_bank__parameterized0 |        512 |        480 |      32 |    0 |    0 |      0 |      0 |          0 |
+|     i_inv_rom          |                 gf256_inv_rom |        104 |        104 |       0 |    0 |  134 |      0 |      0 |          0 |
+|     i_linxfm           |                   xmpk_linxfm |       1035 |        947 |      88 |    0 |  676 |      0 |      0 |          0 |
+|     i_mqeval           |                   xmpk_mqeval |       1127 |       1127 |       0 |    0 | 1215 |      0 |      0 |          0 |
+|     i_qgemm            |                    xmpk_qgemm |       1622 |       1578 |      44 |    0 |  907 |      0 |      0 |          4 |
+|     i_slow_mul         |                 xmpk_slow_mul |        681 |        681 |       0 |    0 |  381 |      0 |      0 |          4 |
+|     i_solveq           |                   xmpk_solveq |       1492 |       1428 |      64 |    0 |  422 |      4 |      0 |          0 |
+|       (i_solveq)       |                   xmpk_solveq |        422 |        358 |      64 |    0 |  422 |      0 |      0 |          0 |
+|       i_matrix         |               xmpk_solveq_ram |       1073 |       1073 |       0 |    0 |    0 |      4 |      0 |          0 |
++------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

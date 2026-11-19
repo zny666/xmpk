@@ -1,0 +1,6 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 33895
+/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf *** SUCCESS *** (tohost = 0) after 10257332 cycles
+CPU time used: 189765.58 ms
+Wall clock time passed: 190768.67 ms
+5c38 hash=0x4242dc5249c33625

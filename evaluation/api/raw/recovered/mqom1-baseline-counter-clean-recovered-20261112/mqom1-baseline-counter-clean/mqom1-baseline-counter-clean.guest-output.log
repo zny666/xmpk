@@ -1,0 +1,7 @@
+E2E_BEGIN algorithm=MQOM parameter=mqom3_cat1_gf16_fast_ct implementation=cva6-reference-C-portable
+E2E_METRIC keygen cycles=0x0000000000a7166d instret=0x000000000099a62f
+E2E_METRIC sign cycles=0x00000000064d5d1a instret=0x0000000005d91776
+E2E_METRIC verify cycles=0x00000000061e00f9 instret=0x00000000058f48ff
+DEBUG_COUNTER sign_start=0x0000000000a71a0e sign_end=0x0000000006f47733 sign_delta=0x00000000064d5d1a
+DEBUG_COUNTER verify_start=0x0000000006f47749 verify_end=0x000000000d12784d verify_delta=0x00000000061e00f9
+E2E_SUCCESS

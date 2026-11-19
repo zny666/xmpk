@@ -1,0 +1,9 @@
+{
+  "cases": 60,
+  "timing_batches": 420,
+  "stat_batches": 300,
+  "raw_events": 600,
+  "all_archived_PMU_values_match": true,
+  "TABLE_II_byte_identical": true,
+  "scope": "Medians of user-mode PMU counts per actual API iteration. Independent event pairs; self sampling shares are not wall-time fractions."
+}

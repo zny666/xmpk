@@ -1,0 +1,52 @@
+[
+  {
+    "path": "e2e/source/r20/results/received/upstream/qruov/Reference_Implementation/ref/prim.h",
+    "before": "fdce2491d72498eb4120354e0b7c6b5b4c2ca28459d7f376c1b657bcea4084c6",
+    "after": "cad98880ed2073097206981a0ea4200490e52ead6c0d13dcbe2df6e8f071cbaf"
+  },
+  {
+    "path": "e2e/source/r20/results/received/upstream/qruov/Reference_Implementation/ref/qruov.c",
+    "before": "e43f14202d4a1c0b275fe521f6cd3d4d72d9a89af3c9158d57521679ca4acc95",
+    "after": "2d4598ac53f8abc5d65fa2a53e29d060b09652a3c9cad7b19e8f1b969454a45c"
+  },
+  {
+    "path": "e2e/source/r20/results/received/upstream/qruov/Reference_Implementation/ref/qruov_common.c",
+    "before": "41fc0f7038243bb9216813896c1b4bd167e1a9fb237a209865fb678ecba7bd0c",
+    "after": "83b2306056aaeb9f24e2d735c3eb2a553333f5793a2a43c3c15416ea1e585ef6"
+  },
+  {
+    "path": "e2e/source/r20/results/received/upstream/uov/src/config.h",
+    "before": "3e78b48229f000ff753a8d4d745d4a7241c260c6eca1c551bfca6c9fedd9195f",
+    "after": "4347f6d031bef192b90b6085084fd7cd71b2d9426467fc091d8e923051032a7f"
+  },
+  {
+    "path": "e2e/work/runtime/xmpk_asm.c",
+    "before": "0d464ab1ef0fe29f72f0fbe27aa128e96107b6b5482d7c78a52f7a0ad6d0359d",
+    "after": "d20028788063fab77cd797c41c89010990cca5e46b63e7cc2e81b276a9350875"
+  },
+  {
+    "path": "e2e/work/runtime/xmpk_asm.h",
+    "before": "e94699bc9a0e1f54e8afbe2ab536d041f961b097c53b334a6eb4b4b95276c4b5",
+    "after": "dd6b5dc3e0e140ae0140abcab26886858a1c4aaf6a110c87cea0c6d7a0d54ed6"
+  },
+  {
+    "path": "e2e/work/scripts/build_qruov_l3_baseline.sh",
+    "before": "044c568ff103fe55ec4cf5ea17889a79d5d4bb59fcff2586bfb2a12defd8cbcf",
+    "after": "ad9737bb0fb8b742dc3a15079e28887cc493b041902de6f1e718adc4c4f0aef8"
+  },
+  {
+    "path": "e2e/work/scripts/build_qruov_l5_baseline.sh",
+    "before": "d3e0fbe2e0d417b97629688a110c07874f7bdf3aaab8c560033776402130cd20",
+    "after": "ec2af9ec0f2602e6b0e28d29854c0429dc6ba9ac958a42afbcce98b9a3eb1f3f"
+  },
+  {
+    "path": "e2e/source/r20/results/received/upstream/qruov/Reference_Implementation/ref/xmpk_refined.c",
+    "before": null,
+    "after": "d0de5ff884d380eb927d3548287539b69a0ccd85a8ca9d259e9b317ce50cf428"
+  },
+  {
+    "path": "e2e/source/r20/results/received/upstream/qruov/Reference_Implementation/ref/xmpk_refined.h",
+    "before": null,
+    "after": "6862a032e53cbd16f7c9911e7affb25bba3a4c49646070e5bc522e8249e260fd"
+  }
+]

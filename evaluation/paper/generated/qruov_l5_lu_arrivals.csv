@@ -1,0 +1,4 @@
+scheme,level,operation,baseline_cycles,xmpk_cycles,speedup,status
+QR-UOV-5q127L3,L5,keygen,2452505880,2142131324,,baseline-and-lu-measured
+QR-UOV-5q127L3,L5,sign,544451111,518634908,,baseline-and-lu-measured
+QR-UOV-5q127L3,L5,verify,520880656,556416828,,baseline-and-lu-measured

@@ -1,0 +1,14 @@
+This emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.
+Listening on port 35339
+/artifact/xmpk-arm64-native/restart-l5-o3-20261113/elf/precheck-candidate.elf *** SUCCESS *** (tohost = 0) after 84038 cycles
+*** [rvfi_tracer] INFO: Simulation terminated after      84026 cycles!
+
+CPU time used: 24265.41 ms
+Wall clock time passed: 24625.40 ms
+instret=0x0000000000003a3f hash=0xe6cb594c1a148ac5
+E2E_STAGE verify cycles=0x00000000000021b7 instret=0x0000000000000fde hash=0xe6cb594c1a148ac5
+E2E_BEGIN algorithm=PRECHECK parameter=GF16-GF127
+E2E_METRIC keygen cycles=0x000000000000887c instret=0x0000000000005c38 hash=0x4242dc5249c33625
+E2E_METRIC sign cycles=0x00000000000054a0 instret=0x0000000000003a3f hash=0xe6cb594c1a148ac5
+E2E_METRIC verify cycles=0x00000000000021b7 instret=0x0000000000000fde hash=0xe6cb594c1a148ac5
+E2E_SUCCESS

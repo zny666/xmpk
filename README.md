@@ -53,6 +53,13 @@ The public firmware rerun also has a [CSV export](results/benchmark-public-rerun
 
 ## Reproduction materials
 
+The `evaluation-artifacts` branch also provides [full evaluation materials](evaluation/README.md):
+five-scheme scalar/Xmpk C snapshots, historical API logs, full profiling text
+and native drivers, exact FPGA inputs, original reports, and
+[per-table provenance](evaluation/provenance/table-index.md).
+Its [coverage report](evaluation/provenance/coverage.json) explicitly identifies
+final API source/log links that have not yet been recovered.
+
 | Directory | Material |
 |---|---|
 | `tests/` | Instruction-level C++ reference tests, random/boundary cases, backpressure, faults and reset recovery |

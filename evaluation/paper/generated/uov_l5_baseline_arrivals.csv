@@ -1,0 +1,4 @@
+scheme,level,operation,baseline_cycles,xmpk_cycles,status
+UOV-V,L5,keygen,9656875166,,baseline-and-optimized-measured
+UOV-V,L5,sign,76404978,,baseline-and-optimized-measured
+UOV-V,L5,verify,17248892,,baseline-and-optimized-measured

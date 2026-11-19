@@ -1,0 +1,199 @@
+\begin{table}[t]
+\centering
+\caption{Multivariate workloads and engine mapping.}
+\label{tab:workloads}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Scheme & Field & Dominant kernel & Engine \\
+\midrule
+MAYO & \(\GF{16}\) & row MAC, matvec & lanes/QGEMM \\
+MQOM & \(\GF{256}\) & MQ/matvec & lanes/QGEMM \\
+QR-UOV & \(\GF{127^\ell}\) & poly. dot/GEMM & EXTGEMM \\
+SNOVA & \(\GF{16}\) & small transforms & LINXFM/QGEMM \\
+UOV & \(\GF{16/256}\) & matvec, solve & QGEMM/SOLVEQ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{PMU profiles of the slowest APIs.}
+\label{tab:profile}
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\begin{lrbox}{\notedtablebox}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Scheme & API & IPC &
+\shortstack{Branches\\(M)} & \shortstack{L1D loads\\(M)} &
+\shortstack{Branch\\miss} & \shortstack{L1D\\miss} \\
+\midrule
+\ReferenceProfileRows
+\bottomrule
+\end{tabular}
+\end{lrbox}
+\usebox{\notedtablebox}
+\tablenote[\wd\notedtablebox]{Counts are in millions per API call on the RV64GC reference platform.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Hardware approaches to cryptographic acceleration.}
+\label{tab:related}
+\setlength{\tabcolsep}{2.6pt}
+\begin{lrbox}{\notedtablebox}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Work & Style & Target arithmetic & Scope \\
+\midrule
+Whipping~\cite{whipping} & Full & \(\GF{16}\) matrices & MAYO \\
+Krieger et al.~\cite{uovhw} & Full & \(\GF{16/256}\), GE & UOV \\
+Sugai et al.~\cite{qruovhw} & Full & \(\GF{127^\ell}\) & QR-UOV \\
+Li et al.~\cite{dac22kyber} & ISE & NTT/vector & Kyber \\
+Kuo et al.~\cite{kuogf} & ISE & \(\GF{2^m}\) mul./reduce & AES/RS \\
+Seo et al.~\cite{seopoly} & ISE & polynomial multiply & crypto. primitives \\
+ATHOS~\cite{athos} & Hybrid & NTT, Keccak & Kyber/Dilithium \\
+HORCRUX~\cite{horcrux} & ISE & poly./hash/code & std. PQC \\
+\textbf{\xmpk\ (ours)} & \textbf{ISE} & \textbf{field linear algebra} & \textbf{five schemes} \\
+\bottomrule
+\end{tabular}
+\end{lrbox}
+\usebox{\notedtablebox}
+\tablenote[\wd\notedtablebox]{``Full'' denotes complete-scheme hardware; ``ISE'' retains software orchestration.}
+\end{table}
+
+\begin{table}[b]
+\centering
+\caption{\xmpk\ instruction groups and completion cycles.}
+\label{tab:isa}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}
+  p{\dimexpr\columnwidth-15mm-6pt\relax}
+  >{\raggedleft\arraybackslash}p{15mm}@{}}
+\toprule
+Instructions & Cycles \\
+\midrule
+\multicolumn{2}{@{}p{\columnwidth}@{}}{
+  \textbf{Packed (11 operations)}} \\
+GF16.MUL; GF16.MACC; VBROAD16; VBROAD256; \newline
+XORFOLD16; XORFOLD256; FNZ16; FNZ256 & 1 \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+GF256.MUL & 3 \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+GF127.MUL & 4 \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+GF256.INV & 10 \\
+\midrule
+\multicolumn{2}{@{}p{\columnwidth}@{}}{
+  \textbf{Stateful (13 operations)}} \\
+TRF.WRITE; PIVOT16; ROWELIM16 & 1 \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+GF16.DOT & 3 \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+TRF.READ; GER16; GER16R; BGER16R; \newline
+ATRF.LOAD; ATRF.LOAD16; \newline
+AGER16R; AGER16X16; AGER16R2 & variable \\
+\midrule
+\multicolumn{2}{@{}p{\columnwidth}@{}}{
+  \textbf{Autonomous (13 operations)}} \\
+GER.SETUP; QGEMM.SETUP; MQEVAL.SETUP; \newline
+SOLVEQ.SETUP; LINXFM.SETUP; EXTGEMM.SETUP & 1 \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+GER.RUN; QGEMM.RUN; MQEVAL.RUN; \newline
+SOLVEQ.RUN; LINXFM.RUN; EXTGEMM.RUN & variable \\
+\cmidrule[0.25pt](lr{2pt}){1-1}\cmidrule[0.25pt](lr{2pt}){2-2}
+XMEM.STORE & variable \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Finite-field kernel performance on CVA6.}
+\label{tab:perf}
+\setlength{\tabcolsep}{3.0pt}
+\begin{lrbox}{\notedtablebox}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Kernel & Shape & Scalar & \xmpk & Speedup \\
+ & & \multicolumn{2}{c}{cycles} & \\
+\midrule
+Solve GF256 & \(N=45\) & 824,356 & 16,370 & 50.36\(\times\) \\
+ & \(N=72\) & 3,227,451 & 49,298 & 65.47\(\times\) \\
+ & \(N=96\) & 7,504,229 & 96,328 & 77.90\(\times\) \\
+\midrule
+EXTGEMM core & L3 \(52^2\) & 527,308 & 61,176 & 8.62\(\times\) \\
+ & L10 \(54^2\) & 4,578,372 & 198,534 & 23.06\(\times\) \\
+EXTGEMM + layout & L3 \(52^2\) & 527,308 & 92,287 & 5.71\(\times\) \\
+ & L10 \(54^2\) & 4,578,372 & 510,198 & 8.97\(\times\) \\
+\midrule
+QGEMM GF16 & \(3{\times}5{\times}16\) & \QgemmScalarSmall & \QgemmCyclesSmall & \QgemmSpeedupSmall\(\times\) \\
+ & \(7{\times}19{\times}32\) & \QgemmScalarMedium & \QgemmCyclesMedium & \QgemmSpeedupMedium\(\times\) \\
+ & \(16{\times}64{\times}32\) & \QgemmScalarLarge & \QgemmCyclesLarge & \QgemmSpeedupLarge\(\times\) \\
+\bottomrule
+\end{tabular}
+\end{lrbox}
+\usebox{\notedtablebox}
+\tablenote[\wd\notedtablebox]{EXTGEMM uses one output column. QGEMM excludes SETUP.}
+\end{table}
+
+\begin{table*}[t]
+\centering
+\caption{CVA6 API cycles, speedups, and total algorithm energy.}
+\label{tab:e2e}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Scheme & Sec. & KeyGen & Sign & Verify & Energy (J) \\
+\midrule
+\UpdatedEtoEEnergyRows
+\bottomrule
+\end{tabular*}
+\tablenote[\textwidth]{API cycles are in millions, shown as baseline/\xmpk\
+[speedup].
+Energy is baseline/\xmpk\ [relative change] for one KeyGen+Sign+Verify sequence:
+\(E=P\sum_{\rm APIs}C/(40\,{\rm MHz})\), with vectorless \(P=0.221/0.269\)\,W;
+change is \((E_{\xmpk}/E_{\rm baseline}-1)\times100\%\).}
+\end{table*}
+
+\begin{table}[t]
+\centering
+\caption{Post-route Artix-7 resources and timing.}
+\label{tab:ppa}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Design & LUT & FF & BRAM36 & DSP & \(F_{\max}\) (MHz) \\
+\midrule
+\xmpk\ accelerator, 80\,MHz & \XmpkLUT & \XmpkFF & \XmpkBRAM &
+  \XmpkDSP & \XmpkFmax \\
+CVA6, 40\,MHz & \CvaSixLUT & \CvaSixFF & \CvaSixBRAM &
+  \CvaSixDSP & \CvaSixFmax \\
+CVA6+\xmpk, 40\,MHz & \SystemLUT & \SystemFF & \SystemBRAM &
+  \SystemDSP & \SystemFmax \\
+\bottomrule
+\end{tabular}
+\tablenote{Full system at 40\,MHz; OOC excludes external I/O delay.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Post-route system power and energy estimates.}
+\label{tab:power}
+\setlength{\tabcolsep}{4.0pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Design & Total (W) & Dyn. (W) & Static (W) & E/cycle (nJ) \\
+\midrule
+CVA6 & \CvaSixPowerTotal & \CvaSixPowerDynamic &
+  \CvaSixPowerStatic & \CvaSixEnergyPerCycle \\
+CVA6+\xmpk & \SystemPowerTotal & \SystemPowerDynamic &
+  \SystemPowerStatic & \SystemEnergyPerCycle \\
+\bottomrule
+\end{tabular}
+\tablenote{Vectorless activity estimates; external memory is excluded.}
+\end{table}

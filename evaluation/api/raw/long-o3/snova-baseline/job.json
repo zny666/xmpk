@@ -1,0 +1,59 @@
+{
+  "tag": "snova-baseline",
+  "pid": 15166,
+  "worker_pid": 15165,
+  "started": 1794508101.5896757,
+  "elf": "/artifact/xmpk-arm64-native/long-o3-20261113/elf/snova-baseline.elf",
+  "elf_sha256": "72326fa2269b6d351958f5009d030529fca4e5e7bafb4121690b87df898f506d",
+  "simulator": "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t1/Variane_testharness",
+  "simulator_sha256": "c5daca3087796a5a7b2f4d28cb43538e74d4e25feb0295986169502d07bdb815",
+  "offsets": {
+    "cycle": 34032,
+    "instret": 34048,
+    "pc": 22416,
+    "sram": 43368,
+    "sram_plain": 268478824
+  },
+  "stage_table_va": "0x82013000",
+  "command": [
+    "/reviewer/xmpk-arm64/simulator-speed-20261112/release-t1/Variane_testharness",
+    "/artifact/xmpk-arm64-native/long-o3-20261113/elf/snova-baseline.elf",
+    "+debug_disable=1",
+    "+rvfi_trace_disable=1",
+    "+time_out=10000000000",
+    "++/artifact/xmpk-arm64-native/long-o3-20261113/elf/snova-baseline.elf",
+    "+elf_file=/artifact/xmpk-arm64-native/long-o3-20261113/elf/snova-baseline.elf",
+    "+core_name=cv64a6_imafdc_sv39",
+    "+tohost_addr=0000000080001000",
+    "+signature=/artifact/xmpk-arm64-native/long-o3-20261113/results/snova-baseline/signature",
+    "+UVM_TESTNAME=uvmt_cva6_firmware_test_c",
+    "+report_file=/artifact/xmpk-arm64-native/long-o3-20261113/results/snova-baseline/report.yaml"
+  ],
+  "state": "passed",
+  "root": "0xfb22b0757100",
+  "sram": "0xfb22c0761a68",
+  "returncode": 0,
+  "ended": 1794511115.320532,
+  "metrics": [
+    {
+      "operation": "keygen",
+      "cycles": 13099260,
+      "instret": 10149090,
+      "hash": "0x77503626036f47ee"
+    },
+    {
+      "operation": "sign",
+      "cycles": 64250584,
+      "instret": 51536283,
+      "hash": "0xe07def2895f5c33c"
+    },
+    {
+      "operation": "verify",
+      "cycles": 27257149,
+      "instret": 26530137,
+      "hash": "0xe6cb594c1a148ac5"
+    }
+  ],
+  "observed_sequences": 3,
+  "completed_stages_observed": 2
+}

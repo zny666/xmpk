@@ -1,0 +1,36 @@
+{
+  "revision": "q-request-overlap-confirmed-20261116",
+  "source_manifest": "q-overlap-source-hashes.json",
+  "kind": "coprocessor OOC post-route; internal register paths",
+  "LUT": 13392,
+  "FF": 8021,
+  "LUTRAM": 804,
+  "BRAM36": 4,
+  "DSP": 8,
+  "target_MHz": 80,
+  "WNS_ns": 0.144,
+  "critical_path_ns": 12.356,
+  "effective_Fmax_MHz": 80.93234056328909,
+  "STA_max_integer_MHz": 80,
+  "next_MHz": 81,
+  "next_WNS_ns": -0.01,
+  "power_total_W": 0.224,
+  "power_dynamic_W": 0.102,
+  "power_static_W": 0.122,
+  "power_method": "Vivado 2025.2 vectorless; medium confidence",
+  "io_scope": "267 inputs and 196 outputs without IO delay; CPU/LSU interface timing not validated",
+  "unit_synthesis": {
+    "LUT": 1514,
+    "FF": 913,
+    "delta_LUT": 62,
+    "delta_FF": 5
+  },
+  "report_sha256": {
+    "q-overlap-copro-clocks-target.rpt": "ddb2de1e91c644e0c122b329dc4f2c6e6b98f06e75d93adae644f6f06d30d31f",
+    "q-overlap-copro-power-target.rpt": "59c6784ba0684523d46aec2805883c75c9d2d2cbe331f64140750824a5ed3ecf",
+    "q-overlap-copro-route-hierarchy.rpt": "61a04db795ace33d8631fea46f16673bd71b42a9f766ed47ed4ff1a5fbe89608",
+    "q-overlap-copro-route-util.rpt": "eb38b56d19f1b5561d48b25ad23a7d1ca2522dc08ee1e0f3767891f5da251ce0",
+    "q-overlap-copro-timing-next-mhz.rpt": "3efabb8d135e4d2a1e3e70b6850c5eb13eba4c1360a4e9d887509d6d9bd18230",
+    "q-overlap-copro-timing-target.rpt": "5b1bc61492f9969e8aee4c4dc632ccba9b19076c0613afea392494b9ebf2e14e"
+  }
+}
